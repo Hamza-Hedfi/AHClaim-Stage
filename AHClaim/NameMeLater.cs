@@ -171,7 +171,18 @@ namespace AHClaim
 
         #region Claim Reject Segment
 
-        // TODO 
+        [FieldFixedLength(1)] public string ClaimRejectSegmentSeparatorCharacter { get; set; }
+        [FieldFixedLength(2)] public string ClaimRejectSegmentIdentifier { get; set; }
+        [FieldFixedLength(3)] public string ClaimRejectSegmentRejectCode1 { get; set; }
+        [FieldFixedLength(3)] public string ClaimRejectSegmentRejectCode2 { get; set; }
+        [FieldFixedLength(3)] public string ClaimRejectSegmentRejectCode3 { get; set; }
+        [FieldFixedLength(3)] public string ClaimRejectSegmentRejectCode4 { get; set; }
+        [FieldFixedLength(3)] public string ClaimRejectSegmentRejectCode5 { get; set; }
+        [FieldFixedLength(3)] public string ClaimRejectSegmentEccRejectCode1 { get; set; }
+        [FieldFixedLength(3)] public string ClaimRejectSegmentEccRejectCode2 { get; set; }
+        [FieldFixedLength(3)] public string ClaimRejectSegmentEccRejectCode3 { get; set; }
+        [FieldFixedLength(3)] public string ClaimRejectSegmentEccRejectCode4 { get; set; }
+        [FieldFixedLength(3)] public string ClaimRejectSegmentEccRejectCode5 { get; set; }
 
         #endregion
 
