@@ -188,22 +188,43 @@ namespace AHClaim
 
         #region Prior Authorization Segment
 
-        [FieldFixedLength(1)]public string PriorAuthorizationSegmentSeparatorCharacter { get; set; }
-        [FieldFixedLength(2)]public string PriorAuthorizationSegmentIdentifier { get; set; }
-        [FieldFixedLength(2)]public string PaTypeSubmitted { get; set; }
-        [FieldFixedLength(11)]public string PaNumberSubmitted { get; set; }
-        [FieldFixedLength(11)]public string ActualPaNumberUsed { get; set; }
-        [FieldFixedLength(1)]public string PaTypeManualAuto { get; set; }
-        [FieldFixedLength(8)]public string PaEffectiveDate { get; set; }
-        [FieldFixedLength(8)]public string PaTerminationDate { get; set; }
-        [FieldFixedLength(35)]public string PaDescription { get; set; }
-        [FieldFixedLength(30)]public string PriorAuthorizationSegmentReservedForFutureUse { get; set; }
+        [FieldFixedLength(1)] public string PriorAuthorizationSegmentSeparatorCharacter { get; set; }
+        [FieldFixedLength(2)] public string PriorAuthorizationSegmentIdentifier { get; set; }
+        [FieldFixedLength(2)] public string PaTypeSubmitted { get; set; }
+        [FieldFixedLength(11)] public string PaNumberSubmitted { get; set; }
+        [FieldFixedLength(11)] public string ActualPaNumberUsed { get; set; }
+        [FieldFixedLength(1)] public string PaTypeManualAuto { get; set; }
+        [FieldFixedLength(8)] public string PaEffectiveDate { get; set; }
+        [FieldFixedLength(8)] public string PaTerminationDate { get; set; }
+        [FieldFixedLength(35)] public string PaDescription { get; set; }
+        [FieldFixedLength(30)] public string PriorAuthorizationSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
         #region DUR Segment
 
-        // TODO 
+        [FieldFixedLength(1)] public string DurSegmentSegmentSeparatorCharacter { get; set; }
+        [FieldFixedLength(2)] public string DurSegmentSegmentIdentifier { get; set; }
+        [FieldFixedLength(2)] public string Dur1ConflictCode { get; set; }
+        [FieldFixedLength(1)] public string Dur1SeverityIndex { get; set; }
+        [FieldFixedLength(1)] public string Dur1HitDisposition { get; set; }
+        [FieldFixedLength(20)] public string Dur1ConflictingAuthorizationNumber { get; set; }
+        [FieldFixedLength(2)] public string Dur2ConflictCode { get; set; }
+        [FieldFixedLength(1)] public string Dur2SeverityIndex { get; set; }
+        [FieldFixedLength(1)] public string Dur2HitDisposition { get; set; }
+        [FieldFixedLength(20)] public string Dur2ConflictingAuthorizationNumber { get; set; }
+        [FieldFixedLength(2)] public string Dur3ConflictCode { get; set; }
+        [FieldFixedLength(1)] public string Dur3SeverityIndex { get; set; }
+        [FieldFixedLength(1)] public string Dur3HitDisposition { get; set; }
+        [FieldFixedLength(20)] public string Dur3ConflictingAuthorizationNumber { get; set; }
+        [FieldFixedLength(2)] public string Dur4ConflictCode { get; set; }
+        [FieldFixedLength(1)] public string Dur4SeverityIndex { get; set; }
+        [FieldFixedLength(1)] public string Dur4HitDisposition { get; set; }
+        [FieldFixedLength(20)] public string Dur4ConflictingAuthorizationNumber { get; set; }
+        [FieldFixedLength(2)] public string Dur5ConflictCode { get; set; }
+        [FieldFixedLength(1)] public string Dur5SeverityIndex { get; set; }
+        [FieldFixedLength(1)] public string Dur5HitDisposition { get; set; }
+        [FieldFixedLength(20)] public string Dur5ConflictingAuthorizationNumber { get; set; }
 
         #endregion
 
