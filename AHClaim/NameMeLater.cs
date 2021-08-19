@@ -96,7 +96,39 @@ namespace AHClaim
 
         #region Claim Indicator Segment
 
-        // TODO 
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentSeparatorCharacter { get; set; }
+        [FieldFixedLength(2)] public string ClaimIndicatorSegmentIdentifier { get; set; }
+        [FieldFixedLength(1)] public string PaperClaimFlag { get; set; }
+        [FieldFixedLength(1)] public string DirectReimbursementFlag { get; set; }
+        [FieldFixedLength(1)] public string TestClaimFlag { get; set; }
+        [FieldFixedLength(1)] public string BatchProcessedFlag { get; set; }
+        [FieldFixedLength(1)] public string OtherProcessorFlag { get; set; }
+        [FieldFixedLength(1)] public string FormularyDrugFlag { get; set; }
+        [FieldFixedLength(1)] public string NetworkPharmacyFlag { get; set; }
+        [FieldFixedLength(1)] public string NetworkPhysicianFlag { get; set; }
+        [FieldFixedLength(1)] public string ShoeboxClaimFlag { get; set; }
+        [FieldFixedLength(1)] public string ProductQtyClaimFlag { get; set; }
+        [FieldFixedLength(1)] public string StarterDoseFlag { get; set; }
+        [FieldFixedLength(1)] public string PriorAuthFlag { get; set; }
+        [FieldFixedLength(1)] public string DurFlag { get; set; }
+        [FieldFixedLength(1)] public string DurOverrideFlag { get; set; }
+        [FieldFixedLength(1)] public string IgCopayFlag { get; set; }
+        [FieldFixedLength(1)] public string MultiIngredCompoundFlag { get; set; }
+        [FieldFixedLength(1)] public string PartialFillDispensingStatus { get; set; }
+        [FieldFixedLength(1)] public string MedicaidFlag { get; set; }
+        [FieldFixedLength(1)] public string ForceUcFlag { get; set; }
+        [FieldFixedLength(1)] public string NdcRemapped { get; set; }
+        [FieldFixedLength(1)] public string ForcePharmacyDue { get; set; }
+        [FieldFixedLength(1)] public string AdditionalLowerOfStateRateUsed { get; set; }
+        [FieldFixedLength(1)] public string PosMedicaidFlag { get; set; }
+        [FieldFixedLength(1)] public string AlternateProcessingBypass { get; set; }
+        [FieldFixedLength(1)] public string TaxExemptIndicator { get; set; }
+        [FieldFixedLength(1)] public string AlternateDrugRecord { get; set; }
+        [FieldFixedLength(1)] public string ClaimRoundingUsed { get; set; }
+        [FieldFixedLength(1)] public string MedicalClaimIndicator { get; set; }
+        [FieldFixedLength(1)] public string CompensableClaimIndicator { get; set; }
+        [FieldFixedLength(1)] public string DataFeedTransaction { get; set; }
+        [FieldFixedLength(27)] public string ClaimIndicatorSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
