@@ -252,7 +252,32 @@ namespace AHClaim
 
         #region Drug Classification Segment
 
-        // TODO 
+        [FieldFixedLength(1)] public string DrugClassificationSegmentSeparatorCharacter { get; set; }
+        [FieldFixedLength(2)] public string DrugClassificationSegmentIdentifier { get; set; }
+        [FieldFixedLength(1)] public string CategoryCode { get; set; }
+        [FieldFixedLength(1)] public string ClassCode { get; set; }
+        [FieldFixedLength(1)] public string Gc1Code { get; set; }
+        [FieldFixedLength(2)] public string Gc2Code { get; set; }
+        [FieldFixedLength(3)] public string Gc3Code { get; set; }
+        [FieldFixedLength(4)] public string Gc4Code { get; set; }
+        [FieldFixedLength(3)] public string SpecificTherapeuticClass { get; set; }
+        [FieldFixedLength(5)] public string GcnCode { get; set; }
+        [FieldFixedLength(6)] public string GcnSequenceNumber { get; set; }
+        [FieldFixedLength(2)] public string StandardTherapeuticClass { get; set; }
+        [FieldFixedLength(2)] public string GenericTherapeuticClass { get; set; }
+        [FieldFixedLength(6)] public string AhfsTherapeuticClass { get; set; }
+        [FieldFixedLength(3)] public string OrangeBookCode { get; set; }
+        [FieldFixedLength(1)] public string RouteOfAdministrationCode { get; set; }
+        [FieldFixedLength(1)] public string DrugFormCodeUnitOfMeasure { get; set; }
+        [FieldFixedLength(1)] public string DeaCode { get; set; }
+        [FieldFixedLength(1)] public string MaintenanceDrugIndicator { get; set; }
+        [FieldFixedLength(1)] public string UnitOfUseIndicator { get; set; }
+        [FieldFixedLength(1)] public string RepackageIndicator { get; set; }
+        [FieldFixedLength(1)] public string UnitDoseIndicator { get; set; }
+        [FieldFixedLength(1)] public string DesiDrugIndicator { get; set; }
+        [FieldFixedLength(8)] public string DrugObsoleteDate { get; set; }
+        [FieldFixedLength(14)] public string MedispanGpi { get; set; }
+        [FieldFixedLength(11)] public string DrugClassificationReservedForFutureUse { get; set; }
 
         #endregion
 
