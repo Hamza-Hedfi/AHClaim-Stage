@@ -134,7 +134,38 @@ namespace AHClaim
 
         #region Addtl. Patient Info Segment
 
-        // TODO 
+        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentSeparatorCharacter { get; set; }
+        [FieldFixedLength(2)] public string AddtlPatientInfoSegmentIdentifier { get; set; }
+        [FieldFixedLength(15)] public string CardholderLastName { get; set; }
+        [FieldFixedLength(12)] public string CardholderFirstName { get; set; }
+        [FieldFixedLength(1)] public string PatientMiddleInitial { get; set; }
+        [FieldFixedLength(3)] public string PatientNameSuffix { get; set; }
+        [FieldFixedLength(35)] public string AddressLine1 { get; set; }
+        [FieldFixedLength(35)] public string AddressLine2 { get; set; }
+        [FieldFixedLength(18)] public string City { get; set; }
+        [FieldFixedLength(2)] public string State { get; set; }
+        [FieldFixedLength(9)] public string ZipCode { get; set; }
+        [FieldFixedLength(10)] public string PhoneNumber { get; set; }
+        [FieldFixedLength(8)] public string EffectiveDate { get; set; }
+        [FieldFixedLength(8)] public string TerminationDate { get; set; }
+        [FieldFixedLength(8)] public string DateOfBirth { get; set; }
+        [FieldFixedLength(1)] public string GenderCode { get; set; }
+        [FieldFixedLength(1)] public string RelationshipCode { get; set; }
+        [FieldFixedLength(1)] public string CoverageCode { get; set; }
+        [FieldFixedLength(1)] public string AddtlPatientInfoReservedForFutureUse1 { get; set; }
+        [FieldFixedLength(1)] public string StudentFlag { get; set; }
+        [FieldFixedLength(1)] public string AddtlPatientInfoReservedForFutureUse2 { get; set; }
+        [FieldFixedLength(20)] public string LocationCode { get; set; }
+        [FieldFixedLength(35)] public string LocationName { get; set; }
+        [FieldFixedLength(1)] public string SecondaryCoverage { get; set; }
+        [FieldFixedLength(1)] public string PharmacyLockIn { get; set; }
+        [FieldFixedLength(1)] public string PhysicianLockIn { get; set; }
+        [FieldFixedLength(1)] public string TestMemberFlag { get; set; }
+        [FieldFixedLength(10)] public string EligibilityCreatedByUserId { get; set; }
+        [FieldFixedLength(8)] public string EligibilityCreatedDate { get; set; }
+        [FieldFixedLength(10)] public string EligibilityModifiedByUserId { get; set; }
+        [FieldFixedLength(8)] public string EligibilityModifiedDate { get; set; }
+        [FieldFixedLength(15)] public string AddtlPatientInfoReservedForFutureUse3 { get; set; }
 
         #endregion
 
