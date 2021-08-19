@@ -188,7 +188,16 @@ namespace AHClaim
 
         #region Prior Authorization Segment
 
-        // TODO 
+        [FieldFixedLength(1)]public string PriorAuthorizationSegmentSeparatorCharacter { get; set; }
+        [FieldFixedLength(2)]public string PriorAuthorizationSegmentIdentifier { get; set; }
+        [FieldFixedLength(2)]public string PaTypeSubmitted { get; set; }
+        [FieldFixedLength(11)]public string PaNumberSubmitted { get; set; }
+        [FieldFixedLength(11)]public string ActualPaNumberUsed { get; set; }
+        [FieldFixedLength(1)]public string PaTypeManualAuto { get; set; }
+        [FieldFixedLength(8)]public string PaEffectiveDate { get; set; }
+        [FieldFixedLength(8)]public string PaTerminationDate { get; set; }
+        [FieldFixedLength(35)]public string PaDescription { get; set; }
+        [FieldFixedLength(30)]public string PriorAuthorizationSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
