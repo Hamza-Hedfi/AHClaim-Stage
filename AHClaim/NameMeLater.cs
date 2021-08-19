@@ -230,7 +230,23 @@ namespace AHClaim
 
         #region Submitted DUR Override Segment
 
-        // TODO 
+        public string SubmittedDurOverrideSegmentSeparatorCharacter { get; set; }
+        public string SubmittedDurOverrideSegmentIdentifier { get; set; }
+        public string ReasonForServiceConflict1 { get; set; }
+        public string ProfessionalServiceCodeIntervention1 { get; set; }
+        public string ResultOfServiceCodeOutcome1 { get; set; }
+        public string ReasonForServiceConflict2 { get; set; }
+        public string ProfessionalServiceCodeIntervention2 { get; set; }
+        public string ResultOfServiceCodeOutcome2 { get; set; }
+        public string ReasonForServiceConflict3 { get; set; }
+        public string ProfessionalServiceCodeIntervention3 { get; set; }
+        public string ResultOfServiceCodeOutcome3 { get; set; }
+        public string ReasonForServiceConflict4 { get; set; }
+        public string ProfessionalServiceCodeIntervention4 { get; set; }
+        public string ResultOfServiceCodeOutcome4 { get; set; }
+        public string ReasonForServiceConflict5 { get; set; }
+        public string ProfessionalServiceCodeIntervention5 { get; set; }
+        public string ResultOfServiceCodeOutcome5 { get; set; }
 
         #endregion
 
