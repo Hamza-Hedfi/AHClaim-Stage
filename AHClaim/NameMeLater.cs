@@ -7,9 +7,9 @@ namespace AHClaim
     {
         #region Header Segment
 
-        [FieldFixedLength(2)] public string ClaimFileRecordIndicator { get; set; }
-        [FieldFixedLength(2)] public string VersionNumber { get; set; }
-        [FieldFixedLength(2)] public string MinorVersionNumber { get; set; }
+        [FieldFixedLength(2)] public string HeaderSegmentClaimFileRecordIndicator { get; set; }
+        [FieldFixedLength(2)] public string HeaderSegmentVersionNumber { get; set; }
+        [FieldFixedLength(2)] public string HeaderSegmentMinorVersionNumber { get; set; }
 
         #endregion
 
@@ -17,80 +17,80 @@ namespace AHClaim
 
         [FieldFixedLength(1)] public string ClaimSegmentSeparatorCharacter { get; set; }
         [FieldFixedLength(2)] public string ClaimSegmentIdentifier { get; set; }
-        [FieldFixedLength(20)] public string ClaimAuthorizationNumber { get; set; }
-        [FieldFixedLength(20)] public string OriginalClaimAuthorizationNumber { get; set; }
-        [FieldFixedLength(20)] public string ReversalClaimAuthorizationNumber { get; set; }
-        [FieldFixedLength(8)] public string DateProcessed { get; set; }
-        [FieldFixedLength(8)] public string TimeProcessed { get; set; }
-        [FieldFixedLength(1)] public string RejectionFlag { get; set; }
-        [FieldFixedLength(1)] public string DuplicateFlag { get; set; }
-        [FieldFixedLength(1)] public string ReversalFlag { get; set; }
-        [FieldFixedLength(15)] public string PharmacyNcpdpidNumber { get; set; }
-        [FieldFixedLength(35)] public string PharmacyName { get; set; }
-        [FieldFixedLength(4)] public string PharmacyChainNumber { get; set; }
-        [FieldFixedLength(35)] public string PharmacyChainName { get; set; }
-        [FieldFixedLength(1)] public string PharmacyType { get; set; }
-        [FieldFixedLength(3)] public string CarrierCode { get; set; }
-        [FieldFixedLength(3)] public string SubmittedCarrierCode { get; set; }
-        [FieldFixedLength(10)] public string TpaBrokerCode { get; set; }
-        [FieldFixedLength(35)] public string TpaBrokerName { get; set; }
-        [FieldFixedLength(10)] public string SponsorCode { get; set; }
-        [FieldFixedLength(35)] public string SponsorName { get; set; }
-        [FieldFixedLength(15)] public string GroupNumber { get; set; }
-        [FieldFixedLength(35)] public string GroupName { get; set; }
-        [FieldFixedLength(20)] public string CardholderIdNumber { get; set; }
-        [FieldFixedLength(3)] public string PatientPersonCode { get; set; }
-        [FieldFixedLength(15)] public string PatientLastName { get; set; }
-        [FieldFixedLength(12)] public string PatientFirstName { get; set; }
-        [FieldFixedLength(15)] public string PrescriberId { get; set; }
-        [FieldFixedLength(35)] public string PrescriberName { get; set; }
-        [FieldFixedLength(8)] public string DateFilled { get; set; }
-        [FieldFixedLength(8)] public string DateWritten { get; set; }
-        [FieldFixedLength(12)] public string RxNumber { get; set; }
-        [FieldFixedLength(2)] public string FillNumber { get; set; }
-        [FieldFixedLength(2)] public string NumberOfRefillsAuthorized { get; set; }
-        [FieldFixedLength(19)] public string DrugNdcNumber { get; set; }
-        [FieldFixedLength(35)] public string DrugName { get; set; }
-        [FieldFixedLength(10)] public string DrugStrengthDescription { get; set; }
-        [FieldFixedLength(10)] public string DrugDoseFormDescription { get; set; }
-        [FieldFixedLength(1)] public string SubmittedCompoundCode { get; set; }
-        [FieldFixedLength(11)] public string SubmittedRouteOfAdmin { get; set; }
-        [FieldFixedLength(1)] public string DrugProcessedSigCode { get; set; }
-        [FieldFixedLength(1)] public string DrugMonyCode { get; set; }
-        [FieldFixedLength(12)] public string QuantityDispensed { get; set; }
-        [FieldFixedLength(4)] public string DaysSupply { get; set; }
-        [FieldFixedLength(1)] public string DawCode { get; set; }
-        [FieldFixedLength(10)] public string PlanIngredientCost { get; set; }
-        [FieldFixedLength(10)] public string PlanDispensingFee { get; set; }
-        [FieldFixedLength(10)] public string PlanSalesTax { get; set; }
-        [FieldFixedLength(10)] public string IncentiveFee { get; set; }
-        [FieldFixedLength(10)] public string ClaimSegmentProcessorFee { get; set; }
-        [FieldFixedLength(10)] public string PlanGrossAmount { get; set; }
-        [FieldFixedLength(10)] public string OtherPayerAmount { get; set; }
-        [FieldFixedLength(10)] public string TotalPatientPayAmount { get; set; }
-        [FieldFixedLength(10)] public string PlanPharmacyAmount { get; set; }
-        [FieldFixedLength(3)] public string PlanBasisOfCost { get; set; }
-        [FieldFixedLength(3)] public string PlanBasisOfReimbursement { get; set; }
-        [FieldFixedLength(10)] public string CalculatedAwp { get; set; }
-        [FieldFixedLength(2)] public string SubmissionClarificationCode { get; set; }
-        [FieldFixedLength(2)] public string OtherCoverageCode { get; set; }
-        [FieldFixedLength(4)] public string MedicaidCode { get; set; }
-        [FieldFixedLength(35)] public string MedicaidName { get; set; }
-        [FieldFixedLength(15)] public string CouponNumber { get; set; }
-        [FieldFixedLength(15)] public string PharmacyNationalProviderId { get; set; }
-        [FieldFixedLength(2)] public string PharmacyIdQualifiersubmitted { get; set; }
-        [FieldFixedLength(10)] public string CalculatedFedmac { get; set; }
-        [FieldFixedLength(1)] public string CalculatedAwpSource { get; set; }
-        [FieldFixedLength(10)] public string CalculatedWac { get; set; }
-        [FieldFixedLength(3)] public string CouponActualUseNumber { get; set; }
-        [FieldFixedLength(1)] public string ProcessedSingleSourceGenericIndicator { get; set; }
-        [FieldFixedLength(20)] public string ManufacturerName { get; set; }
-        [FieldFixedLength(12)] public string AdjudicatedUnitPrice { get; set; }
-        [FieldFixedLength(10)] public string PreCopayRoundingAmount { get; set; }
-        [FieldFixedLength(1)] public string NumberOfCouponUses { get; set; }
-        [FieldFixedLength(3)] public string CombinedCouponUses { get; set; }
-        [FieldFixedLength(20)] public string RejectReprocessOriginalAuthorizationNumber { get; set; }
-        [FieldFixedLength(119)] public string ReservedForFutureUse { get; set; }
+        [FieldFixedLength(20)] public string ClaimSegmentClaimAuthorizationNumber { get; set; }
+        [FieldFixedLength(20)] public string ClaimSegmentOriginalClaimAuthorizationNumber { get; set; }
+        [FieldFixedLength(20)] public string ClaimSegmentReversalClaimAuthorizationNumber { get; set; }
+        [FieldFixedLength(8)] public string ClaimSegmentDateProcessed { get; set; }
+        [FieldFixedLength(8)] public string ClaimSegmentTimeProcessed { get; set; }
+        [FieldFixedLength(1)] public string ClaimSegmentRejectionFlag { get; set; }
+        [FieldFixedLength(1)] public string ClaimSegmentDuplicateFlag { get; set; }
+        [FieldFixedLength(1)] public string ClaimSegmentReversalFlag { get; set; }
+        [FieldFixedLength(15)] public string ClaimSegmentPharmacyNcpdpidNumber { get; set; }
+        [FieldFixedLength(35)] public string ClaimSegmentPharmacyName { get; set; }
+        [FieldFixedLength(4)] public string ClaimSegmentPharmacyChainNumber { get; set; }
+        [FieldFixedLength(35)] public string ClaimSegmentPharmacyChainName { get; set; }
+        [FieldFixedLength(1)] public string ClaimSegmentPharmacyType { get; set; }
+        [FieldFixedLength(3)] public string ClaimSegmentCarrierCode { get; set; }
+        [FieldFixedLength(3)] public string ClaimSegmentSubmittedCarrierCode { get; set; }
+        [FieldFixedLength(10)] public string ClaimSegmentTpaBrokerCode { get; set; }
+        [FieldFixedLength(35)] public string ClaimSegmentTpaBrokerName { get; set; }
+        [FieldFixedLength(10)] public string ClaimSegmentSponsorCode { get; set; }
+        [FieldFixedLength(35)] public string ClaimSegmentSponsorName { get; set; }
+        [FieldFixedLength(15)] public string ClaimSegmentGroupNumber { get; set; }
+        [FieldFixedLength(35)] public string ClaimSegmentGroupName { get; set; }
+        [FieldFixedLength(20)] public string ClaimSegmentCardholderIdNumber { get; set; }
+        [FieldFixedLength(3)] public string ClaimSegmentPatientPersonCode { get; set; }
+        [FieldFixedLength(15)] public string ClaimSegmentPatientLastName { get; set; }
+        [FieldFixedLength(12)] public string ClaimSegmentPatientFirstName { get; set; }
+        [FieldFixedLength(15)] public string ClaimSegmentPrescriberId { get; set; }
+        [FieldFixedLength(35)] public string ClaimSegmentPrescriberName { get; set; }
+        [FieldFixedLength(8)] public string ClaimSegmentDateFilled { get; set; }
+        [FieldFixedLength(8)] public string ClaimSegmentDateWritten { get; set; }
+        [FieldFixedLength(12)] public string ClaimSegmentRxNumber { get; set; }
+        [FieldFixedLength(2)] public string ClaimSegmentFillNumber { get; set; }
+        [FieldFixedLength(2)] public string ClaimSegmentNumberOfRefillsAuthorized { get; set; }
+        [FieldFixedLength(19)] public string ClaimSegmentDrugNdcNumber { get; set; }
+        [FieldFixedLength(35)] public string ClaimSegmentDrugName { get; set; }
+        [FieldFixedLength(10)] public string ClaimSegmentDrugStrengthDescription { get; set; }
+        [FieldFixedLength(10)] public string ClaimSegmentDrugDoseFormDescription { get; set; }
+        [FieldFixedLength(1)] public string ClaimSegmentSubmittedCompoundCode { get; set; }
+        [FieldFixedLength(11)] public string ClaimSegmentSubmittedRouteOfAdmin { get; set; }
+        [FieldFixedLength(1)] public string ClaimSegmentDrugProcessedSigCode { get; set; }
+        [FieldFixedLength(1)] public string ClaimSegmentDrugMonyCode { get; set; }
+        [FieldFixedLength(12)] public string ClaimSegmentQuantityDispensed { get; set; }
+        [FieldFixedLength(4)] public string ClaimSegmentDaysSupply { get; set; }
+        [FieldFixedLength(1)] public string ClaimSegmentDawCode { get; set; }
+        [FieldFixedLength(10)] public string ClaimSegmentPlanIngredientCost { get; set; }
+        [FieldFixedLength(10)] public string ClaimSegmentPlanDispensingFee { get; set; }
+        [FieldFixedLength(10)] public string ClaimSegmentPlanSalesTax { get; set; }
+        [FieldFixedLength(10)] public string ClaimSegmentIncentiveFee { get; set; }
+        [FieldFixedLength(10)] public string ClaimSegmentClaimSegmentProcessorFee { get; set; }
+        [FieldFixedLength(10)] public string ClaimSegmentPlanGrossAmount { get; set; }
+        [FieldFixedLength(10)] public string ClaimSegmentOtherPayerAmount { get; set; }
+        [FieldFixedLength(10)] public string ClaimSegmentTotalPatientPayAmount { get; set; }
+        [FieldFixedLength(10)] public string ClaimSegmentPlanPharmacyAmount { get; set; }
+        [FieldFixedLength(3)] public string ClaimSegmentPlanBasisOfCost { get; set; }
+        [FieldFixedLength(3)] public string ClaimSegmentPlanBasisOfReimbursement { get; set; }
+        [FieldFixedLength(10)] public string ClaimSegmentCalculatedAwp { get; set; }
+        [FieldFixedLength(2)] public string ClaimSegmentSubmissionClarificationCode { get; set; }
+        [FieldFixedLength(2)] public string ClaimSegmentOtherCoverageCode { get; set; }
+        [FieldFixedLength(4)] public string ClaimSegmentMedicaidCode { get; set; }
+        [FieldFixedLength(35)] public string ClaimSegmentMedicaidName { get; set; }
+        [FieldFixedLength(15)] public string ClaimSegmentCouponNumber { get; set; }
+        [FieldFixedLength(15)] public string ClaimSegmentPharmacyNationalProviderId { get; set; }
+        [FieldFixedLength(2)] public string ClaimSegmentPharmacyIdQualifiersubmitted { get; set; }
+        [FieldFixedLength(10)] public string ClaimSegmentCalculatedFedmac { get; set; }
+        [FieldFixedLength(1)] public string ClaimSegmentCalculatedAwpSource { get; set; }
+        [FieldFixedLength(10)] public string ClaimSegmentCalculatedWac { get; set; }
+        [FieldFixedLength(3)] public string ClaimSegmentCouponActualUseNumber { get; set; }
+        [FieldFixedLength(1)] public string ClaimSegmentProcessedSingleSourceGenericIndicator { get; set; }
+        [FieldFixedLength(20)] public string ClaimSegmentManufacturerName { get; set; }
+        [FieldFixedLength(12)] public string ClaimSegmentAdjudicatedUnitPrice { get; set; }
+        [FieldFixedLength(10)] public string ClaimSegmentPreCopayRoundingAmount { get; set; }
+        [FieldFixedLength(1)] public string ClaimSegmentNumberOfCouponUses { get; set; }
+        [FieldFixedLength(3)] public string ClaimSegmentCombinedCouponUses { get; set; }
+        [FieldFixedLength(20)] public string ClaimSegmentRejectReprocessOriginalAuthorizationNumber { get; set; }
+        [FieldFixedLength(119)] public string ClaimSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
@@ -98,36 +98,36 @@ namespace AHClaim
 
         [FieldFixedLength(1)] public string ClaimIndicatorSegmentSeparatorCharacter { get; set; }
         [FieldFixedLength(2)] public string ClaimIndicatorSegmentIdentifier { get; set; }
-        [FieldFixedLength(1)] public string PaperClaimFlag { get; set; }
-        [FieldFixedLength(1)] public string DirectReimbursementFlag { get; set; }
-        [FieldFixedLength(1)] public string TestClaimFlag { get; set; }
-        [FieldFixedLength(1)] public string BatchProcessedFlag { get; set; }
-        [FieldFixedLength(1)] public string OtherProcessorFlag { get; set; }
-        [FieldFixedLength(1)] public string FormularyDrugFlag { get; set; }
-        [FieldFixedLength(1)] public string NetworkPharmacyFlag { get; set; }
-        [FieldFixedLength(1)] public string NetworkPhysicianFlag { get; set; }
-        [FieldFixedLength(1)] public string ShoeboxClaimFlag { get; set; }
-        [FieldFixedLength(1)] public string ProductQtyClaimFlag { get; set; }
-        [FieldFixedLength(1)] public string StarterDoseFlag { get; set; }
-        [FieldFixedLength(1)] public string PriorAuthFlag { get; set; }
-        [FieldFixedLength(1)] public string DurFlag { get; set; }
-        [FieldFixedLength(1)] public string DurOverrideFlag { get; set; }
-        [FieldFixedLength(1)] public string IgCopayFlag { get; set; }
-        [FieldFixedLength(1)] public string MultiIngredCompoundFlag { get; set; }
-        [FieldFixedLength(1)] public string PartialFillDispensingStatus { get; set; }
-        [FieldFixedLength(1)] public string MedicaidFlag { get; set; }
-        [FieldFixedLength(1)] public string ForceUcFlag { get; set; }
-        [FieldFixedLength(1)] public string NdcRemapped { get; set; }
-        [FieldFixedLength(1)] public string ForcePharmacyDue { get; set; }
-        [FieldFixedLength(1)] public string AdditionalLowerOfStateRateUsed { get; set; }
-        [FieldFixedLength(1)] public string PosMedicaidFlag { get; set; }
-        [FieldFixedLength(1)] public string AlternateProcessingBypass { get; set; }
-        [FieldFixedLength(1)] public string TaxExemptIndicator { get; set; }
-        [FieldFixedLength(1)] public string AlternateDrugRecord { get; set; }
-        [FieldFixedLength(1)] public string ClaimRoundingUsed { get; set; }
-        [FieldFixedLength(1)] public string MedicalClaimIndicator { get; set; }
-        [FieldFixedLength(1)] public string CompensableClaimIndicator { get; set; }
-        [FieldFixedLength(1)] public string DataFeedTransaction { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentPaperClaimFlag { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentDirectReimbursementFlag { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentTestClaimFlag { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentBatchProcessedFlag { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentOtherProcessorFlag { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentFormularyDrugFlag { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentNetworkPharmacyFlag { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentNetworkPhysicianFlag { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentShoeboxClaimFlag { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentProductQtyClaimFlag { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentStarterDoseFlag { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentPriorAuthFlag { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentDurFlag { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentDurOverrideFlag { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentIgCopayFlag { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentMultiIngredCompoundFlag { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentPartialFillDispensingStatus { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentMedicaidFlag { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentForceUcFlag { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentNdcRemapped { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentForcePharmacyDue { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentAdditionalLowerOfStateRateUsed { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentPosMedicaidFlag { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentAlternateProcessingBypass { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentTaxExemptIndicator { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentAlternateDrugRecord { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentClaimRoundingUsed { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentMedicalClaimIndicator { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentCompensableClaimIndicator { get; set; }
+        [FieldFixedLength(1)] public string ClaimIndicatorSegmentDataFeedTransaction { get; set; }
         [FieldFixedLength(27)] public string ClaimIndicatorSegmentReservedForFutureUse { get; set; }
 
         #endregion
@@ -136,35 +136,35 @@ namespace AHClaim
 
         [FieldFixedLength(1)] public string AddtlPatientInfoSegmentSeparatorCharacter { get; set; }
         [FieldFixedLength(2)] public string AddtlPatientInfoSegmentIdentifier { get; set; }
-        [FieldFixedLength(15)] public string CardholderLastName { get; set; }
-        [FieldFixedLength(12)] public string CardholderFirstName { get; set; }
-        [FieldFixedLength(1)] public string PatientMiddleInitial { get; set; }
-        [FieldFixedLength(3)] public string PatientNameSuffix { get; set; }
+        [FieldFixedLength(15)] public string AddtlPatientInfoSegmentCardholderLastName { get; set; }
+        [FieldFixedLength(12)] public string AddtlPatientInfoSegmentCardholderFirstName { get; set; }
+        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentPatientMiddleInitial { get; set; }
+        [FieldFixedLength(3)] public string AddtlPatientInfoSegmentPatientNameSuffix { get; set; }
         [FieldFixedLength(35)] public string AddtlPatientInfoSegmentAddressLine1 { get; set; }
         [FieldFixedLength(35)] public string AddtlPatientInfoSegmentAddressLine2 { get; set; }
         [FieldFixedLength(18)] public string AddtlPatientInfoSegmentCity { get; set; }
         [FieldFixedLength(2)] public string AddtlPatientInfoSegmentState { get; set; }
         [FieldFixedLength(9)] public string AddtlPatientInfoSegmentZipCode { get; set; }
         [FieldFixedLength(10)] public string AddtlPatientInfoSegmentPhoneNumber { get; set; }
-        [FieldFixedLength(8)] public string EffectiveDate { get; set; }
-        [FieldFixedLength(8)] public string TerminationDate { get; set; }
-        [FieldFixedLength(8)] public string DateOfBirth { get; set; }
-        [FieldFixedLength(1)] public string GenderCode { get; set; }
-        [FieldFixedLength(1)] public string RelationshipCode { get; set; }
-        [FieldFixedLength(1)] public string CoverageCode { get; set; }
-        [FieldFixedLength(1)] public string AddtlPatientInfoReservedForFutureUse1 { get; set; }
-        [FieldFixedLength(1)] public string StudentFlag { get; set; }
-        [FieldFixedLength(1)] public string AddtlPatientInfoReservedForFutureUse2 { get; set; }
-        [FieldFixedLength(20)] public string LocationCode { get; set; }
-        [FieldFixedLength(35)] public string LocationName { get; set; }
-        [FieldFixedLength(1)] public string SecondaryCoverage { get; set; }
-        [FieldFixedLength(1)] public string PharmacyLockIn { get; set; }
-        [FieldFixedLength(1)] public string PhysicianLockIn { get; set; }
-        [FieldFixedLength(1)] public string TestMemberFlag { get; set; }
-        [FieldFixedLength(10)] public string EligibilityCreatedByUserId { get; set; }
-        [FieldFixedLength(8)] public string EligibilityCreatedDate { get; set; }
-        [FieldFixedLength(10)] public string EligibilityModifiedByUserId { get; set; }
-        [FieldFixedLength(8)] public string EligibilityModifiedDate { get; set; }
+        [FieldFixedLength(8)] public string AddtlPatientInfoSegmentEffectiveDate { get; set; }
+        [FieldFixedLength(8)] public string AddtlPatientInfoSegmentTerminationDate { get; set; }
+        [FieldFixedLength(8)] public string AddtlPatientInfoSegmentDateOfBirth { get; set; }
+        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentGenderCode { get; set; }
+        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentRelationshipCode { get; set; }
+        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentCoverageCode { get; set; }
+        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentReservedForFutureUse1 { get; set; }
+        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentStudentFlag { get; set; }
+        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentReservedForFutureUse2 { get; set; }
+        [FieldFixedLength(20)] public string AddtlPatientInfoSegmentLocationCode { get; set; }
+        [FieldFixedLength(35)] public string AddtlPatientInfoSegmentLocationName { get; set; }
+        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentSecondaryCoverage { get; set; }
+        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentPharmacyLockIn { get; set; }
+        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentPhysicianLockIn { get; set; }
+        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentTestMemberFlag { get; set; }
+        [FieldFixedLength(10)] public string AddtlPatientInfoSegmentEligibilityCreatedByUserId { get; set; }
+        [FieldFixedLength(8)] public string AddtlPatientInfoSegmentEligibilityCreatedDate { get; set; }
+        [FieldFixedLength(10)] public string AddtlPatientInfoSegmentEligibilityModifiedByUserId { get; set; }
+        [FieldFixedLength(8)] public string AddtlPatientInfoSegmentEligibilityModifiedDate { get; set; }
         [FieldFixedLength(15)] public string AddtlPatientInfoReservedForFutureUse3 { get; set; }
 
         #endregion
@@ -190,14 +190,14 @@ namespace AHClaim
 
         [FieldFixedLength(1)] public string PriorAuthorizationSegmentSeparatorCharacter { get; set; }
         [FieldFixedLength(2)] public string PriorAuthorizationSegmentIdentifier { get; set; }
-        [FieldFixedLength(2)] public string PaTypeSubmitted { get; set; }
-        [FieldFixedLength(11)] public string PaNumberSubmitted { get; set; }
-        [FieldFixedLength(11)] public string ActualPaNumberUsed { get; set; }
-        [FieldFixedLength(1)] public string PaTypeManualAuto { get; set; }
-        [FieldFixedLength(8)] public string PaEffectiveDate { get; set; }
-        [FieldFixedLength(8)] public string PaTerminationDate { get; set; }
-        [FieldFixedLength(35)] public string PaDescription { get; set; }
-        [FieldFixedLength(30)] public string PriorAuthorizationSegmentReservedForFutureUse { get; set; }
+        [FieldFixedLength(2)] public string PriorAuthorizationSegmentPaTypeSubmitted { get; set; }
+        [FieldFixedLength(11)] public string PriorAuthorizationSegmentPaNumberSubmitted { get; set; }
+        [FieldFixedLength(11)] public string PriorAuthorizationSegmentActualPaNumberUsed { get; set; }
+        [FieldFixedLength(1)] public string PriorAuthorizationSegmentPaTypeManualAuto { get; set; }
+        [FieldFixedLength(8)] public string PriorAuthorizationSegmentPaEffectiveDate { get; set; }
+        [FieldFixedLength(8)] public string PriorAuthorizationSegmentPaTerminationDate { get; set; }
+        [FieldFixedLength(35)] public string PriorAuthorizationSegmentPaDescription { get; set; }
+        [FieldFixedLength(30)] public string PriorAuthorizationSegmentPriorAuthorizationSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
@@ -205,26 +205,26 @@ namespace AHClaim
 
         [FieldFixedLength(1)] public string DurSegmentSegmentSeparatorCharacter { get; set; }
         [FieldFixedLength(2)] public string DurSegmentSegmentIdentifier { get; set; }
-        [FieldFixedLength(2)] public string Dur1ConflictCode { get; set; }
-        [FieldFixedLength(1)] public string Dur1SeverityIndex { get; set; }
-        [FieldFixedLength(1)] public string Dur1HitDisposition { get; set; }
-        [FieldFixedLength(20)] public string Dur1ConflictingAuthorizationNumber { get; set; }
-        [FieldFixedLength(2)] public string Dur2ConflictCode { get; set; }
-        [FieldFixedLength(1)] public string Dur2SeverityIndex { get; set; }
-        [FieldFixedLength(1)] public string Dur2HitDisposition { get; set; }
-        [FieldFixedLength(20)] public string Dur2ConflictingAuthorizationNumber { get; set; }
-        [FieldFixedLength(2)] public string Dur3ConflictCode { get; set; }
-        [FieldFixedLength(1)] public string Dur3SeverityIndex { get; set; }
-        [FieldFixedLength(1)] public string Dur3HitDisposition { get; set; }
-        [FieldFixedLength(20)] public string Dur3ConflictingAuthorizationNumber { get; set; }
-        [FieldFixedLength(2)] public string Dur4ConflictCode { get; set; }
-        [FieldFixedLength(1)] public string Dur4SeverityIndex { get; set; }
-        [FieldFixedLength(1)] public string Dur4HitDisposition { get; set; }
-        [FieldFixedLength(20)] public string Dur4ConflictingAuthorizationNumber { get; set; }
-        [FieldFixedLength(2)] public string Dur5ConflictCode { get; set; }
-        [FieldFixedLength(1)] public string Dur5SeverityIndex { get; set; }
-        [FieldFixedLength(1)] public string Dur5HitDisposition { get; set; }
-        [FieldFixedLength(20)] public string Dur5ConflictingAuthorizationNumber { get; set; }
+        [FieldFixedLength(2)] public string DurSegmentDur1ConflictCode { get; set; }
+        [FieldFixedLength(1)] public string DurSegmentDur1SeverityIndex { get; set; }
+        [FieldFixedLength(1)] public string DurSegmentDur1HitDisposition { get; set; }
+        [FieldFixedLength(20)] public string DurSegmentDur1ConflictingAuthorizationNumber { get; set; }
+        [FieldFixedLength(2)] public string DurSegmentDur2ConflictCode { get; set; }
+        [FieldFixedLength(1)] public string DurSegmentDur2SeverityIndex { get; set; }
+        [FieldFixedLength(1)] public string DurSegmentDur2HitDisposition { get; set; }
+        [FieldFixedLength(20)] public string DurSegmentDur2ConflictingAuthorizationNumber { get; set; }
+        [FieldFixedLength(2)] public string DurSegmentDur3ConflictCode { get; set; }
+        [FieldFixedLength(1)] public string DurSegmentDur3SeverityIndex { get; set; }
+        [FieldFixedLength(1)] public string DurSegmentDur3HitDisposition { get; set; }
+        [FieldFixedLength(20)] public string DurSegmentDur3ConflictingAuthorizationNumber { get; set; }
+        [FieldFixedLength(2)] public string DurSegmentDur4ConflictCode { get; set; }
+        [FieldFixedLength(1)] public string DurSegmentDur4SeverityIndex { get; set; }
+        [FieldFixedLength(1)] public string DurSegmentDur4HitDisposition { get; set; }
+        [FieldFixedLength(20)] public string DurSegmentDur4ConflictingAuthorizationNumber { get; set; }
+        [FieldFixedLength(2)] public string DurSegmentDur5ConflictCode { get; set; }
+        [FieldFixedLength(1)] public string DurSegmentDur5SeverityIndex { get; set; }
+        [FieldFixedLength(1)] public string DurSegmentDur5HitDisposition { get; set; }
+        [FieldFixedLength(20)] public string DurSegmentDur5ConflictingAuthorizationNumber { get; set; }
 
         #endregion
 
@@ -232,21 +232,21 @@ namespace AHClaim
 
         public string SubmittedDurOverrideSegmentSeparatorCharacter { get; set; }
         public string SubmittedDurOverrideSegmentIdentifier { get; set; }
-        public string ReasonForServiceConflict1 { get; set; }
-        public string ProfessionalServiceCodeIntervention1 { get; set; }
-        public string ResultOfServiceCodeOutcome1 { get; set; }
-        public string ReasonForServiceConflict2 { get; set; }
-        public string ProfessionalServiceCodeIntervention2 { get; set; }
-        public string ResultOfServiceCodeOutcome2 { get; set; }
-        public string ReasonForServiceConflict3 { get; set; }
-        public string ProfessionalServiceCodeIntervention3 { get; set; }
-        public string ResultOfServiceCodeOutcome3 { get; set; }
-        public string ReasonForServiceConflict4 { get; set; }
-        public string ProfessionalServiceCodeIntervention4 { get; set; }
-        public string ResultOfServiceCodeOutcome4 { get; set; }
-        public string ReasonForServiceConflict5 { get; set; }
-        public string ProfessionalServiceCodeIntervention5 { get; set; }
-        public string ResultOfServiceCodeOutcome5 { get; set; }
+        public string SubmittedDurOverrideSegmentReasonForServiceConflict1 { get; set; }
+        public string SubmittedDurOverrideSegmentProfessionalServiceCodeIntervention1 { get; set; }
+        public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome1 { get; set; }
+        public string SubmittedDurOverrideSegmentReasonForServiceConflict2 { get; set; }
+        public string SubmittedDurOverrideSegmentProfessionalServiceCodeIntervention2 { get; set; }
+        public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome2 { get; set; }
+        public string SubmittedDurOverrideSegmentReasonForServiceConflict3 { get; set; }
+        public string SubmittedDurOverrideSegmentProfessionalServiceCodeIntervention3 { get; set; }
+        public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome3 { get; set; }
+        public string SubmittedDurOverrideSegmentReasonForServiceConflict4 { get; set; }
+        public string SubmittedDurOverrideSegmentProfessionalServiceCodeIntervention4 { get; set; }
+        public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome4 { get; set; }
+        public string SubmittedDurOverrideSegmentReasonForServiceConflict5 { get; set; }
+        public string SubmittedDurOverrideSegmentProfessionalServiceCodeIntervention5 { get; set; }
+        public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome5 { get; set; }
 
         #endregion
 
@@ -254,29 +254,29 @@ namespace AHClaim
 
         [FieldFixedLength(1)] public string DrugClassificationSegmentSeparatorCharacter { get; set; }
         [FieldFixedLength(2)] public string DrugClassificationSegmentIdentifier { get; set; }
-        [FieldFixedLength(1)] public string CategoryCode { get; set; }
-        [FieldFixedLength(1)] public string ClassCode { get; set; }
-        [FieldFixedLength(1)] public string Gc1Code { get; set; }
-        [FieldFixedLength(2)] public string Gc2Code { get; set; }
-        [FieldFixedLength(3)] public string Gc3Code { get; set; }
-        [FieldFixedLength(4)] public string Gc4Code { get; set; }
-        [FieldFixedLength(3)] public string SpecificTherapeuticClass { get; set; }
-        [FieldFixedLength(5)] public string GcnCode { get; set; }
-        [FieldFixedLength(6)] public string GcnSequenceNumber { get; set; }
-        [FieldFixedLength(2)] public string StandardTherapeuticClass { get; set; }
-        [FieldFixedLength(2)] public string GenericTherapeuticClass { get; set; }
-        [FieldFixedLength(6)] public string AhfsTherapeuticClass { get; set; }
-        [FieldFixedLength(3)] public string OrangeBookCode { get; set; }
-        [FieldFixedLength(1)] public string RouteOfAdministrationCode { get; set; }
-        [FieldFixedLength(1)] public string DrugFormCodeUnitOfMeasure { get; set; }
-        [FieldFixedLength(1)] public string DeaCode { get; set; }
-        [FieldFixedLength(1)] public string MaintenanceDrugIndicator { get; set; }
-        [FieldFixedLength(1)] public string UnitOfUseIndicator { get; set; }
-        [FieldFixedLength(1)] public string RepackageIndicator { get; set; }
-        [FieldFixedLength(1)] public string UnitDoseIndicator { get; set; }
-        [FieldFixedLength(1)] public string DesiDrugIndicator { get; set; }
-        [FieldFixedLength(8)] public string DrugObsoleteDate { get; set; }
-        [FieldFixedLength(14)] public string MedispanGpi { get; set; }
+        [FieldFixedLength(1)] public string DrugClassificationSegmentCategoryCode { get; set; }
+        [FieldFixedLength(1)] public string DrugClassificationSegmentClassCode { get; set; }
+        [FieldFixedLength(1)] public string DrugClassificationSegmentGc1Code { get; set; }
+        [FieldFixedLength(2)] public string DrugClassificationSegmentGc2Code { get; set; }
+        [FieldFixedLength(3)] public string DrugClassificationSegmentGc3Code { get; set; }
+        [FieldFixedLength(4)] public string DrugClassificationSegmentGc4Code { get; set; }
+        [FieldFixedLength(3)] public string DrugClassificationSegmentSpecificTherapeuticClass { get; set; }
+        [FieldFixedLength(5)] public string DrugClassificationSegmentGcnCode { get; set; }
+        [FieldFixedLength(6)] public string DrugClassificationSegmentGcnSequenceNumber { get; set; }
+        [FieldFixedLength(2)] public string DrugClassificationSegmentStandardTherapeuticClass { get; set; }
+        [FieldFixedLength(2)] public string DrugClassificationSegmentGenericTherapeuticClass { get; set; }
+        [FieldFixedLength(6)] public string DrugClassificationSegmentAhfsTherapeuticClass { get; set; }
+        [FieldFixedLength(3)] public string DrugClassificationSegmentOrangeBookCode { get; set; }
+        [FieldFixedLength(1)] public string DrugClassificationSegmentRouteOfAdministrationCode { get; set; }
+        [FieldFixedLength(1)] public string DrugClassificationSegmentDrugFormCodeUnitOfMeasure { get; set; }
+        [FieldFixedLength(1)] public string DrugClassificationSegmentDeaCode { get; set; }
+        [FieldFixedLength(1)] public string DrugClassificationSegmentMaintenanceDrugIndicator { get; set; }
+        [FieldFixedLength(1)] public string DrugClassificationSegmentUnitOfUseIndicator { get; set; }
+        [FieldFixedLength(1)] public string DrugClassificationSegmentRepackageIndicator { get; set; }
+        [FieldFixedLength(1)] public string DrugClassificationSegmentUnitDoseIndicator { get; set; }
+        [FieldFixedLength(1)] public string DrugClassificationSegmentDesiDrugIndicator { get; set; }
+        [FieldFixedLength(8)] public string DrugClassificationSegmentDrugObsoleteDate { get; set; }
+        [FieldFixedLength(14)] public string DrugClassificationSegmentMedispanGpi { get; set; }
         [FieldFixedLength(11)] public string DrugClassificationReservedForFutureUse { get; set; }
 
         #endregion
@@ -285,24 +285,24 @@ namespace AHClaim
 
         [FieldFixedLength(1)] public string PharmacySegmentSeparatorCharacter { get; set; }
         [FieldFixedLength(2)] public string PharmacySegmentIdentifier { get; set; }
-        [FieldFixedLength(35)] public string PhysicalAddressLine1 { get; set; }
-        [FieldFixedLength(35)] public string PhysicalAddressLine2 { get; set; }
-        [FieldFixedLength(18)] public string PhysicalCity { get; set; }
-        [FieldFixedLength(2)] public string PhysicalState { get; set; }
-        [FieldFixedLength(9)] public string PhysicalZipCode { get; set; }
+        [FieldFixedLength(35)] public string PharmacySegmentPhysicalAddressLine1 { get; set; }
+        [FieldFixedLength(35)] public string PharmacySegmentPhysicalAddressLine2 { get; set; }
+        [FieldFixedLength(18)] public string PharmacySegmentPhysicalCity { get; set; }
+        [FieldFixedLength(2)] public string PharmacySegmentPhysicalState { get; set; }
+        [FieldFixedLength(9)] public string PharmacySegmentPhysicalZipCode { get; set; }
         [FieldFixedLength(10)] public string PharmacySegmentPhoneNumber { get; set; }
         [FieldFixedLength(10)] public string PharmacySegmentReservedForFutureUse1 { get; set; }
-        [FieldFixedLength(10)] public string FaxNumber { get; set; }
-        [FieldFixedLength(12)] public string FederalLicenseNumber { get; set; }
-        [FieldFixedLength(15)] public string FederalTaxIdNumber { get; set; }
-        [FieldFixedLength(20)] public string StateLicenseNumber { get; set; }
-        [FieldFixedLength(15)] public string StateTaxIdNumber { get; set; }
-        [FieldFixedLength(20)] public string StateMedicaidNumber { get; set; }
-        [FieldFixedLength(10)] public string PharmacyStoreNumber { get; set; }
-        [FieldFixedLength(1)] public string TestPharmacyFlag { get; set; }
-        [FieldFixedLength(2)] public string PharmacistIdQualifier { get; set; }
-        [FieldFixedLength(15)] public string PharmacistId { get; set; }
-        [FieldFixedLength(2)] public string PrimaryPharmacyDispenserType { get; set; }
+        [FieldFixedLength(10)] public string PharmacySegmentFaxNumber { get; set; }
+        [FieldFixedLength(12)] public string PharmacySegmentFederalLicenseNumber { get; set; }
+        [FieldFixedLength(15)] public string PharmacySegmentFederalTaxIdNumber { get; set; }
+        [FieldFixedLength(20)] public string PharmacySegmentStateLicenseNumber { get; set; }
+        [FieldFixedLength(15)] public string PharmacySegmentStateTaxIdNumber { get; set; }
+        [FieldFixedLength(20)] public string PharmacySegmentStateMedicaidNumber { get; set; }
+        [FieldFixedLength(10)] public string PharmacySegmentPharmacyStoreNumber { get; set; }
+        [FieldFixedLength(1)] public string PharmacySegmentTestPharmacyFlag { get; set; }
+        [FieldFixedLength(2)] public string PharmacySegmentPharmacistIdQualifier { get; set; }
+        [FieldFixedLength(15)] public string PharmacySegmentPharmacistId { get; set; }
+        [FieldFixedLength(2)] public string PharmacySegmentPrimaryPharmacyDispenserType { get; set; }
         [FieldFixedLength(6)] public string PharmacySegmentReservedForFutureUse2 { get; set; }
 
         #endregion
@@ -311,8 +311,8 @@ namespace AHClaim
 
         [FieldFixedLength(1)] public string PrescriberSegmentSeparatorCharacter { get; set; }
         [FieldFixedLength(2)] public string PrescriberSegmentIdentifier { get; set; }
-        [FieldFixedLength(1)] public string BusinessActivityCode { get; set; }
-        [FieldFixedLength(12)] public string DrugSchedules { get; set; }
+        [FieldFixedLength(1)] public string PrescriberSegmentBusinessActivityCode { get; set; }
+        [FieldFixedLength(12)] public string PrescriberSegmentDrugSchedules { get; set; }
         [FieldFixedLength(40)] public string PrescriberSegmentAddressLine1 { get; set; }
         [FieldFixedLength(40)] public string PrescriberSegmentAddressLine2 { get; set; }
         [FieldFixedLength(40)] public string PrescriberSegmentAddressLine3 { get; set; }
@@ -320,9 +320,9 @@ namespace AHClaim
         [FieldFixedLength(24)] public string PrescriberSegmentCity { get; set; }
         [FieldFixedLength(2)] public string PrescriberSegmentState { get; set; }
         [FieldFixedLength(5)] public string PrescriberSegmentZipCode { get; set; }
-        [FieldFixedLength(9)] public string Dea { get; set; }
-        [FieldFixedLength(10)] public string Npi { get; set; }
-        [FieldFixedLength(2)] public string PrescriberIdQualifier { get; set; }
+        [FieldFixedLength(9)] public string PrescriberSegmentDea { get; set; }
+        [FieldFixedLength(10)] public string PrescriberSegmentNpi { get; set; }
+        [FieldFixedLength(2)] public string PrescriberSegmentPrescriberIdQualifier { get; set; }
         [FieldFixedLength(4)] public string PrescriberSegmentReservedForFutureUse { get; set; }
 
         #endregion
@@ -385,20 +385,22 @@ namespace AHClaim
 
         [FieldFixedLength(1)] public string PatientPaySegmentSeparatorCharacter { get; set; }
         [FieldFixedLength(2)] public string PatientPaySegmentIdentifier { get; set; }
-        [FieldFixedLength(10)] public string AmtAttributedToProcessorFee { get; set; }
-        [FieldFixedLength(10)] public string AmountOfCoinsurance { get; set; }
-        [FieldFixedLength(2)] public string ReservedForFutureDefinedField { get; set; }
+        [FieldFixedLength(10)] public string PatientPaySegmentAmtAttributedToProcessorFee { get; set; }
+        [FieldFixedLength(10)] public string PatientPaySegmentAmountOfCoinsurance { get; set; }
+        [FieldFixedLength(2)] public string PatientPaySegmentReservedForFutureDefinedField { get; set; }
         [FieldFixedLength(10)] public string PatientPaySegmentReservedForFuturePricingField1 { get; set; }
         [FieldFixedLength(10)] public string PatientPaySegmentReservedForFuturePricingField2 { get; set; }
-        [FieldFixedLength(10)] public string AmtAttributedToProductSelectionBrandDrug { get; set; }
-        [FieldFixedLength(10)] public string AmtAttributedToProductSelectionNonPreferredFormularySelection { get; set; }
+        [FieldFixedLength(10)] public string PatientPaySegmentAmtAttributedToProductSelectionBrandDrug { get; set; }
 
         [FieldFixedLength(10)]
-        public string AmtAttributedToProductSelectionBrandNonPreferredFormularySelection { get; set; }
+        public string PatientPaySegmentAmtAttributedToProductSelectionNonPreferredFormularySelection { get; set; }
+
+        [FieldFixedLength(10)]
+        public string PatientPaySegmentAmtAttributedToProductSelectionBrandNonPreferredFormularySelection { get; set; }
 
         [FieldFixedLength(10)] public string PatientPaySegmentReservedForFuturePricingField3 { get; set; }
         [FieldFixedLength(10)] public string PatientPaySegmentReservedForFuturePricingField4 { get; set; }
-        [FieldFixedLength(10)] public string AmountAttributedToSalesTax { get; set; }
+        [FieldFixedLength(10)] public string PatientPaySegmentAmountAttributedToSalesTax { get; set; }
         [FieldFixedLength(40)] public string PatientPaySegmentReservedForFutureUse { get; set; }
 
         #endregion
@@ -457,15 +459,15 @@ namespace AHClaim
 
         [FieldFixedLength(1)] public string PharmacyPricingSegmentSeparatorCharacter { get; set; }
         [FieldFixedLength(2)] public string PharmacyPricingSegmentIdentifier { get; set; }
-        [FieldFixedLength(10)] public string PharmacyIngredientCost { get; set; }
-        [FieldFixedLength(10)] public string PharmacyDispensingFee { get; set; }
-        [FieldFixedLength(10)] public string PharmacySalesTax { get; set; }
-        [FieldFixedLength(10)] public string PharmacyGrossAmount { get; set; }
-        [FieldFixedLength(10)] public string PharmacyCopayAmount { get; set; }
-        [FieldFixedLength(10)] public string PharmacyDueAmount { get; set; }
-        [FieldFixedLength(3)] public string PharmacyBasisOfCost { get; set; }
-        [FieldFixedLength(3)] public string PharmacyBasisOfReimbursement { get; set; }
-        [FieldFixedLength(10)] public string PharmacyCalculatedAmount { get; set; }
+        [FieldFixedLength(10)] public string PharmacyPricingSegmentPharmacyIngredientCost { get; set; }
+        [FieldFixedLength(10)] public string PharmacyPricingSegmentPharmacyDispensingFee { get; set; }
+        [FieldFixedLength(10)] public string PharmacyPricingSegmentPharmacySalesTax { get; set; }
+        [FieldFixedLength(10)] public string PharmacyPricingSegmentPharmacyGrossAmount { get; set; }
+        [FieldFixedLength(10)] public string PharmacyPricingSegmentPharmacyCopayAmount { get; set; }
+        [FieldFixedLength(10)] public string PharmacyPricingSegmentPharmacyDueAmount { get; set; }
+        [FieldFixedLength(3)] public string PharmacyPricingSegmentPharmacyBasisOfCost { get; set; }
+        [FieldFixedLength(3)] public string PharmacyPricingSegmentPharmacyBasisOfReimbursement { get; set; }
+        [FieldFixedLength(10)] public string PharmacyPricingSegmentPharmacyCalculatedAmount { get; set; }
         [FieldFixedLength(10)] public string PharmacyPricingSegmentProcessorFee { get; set; }
         [FieldFixedLength(3)] public string PharmacyPricingReservedForFutureUse { get; set; }
 
@@ -475,12 +477,12 @@ namespace AHClaim
 
         [FieldFixedLength(1)] public string AddtlSubmittedPharmacyPricingSegmentSeparatorCharacter { get; set; }
         [FieldFixedLength(2)] public string AddtlSubmittedPharmacyPricingSegmentIdentifier { get; set; }
-        [FieldFixedLength(10)] public string SubmittedUc { get; set; }
-        [FieldFixedLength(10)] public string SubmittedIngredientCost { get; set; }
-        [FieldFixedLength(10)] public string SubmittedDispensingFee { get; set; }
-        [FieldFixedLength(10)] public string SubmittedSalesTax { get; set; }
-        [FieldFixedLength(10)] public string SubmittedGrossAmount { get; set; }
-        [FieldFixedLength(10)] public string SubmittedCopayAmount { get; set; }
+        [FieldFixedLength(10)] public string AddtlSubmittedPharmacyPricingSegmentSubmittedUc { get; set; }
+        [FieldFixedLength(10)] public string AddtlSubmittedPharmacyPricingSegmentSubmittedIngredientCost { get; set; }
+        [FieldFixedLength(10)] public string AddtlSubmittedPharmacyPricingSegmentSubmittedDispensingFee { get; set; }
+        [FieldFixedLength(10)] public string AddtlSubmittedPharmacyPricingSegmentSubmittedSalesTax { get; set; }
+        [FieldFixedLength(10)] public string AddtlSubmittedPharmacyPricingSegmentSubmittedGrossAmount { get; set; }
+        [FieldFixedLength(10)] public string AddtlSubmittedPharmacyPricingSegmentSubmittedCopayAmount { get; set; }
         [FieldFixedLength(24)] public string AddtlSubmittedPharmacyPricingSegmentReservedForFutureUse { get; set; }
 
         #endregion
