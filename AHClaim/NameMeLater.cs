@@ -500,7 +500,19 @@ namespace AHClaim
 
         #region Addtl. Submitted Values Segment
 
-        // TODO 
+        [FieldFixedLength(1)] public string AddtlSubmittedValuesSegmentSeparatorCharacter { get; set; }
+        [FieldFixedLength(2)] public string AddtlSubmittedValuesSegmentIdentifier { get; set; }
+        [FieldFixedLength(19)] public string AddtlSubmittedValuesSegmentSubmittedNdcNumber { get; set; }
+        [FieldFixedLength(20)] public string AddtlSubmittedValuesSegmentSubmittedCardholderId { get; set; }
+        [FieldFixedLength(1)] public string AddtlSubmittedValuesSegmentPrescriptionOriginCode { get; set; }
+        [FieldFixedLength(2)] public string AddtlSubmittedValuesSegmentPrimaryOtherPayerIdQualifier { get; set; }
+        [FieldFixedLength(10)] public string AddtlSubmittedValuesSegmentPrimaryOtherPayerId { get; set; }
+        [FieldFixedLength(2)] public string AddtlSubmittedValuesSegmentSubmittedNcpdpVersion { get; set; }
+        [FieldFixedLength(15)] public string AddtlSubmittedValuesSegmentSubmittedGroupNumber { get; set; }
+        [FieldFixedLength(10)] public string AddtlSubmittedValuesSegmentSubmittedBin { get; set; }
+        [FieldFixedLength(2)] public string AddtlSubmittedValuesSegmentSubmittedTransactionType { get; set; }
+        [FieldFixedLength(10)] public string AddtlSubmittedValuesSegmentSoftwareVendorId { get; set; }
+        [FieldFixedLength(106)] public string AddtlSubmittedValuesSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
