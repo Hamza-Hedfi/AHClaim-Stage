@@ -443,7 +443,20 @@ namespace AHClaim
 
         #region Plan Codes Used Segment
 
-        // TODO 
+        [FieldFixedLength(1)] public string PlanCodesUsedSegmentSeparatorCharacter { get; set; }
+        [FieldFixedLength(2)] public string PlanCodesUsedSegmentIdentifier { get; set; }
+        [FieldFixedLength(10)] public string PlanCodesUsedSegmentLineOfBusinessCode { get; set; }
+        [FieldFixedLength(10)] public string PlanCodesUsedSegmentPlanNetworkCode { get; set; }
+        [FieldFixedLength(10)] public string PlanCodesUsedSegmentMarginNetworkCode { get; set; }
+        [FieldFixedLength(10)] public string PlanCodesUsedSegmentCommonFormularyCode { get; set; }
+        [FieldFixedLength(10)] public string PlanCodesUsedSegmentPlanFormulaCode { get; set; }
+        [FieldFixedLength(10)] public string PlanCodesUsedSegmentPharmacyFormulaCode { get; set; }
+        [FieldFixedLength(10)] public string PlanCodesUsedSegmentCommonMacCode { get; set; }
+        [FieldFixedLength(10)] public string PlanCodesUsedSegmentCopayCode { get; set; }
+        [FieldFixedLength(10)] public string PlanCodesUsedSegmentLevel2MessagingCode { get; set; }
+        [FieldFixedLength(10)] public string PlanCodesUsedSegmentMemberPlanCode { get; set; }
+        [FieldFixedLength(10)] public string PlanCodesUsedSegmentPlanCommonMacCode { get; set; }
+        [FieldFixedLength(70)] public string PlanCodesUsedSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
