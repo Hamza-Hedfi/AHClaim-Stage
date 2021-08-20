@@ -462,7 +462,9 @@ namespace AHClaim
 
         #region Transaction Messaging
 
-        // TODO 
+        [FieldFixedLength(1)] public string TransactionMessagingSegmentSeparatorCharacter { get; set; }
+        [FieldFixedLength(2)] public string TransactionMessagingSegmentIdentifier { get; set; }
+        [FieldFixedLength(200)] public string TransactionMessagingSegmentTransactionMessage { get; set; }
 
         #endregion
 
