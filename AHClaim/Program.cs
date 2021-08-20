@@ -16,7 +16,7 @@ namespace AHClaim
                 engine.ReadFile($"{Environment.CurrentDirectory}\\..\\..\\ClaimsSample\\2021-02-19_EC210218.AC");
 
             var headerResult = headerEngine.ReadString(engine.HeaderText);
-            var footer = footerEngine.ReadString(engine.FooterText);
+            var footerResult = footerEngine.ReadString(engine.FooterText);
         }
     }
 }
