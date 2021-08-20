@@ -78,7 +78,7 @@ namespace AHClaim
         [FieldFixedLength(35)] public string ClaimSegmentMedicaidName { get; set; }
         [FieldFixedLength(15)] public string ClaimSegmentCouponNumber { get; set; }
         [FieldFixedLength(15)] public string ClaimSegmentPharmacyNationalProviderId { get; set; }
-        [FieldFixedLength(2)] public string ClaimSegmentPharmacyIdQualifiersubmitted { get; set; }
+        [FieldFixedLength(2)] public string ClaimSegmentPharmacyIdQualifierSubmitted { get; set; }
         [FieldFixedLength(10)] public string ClaimSegmentCalculatedFedmac { get; set; }
         [FieldFixedLength(1)] public string ClaimSegmentCalculatedAwpSource { get; set; }
         [FieldFixedLength(10)] public string ClaimSegmentCalculatedWac { get; set; }
