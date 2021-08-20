@@ -140,11 +140,11 @@ namespace AHClaim
         [FieldFixedLength(12)] public string CardholderFirstName { get; set; }
         [FieldFixedLength(1)] public string PatientMiddleInitial { get; set; }
         [FieldFixedLength(3)] public string PatientNameSuffix { get; set; }
-        [FieldFixedLength(35)] public string AddressLine1 { get; set; }
-        [FieldFixedLength(35)] public string AddressLine2 { get; set; }
-        [FieldFixedLength(18)] public string City { get; set; }
-        [FieldFixedLength(2)] public string State { get; set; }
-        [FieldFixedLength(9)] public string ZipCode { get; set; }
+        [FieldFixedLength(35)] public string AddtlPatientInfoSegmentAddressLine1 { get; set; }
+        [FieldFixedLength(35)] public string AddtlPatientInfoSegmentAddressLine2 { get; set; }
+        [FieldFixedLength(18)] public string AddtlPatientInfoSegmentCity { get; set; }
+        [FieldFixedLength(2)] public string AddtlPatientInfoSegmentState { get; set; }
+        [FieldFixedLength(9)] public string AddtlPatientInfoSegmentZipCode { get; set; }
         [FieldFixedLength(10)] public string AddtlPatientInfoSegmentPhoneNumber { get; set; }
         [FieldFixedLength(8)] public string EffectiveDate { get; set; }
         [FieldFixedLength(8)] public string TerminationDate { get; set; }
@@ -309,7 +309,21 @@ namespace AHClaim
 
         #region Prescriber Segment
 
-        // TODO 
+        [FieldFixedLength(1)] public string PrescriberSegmentSeparatorCharacter { get; set; }
+        [FieldFixedLength(2)] public string PrescriberSegmentIdentifier { get; set; }
+        [FieldFixedLength(1)] public string BusinessActivityCode { get; set; }
+        [FieldFixedLength(12)] public string DrugSchedules { get; set; }
+        [FieldFixedLength(40)] public string PrescriberSegmentAddressLine1 { get; set; }
+        [FieldFixedLength(40)] public string PrescriberSegmentAddressLine2 { get; set; }
+        [FieldFixedLength(40)] public string PrescriberSegmentAddressLine3 { get; set; }
+        [FieldFixedLength(33)] public string PrescriberSegmentAddressLine4 { get; set; }
+        [FieldFixedLength(24)] public string PrescriberSegmentCity { get; set; }
+        [FieldFixedLength(2)] public string PrescriberSegmentState { get; set; }
+        [FieldFixedLength(5)] public string PrescriberSegmentZipCode { get; set; }
+        [FieldFixedLength(9)] public string Dea { get; set; }
+        [FieldFixedLength(10)] public string Npi { get; set; }
+        [FieldFixedLength(2)] public string PrescriberIdQualifier { get; set; }
+        [FieldFixedLength(4)] public string PrescriberSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
