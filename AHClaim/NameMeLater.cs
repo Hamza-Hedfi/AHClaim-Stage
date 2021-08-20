@@ -430,7 +430,14 @@ namespace AHClaim
 
         #region Paper Claim Info Segment
 
-        // TODO 
+        [FieldFixedLength(1)] public string PaperClaimInfoSegmentSeparatorCharacter { get; set; }
+        [FieldFixedLength(2)] public string PaperClaimInfoSegmentIdentifier { get; set; }
+        [FieldFixedLength(10)] public string PaperClaimInfoSegmentUserId { get; set; }
+        [FieldFixedLength(4)] public string PaperClaimInfoSegmentTerminalId { get; set; }
+        [FieldFixedLength(8)] public string PaperClaimInfoSegmentReceivedDateNumber1 { get; set; }
+        [FieldFixedLength(8)] public string PaperClaimInfoSegmentReceivedDateNumber2 { get; set; }
+        [FieldFixedLength(20)] public string PaperClaimInfoSegmentReferenceCode { get; set; }
+        [FieldFixedLength(29)] public string PaperClaimInfoSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
