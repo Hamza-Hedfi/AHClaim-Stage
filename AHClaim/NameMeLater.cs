@@ -145,7 +145,7 @@ namespace AHClaim
         [FieldFixedLength(18)] public string City { get; set; }
         [FieldFixedLength(2)] public string State { get; set; }
         [FieldFixedLength(9)] public string ZipCode { get; set; }
-        [FieldFixedLength(10)] public string PhoneNumber { get; set; }
+        [FieldFixedLength(10)] public string AddtlPatientInfoSegmentPhoneNumber { get; set; }
         [FieldFixedLength(8)] public string EffectiveDate { get; set; }
         [FieldFixedLength(8)] public string TerminationDate { get; set; }
         [FieldFixedLength(8)] public string DateOfBirth { get; set; }
@@ -283,7 +283,27 @@ namespace AHClaim
 
         #region Pharmacy Segment
 
-        // TODO 
+        [FieldFixedLength(1)] public string PharmacySegmentSeparatorCharacter { get; set; }
+        [FieldFixedLength(2)] public string PharmacySegmentIdentifier { get; set; }
+        [FieldFixedLength(35)] public string PhysicalAddressLine1 { get; set; }
+        [FieldFixedLength(35)] public string PhysicalAddressLine2 { get; set; }
+        [FieldFixedLength(18)] public string PhysicalCity { get; set; }
+        [FieldFixedLength(2)] public string PhysicalState { get; set; }
+        [FieldFixedLength(9)] public string PhysicalZipCode { get; set; }
+        [FieldFixedLength(10)] public string PharmacySegmentPhoneNumber { get; set; }
+        [FieldFixedLength(10)] public string PharmacySegmentReservedForFutureUse1 { get; set; }
+        [FieldFixedLength(10)] public string FaxNumber { get; set; }
+        [FieldFixedLength(12)] public string FederalLicenseNumber { get; set; }
+        [FieldFixedLength(15)] public string FederalTaxIdNumber { get; set; }
+        [FieldFixedLength(20)] public string StateLicenseNumber { get; set; }
+        [FieldFixedLength(15)] public string StateTaxIdNumber { get; set; }
+        [FieldFixedLength(20)] public string StateMedicaidNumber { get; set; }
+        [FieldFixedLength(10)] public string PharmacyStoreNumber { get; set; }
+        [FieldFixedLength(1)] public string TestPharmacyFlag { get; set; }
+        [FieldFixedLength(2)] public string PharmacistIdQualifier { get; set; }
+        [FieldFixedLength(15)] public string PharmacistId { get; set; }
+        [FieldFixedLength(2)] public string PrimaryPharmacyDispenserType { get; set; }
+        [FieldFixedLength(6)] public string PharmacySegmentReservedForFutureUse2 { get; set; }
 
         #endregion
 
