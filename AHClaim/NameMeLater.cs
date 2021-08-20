@@ -371,32 +371,60 @@ namespace AHClaim
 
         #region Workers' Compensation Segment
 
-        [FieldFixedLength(1)]public string WorkersCompensationSegmentSeparatorCharacter {get; set;}
-        [FieldFixedLength(2)]public string WorkersCompensationSegmentIdentifier {get; set;}
-        [FieldFixedLength(8)]public string WorkersCompensationSegmentWcDateOfInjury {get; set;}
-        [FieldFixedLength(14)]public string WorkersCompensationSegmentWcClaimNumber {get; set;}
-        [FieldFixedLength(14)]public string WorkersCompensationSegmentWcRecordClaimNumberInfoOnly {get; set;}
-        [FieldFixedLength(10)]public string WorkersCompensationSegmentWcRecordAdjustorCode {get; set;}
-        [FieldFixedLength(35)]public string WorkersCompensationSegmentWcEmployerName {get; set;}
-        [FieldFixedLength(35)]public string WorkersCompensationSegmentWcEmployerAddress1 {get; set;}
-        [FieldFixedLength(35)]public string WorkersCompensationSegmentWcEmployerAddress2 {get; set;}
-        [FieldFixedLength(18)]public string WorkersCompensationSegmentWcEmployerCity {get; set;}
-        [FieldFixedLength(2)]public string WorkersCompensationSegmentWcEmployerState {get; set;}
-        [FieldFixedLength(9)]public string WorkersCompensationSegmentWcEmployerZipCode {get; set;}
-        [FieldFixedLength(10)]public string WorkersCompensationSegmentWcEmployerPhoneNumber {get; set;}
-        [FieldFixedLength(6)]public string WorkersCompensationSegmentWcRecordTherapyCategoryCode1 {get; set;}
-        [FieldFixedLength(6)]public string WorkersCompensationSegmentWcRecordTherapyCategoryCode2 {get; set;}
-        [FieldFixedLength(6)]public string WorkersCompensationSegmentWcRecordTherapyCategoryCode3 {get; set;}
-        [FieldFixedLength(6)]public string WorkersCompensationSegmentWcRecordTherapyCategoryCode4 {get; set;}
-        [FieldFixedLength(6)]public string WorkersCompensationSegmentWcRecordTherapyCategoryCode5 {get; set;}
-        [FieldFixedLength(8)]public string WorkersCompensationSegmentWcRecordTerminationDate {get; set;}
-        [FieldFixedLength(290)]public string WorkersCompensationSegmentReservedForFutureUse {get; set;} 
+        [FieldFixedLength(1)] public string WorkersCompensationSegmentSeparatorCharacter { get; set; }
+        [FieldFixedLength(2)] public string WorkersCompensationSegmentIdentifier { get; set; }
+        [FieldFixedLength(8)] public string WorkersCompensationSegmentWcDateOfInjury { get; set; }
+        [FieldFixedLength(14)] public string WorkersCompensationSegmentWcClaimNumber { get; set; }
+        [FieldFixedLength(14)] public string WorkersCompensationSegmentWcRecordClaimNumberInfoOnly { get; set; }
+        [FieldFixedLength(10)] public string WorkersCompensationSegmentWcRecordAdjustorCode { get; set; }
+        [FieldFixedLength(35)] public string WorkersCompensationSegmentWcEmployerName { get; set; }
+        [FieldFixedLength(35)] public string WorkersCompensationSegmentWcEmployerAddress1 { get; set; }
+        [FieldFixedLength(35)] public string WorkersCompensationSegmentWcEmployerAddress2 { get; set; }
+        [FieldFixedLength(18)] public string WorkersCompensationSegmentWcEmployerCity { get; set; }
+        [FieldFixedLength(2)] public string WorkersCompensationSegmentWcEmployerState { get; set; }
+        [FieldFixedLength(9)] public string WorkersCompensationSegmentWcEmployerZipCode { get; set; }
+        [FieldFixedLength(10)] public string WorkersCompensationSegmentWcEmployerPhoneNumber { get; set; }
+        [FieldFixedLength(6)] public string WorkersCompensationSegmentWcRecordTherapyCategoryCode1 { get; set; }
+        [FieldFixedLength(6)] public string WorkersCompensationSegmentWcRecordTherapyCategoryCode2 { get; set; }
+        [FieldFixedLength(6)] public string WorkersCompensationSegmentWcRecordTherapyCategoryCode3 { get; set; }
+        [FieldFixedLength(6)] public string WorkersCompensationSegmentWcRecordTherapyCategoryCode4 { get; set; }
+        [FieldFixedLength(6)] public string WorkersCompensationSegmentWcRecordTherapyCategoryCode5 { get; set; }
+        [FieldFixedLength(8)] public string WorkersCompensationSegmentWcRecordTerminationDate { get; set; }
+        [FieldFixedLength(290)] public string WorkersCompensationSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
         #region Claim Balances Segment
 
-        // TODO 
+        [FieldFixedLength(1)] public string ClaimBalancesSegmentSeparatorCharacter { get; set; }
+        [FieldFixedLength(2)] public string ClaimBalancesSegmentIdentifier { get; set; }
+        [FieldFixedLength(10)] public string ClaimBalancesSegmentIndividualDeductibleAmount { get; set; }
+        [FieldFixedLength(10)] public string ClaimBalancesSegmentIndividualMemberAmount { get; set; }
+        [FieldFixedLength(10)] public string ClaimBalancesSegmentIndividualSponsorAmount { get; set; }
+        [FieldFixedLength(10)] public string ClaimBalancesSegmentIndividualStartingDeductibleAccumulation { get; set; }
+        [FieldFixedLength(10)] public string ClaimBalancesSegmentIndividualEndingDeductibleAccumulation { get; set; }
+        [FieldFixedLength(10)] public string ClaimBalancesSegmentIndividualRemainingDeductibleAmount { get; set; }
+        [FieldFixedLength(10)] public string ClaimBalancesSegmentIndividualStartingMemberAccumulation { get; set; }
+        [FieldFixedLength(10)] public string ClaimBalancesSegmentIndividualEndingMemberAccumulation { get; set; }
+        [FieldFixedLength(10)] public string ClaimBalancesSegmentIndividualStartingSponsorAccumulation { get; set; }
+        [FieldFixedLength(10)] public string ClaimBalancesSegmentIndividualEndingSponsorAccumulation { get; set; }
+        [FieldFixedLength(1)] public string ClaimBalancesSegmentIndividualStartingTierLevel { get; set; }
+        [FieldFixedLength(1)] public string ClaimBalancesSegmentIndividualEndingTierLevel { get; set; }
+        [FieldFixedLength(10)] public string ClaimBalancesSegmentFamilyDeductibleAmount { get; set; }
+        [FieldFixedLength(10)] public string ClaimBalancesSegmentFamilyMemberAmount { get; set; }
+        [FieldFixedLength(10)] public string ClaimBalancesSegmentFamilySponsorAmount { get; set; }
+        [FieldFixedLength(10)] public string ClaimBalancesSegmentFamilyStartingDeductibleAccumulation { get; set; }
+        [FieldFixedLength(10)] public string ClaimBalancesSegmentFamilyEndingDeductibleAccumulation { get; set; }
+        [FieldFixedLength(10)] public string ClaimBalancesSegmentFamilyRemainingDeductibleAmount { get; set; }
+        [FieldFixedLength(10)] public string ClaimBalancesSegmentFamilyStartingMemberAccumulation { get; set; }
+        [FieldFixedLength(10)] public string ClaimBalancesSegmentFamilyEndingMemberAccumulation { get; set; }
+        [FieldFixedLength(10)] public string ClaimBalancesSegmentFamilyStartingSponsorAccumulation { get; set; }
+        [FieldFixedLength(10)] public string ClaimBalancesSegmentFamilyEndingSponsorAccumulation { get; set; }
+        [FieldFixedLength(1)] public string ClaimBalancesSegmentFamilyStartingTierLevel { get; set; }
+        [FieldFixedLength(1)] public string ClaimBalancesSegmentFamilyEndingTierLevel { get; set; }
+        [FieldFixedLength(10)] public string ClaimBalancesSegmentCardValue { get; set; }
+        [FieldFixedLength(7)] public string ClaimBalancesSegmentRebateAdjustment { get; set; }
+        [FieldFixedLength(73)] public string ClaimBalancesSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
