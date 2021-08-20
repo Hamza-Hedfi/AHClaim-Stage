@@ -1,5 +1,8 @@
 ﻿namespace AHClaim.Segment
 {
+    /// <summary>
+    /// Header Segment
+    /// </summary>
     public class HeaderSegment
     {
         public string ClaimFileRecordIndicator { get; set; }
