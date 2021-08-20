@@ -197,7 +197,9 @@ namespace AHClaim
         [FieldFixedLength(8)] public string PriorAuthorizationSegmentPaEffectiveDate { get; set; }
         [FieldFixedLength(8)] public string PriorAuthorizationSegmentPaTerminationDate { get; set; }
         [FieldFixedLength(35)] public string PriorAuthorizationSegmentPaDescription { get; set; }
-        [FieldFixedLength(30)] public string PriorAuthorizationSegmentPriorAuthorizationSegmentReservedForFutureUse { get; set; }
+
+        [FieldFixedLength(30)]
+        public string PriorAuthorizationSegmentPriorAuthorizationSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
@@ -329,7 +331,41 @@ namespace AHClaim
 
         #region Enhanced Prescriber Segment
 
-        // TODO 
+        [FieldFixedLength(1)] public string EnhancedPrescriberSegmentSeparatorCharacter { get; set; }
+        [FieldFixedLength(2)] public string EnhancedPrescriberSegmentIdentifier { get; set; }
+        [FieldFixedLength(35)] public string EnhancedPrescriberSegmentPrescriberName { get; set; }
+        [FieldFixedLength(9)] public string EnhancedPrescriberSegmentDea { get; set; }
+        [FieldFixedLength(10)] public string EnhancedPrescriberSegmentNpi { get; set; }
+        [FieldFixedLength(1)] public string EnhancedPrescriberSegmentBusinessActivityCode { get; set; }
+        [FieldFixedLength(1)] public string EnhancedPrescriberSegmentBusinessActivitySubCode { get; set; }
+        [FieldFixedLength(12)] public string EnhancedPrescriberSegmentDrugSchedules { get; set; }
+        [FieldFixedLength(40)] public string EnhancedPrescriberSegmentAddressLine1 { get; set; }
+        [FieldFixedLength(40)] public string EnhancedPrescriberSegmentAddressLine2 { get; set; }
+        [FieldFixedLength(24)] public string EnhancedPrescriberSegmentCity { get; set; }
+        [FieldFixedLength(2)] public string EnhancedPrescriberSegmentState { get; set; }
+        [FieldFixedLength(9)] public string EnhancedPrescriberSegmentZipCode { get; set; }
+        [FieldFixedLength(10)] public string EnhancedPrescriberSegmentPhone { get; set; }
+        [FieldFixedLength(10)] public string EnhancedPrescriberSegmentFaxNumber { get; set; }
+        [FieldFixedLength(10)] public string EnhancedPrescriberSegmentCredentials { get; set; }
+        [FieldFixedLength(25)] public string EnhancedPrescriberSegmentPractitionerType { get; set; }
+        [FieldFixedLength(40)] public string EnhancedPrescriberSegmentSpecialty1 { get; set; }
+        [FieldFixedLength(40)] public string EnhancedPrescriberSegmentSpecialty2 { get; set; }
+        [FieldFixedLength(15)] public string EnhancedPrescriberSegmentStateLicenseNumber1 { get; set; }
+        [FieldFixedLength(2)] public string EnhancedPrescriberSegmentStateLicenseNumber1State { get; set; }
+        [FieldFixedLength(15)] public string EnhancedPrescriberSegmentStateLicenseNumber2 { get; set; }
+        [FieldFixedLength(2)] public string EnhancedPrescriberSegmentStateLicenseNumber2State { get; set; }
+        [FieldFixedLength(15)] public string EnhancedPrescriberSegmentStateLicenseNumber3 { get; set; }
+        [FieldFixedLength(2)] public string EnhancedPrescriberSegmentStateLicenseNumber3State { get; set; }
+        [FieldFixedLength(15)] public string EnhancedPrescriberSegmentMedicaidIdNumber1 { get; set; }
+        [FieldFixedLength(2)] public string EnhancedPrescriberSegmentMedicaidIdNumber1State { get; set; }
+        [FieldFixedLength(15)] public string EnhancedPrescriberSegmentMedicaidIdNumber2 { get; set; }
+        [FieldFixedLength(2)] public string EnhancedPrescriberSegmentMedicaidIdNumber2State { get; set; }
+        [FieldFixedLength(15)] public string EnhancedPrescriberSegmentMedicaidIdNumber3 { get; set; }
+        [FieldFixedLength(2)] public string EnhancedPrescriberSegmentMedicaidIdNumber3State { get; set; }
+        [FieldFixedLength(9)] public string EnhancedPrescriberSegmentTaxId { get; set; }
+        [FieldFixedLength(8)] public string EnhancedPrescriberSegmentExpirationDate { get; set; }
+        [FieldFixedLength(2)] public string EnhancedPrescriberSegmentPrescriberIdQualifier { get; set; }
+        [FieldFixedLength(99)] public string EnhancedPrescriberSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
