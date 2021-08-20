@@ -3,7 +3,7 @@
 namespace AHClaim
 {
     [FixedLengthRecord(FixedMode.AllowVariableLength)]
-    public class RawClaim
+    public class RawClaimRecord
     {
         #region Header Segment
 

@@ -42,7 +42,7 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="RawClaim.cs" />
+        <Compile Include="RawClaimRecord.cs" />
         <Compile Include="FileTrailerRecord.cs" />
         <Compile Include="HeaderRecord.cs" />
         <Compile Include="Program.cs" />
