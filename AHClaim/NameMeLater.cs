@@ -371,7 +371,26 @@ namespace AHClaim
 
         #region Workers' Compensation Segment
 
-        // TODO 
+        [FieldFixedLength(1)]public string WorkersCompensationSegmentSeparatorCharacter {get; set;}
+        [FieldFixedLength(2)]public string WorkersCompensationSegmentIdentifier {get; set;}
+        [FieldFixedLength(8)]public string WorkersCompensationSegmentWcDateOfInjury {get; set;}
+        [FieldFixedLength(14)]public string WorkersCompensationSegmentWcClaimNumber {get; set;}
+        [FieldFixedLength(14)]public string WorkersCompensationSegmentWcRecordClaimNumberInfoOnly {get; set;}
+        [FieldFixedLength(10)]public string WorkersCompensationSegmentWcRecordAdjustorCode {get; set;}
+        [FieldFixedLength(35)]public string WorkersCompensationSegmentWcEmployerName {get; set;}
+        [FieldFixedLength(35)]public string WorkersCompensationSegmentWcEmployerAddress1 {get; set;}
+        [FieldFixedLength(35)]public string WorkersCompensationSegmentWcEmployerAddress2 {get; set;}
+        [FieldFixedLength(18)]public string WorkersCompensationSegmentWcEmployerCity {get; set;}
+        [FieldFixedLength(2)]public string WorkersCompensationSegmentWcEmployerState {get; set;}
+        [FieldFixedLength(9)]public string WorkersCompensationSegmentWcEmployerZipCode {get; set;}
+        [FieldFixedLength(10)]public string WorkersCompensationSegmentWcEmployerPhoneNumber {get; set;}
+        [FieldFixedLength(6)]public string WorkersCompensationSegmentWcRecordTherapyCategoryCode1 {get; set;}
+        [FieldFixedLength(6)]public string WorkersCompensationSegmentWcRecordTherapyCategoryCode2 {get; set;}
+        [FieldFixedLength(6)]public string WorkersCompensationSegmentWcRecordTherapyCategoryCode3 {get; set;}
+        [FieldFixedLength(6)]public string WorkersCompensationSegmentWcRecordTherapyCategoryCode4 {get; set;}
+        [FieldFixedLength(6)]public string WorkersCompensationSegmentWcRecordTherapyCategoryCode5 {get; set;}
+        [FieldFixedLength(8)]public string WorkersCompensationSegmentWcRecordTerminationDate {get; set;}
+        [FieldFixedLength(290)]public string WorkersCompensationSegmentReservedForFutureUse {get; set;} 
 
         #endregion
 
