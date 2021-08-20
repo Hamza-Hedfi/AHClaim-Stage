@@ -232,23 +232,38 @@ namespace AHClaim
 
         #region Submitted DUR Override Segment
 
-        public string SubmittedDurOverrideSegmentSeparatorCharacter { get; set; }
-        public string SubmittedDurOverrideSegmentIdentifier { get; set; }
-        public string SubmittedDurOverrideSegmentReasonForServiceConflict1 { get; set; }
+        [FieldFixedLength(1)] public string SubmittedDurOverrideSegmentSeparatorCharacter { get; set; }
+        [FieldFixedLength(2)] public string SubmittedDurOverrideSegmentIdentifier { get; set; }
+        [FieldFixedLength(2)] public string SubmittedDurOverrideSegmentReasonForServiceConflict1 { get; set; }
+
+        [FieldFixedLength(2)]
         public string SubmittedDurOverrideSegmentProfessionalServiceCodeIntervention1 { get; set; }
-        public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome1 { get; set; }
-        public string SubmittedDurOverrideSegmentReasonForServiceConflict2 { get; set; }
+
+        [FieldFixedLength(2)] public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome1 { get; set; }
+        [FieldFixedLength(2)] public string SubmittedDurOverrideSegmentReasonForServiceConflict2 { get; set; }
+
+        [FieldFixedLength(2)]
         public string SubmittedDurOverrideSegmentProfessionalServiceCodeIntervention2 { get; set; }
-        public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome2 { get; set; }
-        public string SubmittedDurOverrideSegmentReasonForServiceConflict3 { get; set; }
+
+        [FieldFixedLength(2)] public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome2 { get; set; }
+        [FieldFixedLength(2)] public string SubmittedDurOverrideSegmentReasonForServiceConflict3 { get; set; }
+
+        [FieldFixedLength(2)]
         public string SubmittedDurOverrideSegmentProfessionalServiceCodeIntervention3 { get; set; }
-        public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome3 { get; set; }
-        public string SubmittedDurOverrideSegmentReasonForServiceConflict4 { get; set; }
+
+        [FieldFixedLength(2)] public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome3 { get; set; }
+        [FieldFixedLength(2)] public string SubmittedDurOverrideSegmentReasonForServiceConflict4 { get; set; }
+
+        [FieldFixedLength(2)]
         public string SubmittedDurOverrideSegmentProfessionalServiceCodeIntervention4 { get; set; }
-        public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome4 { get; set; }
-        public string SubmittedDurOverrideSegmentReasonForServiceConflict5 { get; set; }
+
+        [FieldFixedLength(2)] public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome4 { get; set; }
+        [FieldFixedLength(2)] public string SubmittedDurOverrideSegmentReasonForServiceConflict5 { get; set; }
+
+        [FieldFixedLength(2)]
         public string SubmittedDurOverrideSegmentProfessionalServiceCodeIntervention5 { get; set; }
-        public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome5 { get; set; }
+
+        [FieldFixedLength(2)] public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome5 { get; set; }
 
         #endregion
 
