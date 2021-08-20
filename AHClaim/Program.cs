@@ -8,7 +8,7 @@ namespace AHClaim
     {
         public static void Main(string[] args)
         {
-            var engine = new FixedFileEngine<NameMeLater>() {Options = {IgnoreFirstLines = 1, IgnoreLastLines = 1}};
+            var engine = new FixedFileEngine<RawClaim>() {Options = {IgnoreFirstLines = 1, IgnoreLastLines = 1}};
             var headerEngine = new FixedFileEngine<HeaderRecord>();
             var footerEngine = new FixedFileEngine<FileTrailerRecord>();
 
