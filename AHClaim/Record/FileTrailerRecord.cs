@@ -1,6 +1,6 @@
 ﻿using FileHelpers;
 
-namespace AHClaim
+namespace AHClaim.Record
 {
     [FixedLengthRecord]
     public class FileTrailerRecord

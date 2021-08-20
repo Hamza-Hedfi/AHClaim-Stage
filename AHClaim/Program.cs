@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using AHClaim.Record;
 using FileHelpers;
 
 namespace AHClaim
