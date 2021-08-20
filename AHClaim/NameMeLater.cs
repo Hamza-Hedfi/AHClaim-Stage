@@ -483,7 +483,18 @@ namespace AHClaim
 
         #region Enhanced Submitted Member Segment
 
-        // TODO 
+        [FieldFixedLength(1)] public string EnhancedSubmittedMemberSegmentSeparatorCharacter { get; set; }
+        [FieldFixedLength(2)] public string EnhancedSubmittedMemberSegmentIdentifier { get; set; }
+        [FieldFixedLength(15)] public string EnhancedSubmittedMemberSegmentSubmittedCardholderLastName { get; set; }
+        [FieldFixedLength(15)] public string EnhancedSubmittedMemberSegmentSubmittedPatientFirstName { get; set; }
+        [FieldFixedLength(8)] public string EnhancedSubmittedMemberSegmentSubmittedPatientDateOfBirth { get; set; }
+        [FieldFixedLength(1)] public string EnhancedSubmittedMemberSegmentSubmittedGender { get; set; }
+        [FieldFixedLength(80)] public string EnhancedSubmittedMemberSegmentSubmittedPatientEmailAddress { get; set; }
+        [FieldFixedLength(30)] public string EnhancedSubmittedMemberSegmentSubmittedPatientStreetAddress { get; set; }
+        [FieldFixedLength(20)] public string EnhancedSubmittedMemberSegmentSubmittedPatientCityAddress { get; set; }
+        [FieldFixedLength(2)] public string EnhancedSubmittedMemberSegmentPatientStateProvinceAddress { get; set; }
+        [FieldFixedLength(15)] public string EnhancedSubmittedMemberSegmentSubmittedPatientZipPostalCode { get; set; }
+        [FieldFixedLength(100)] public string EnhancedSubmittedMemberSegmentFutureUse { get; set; }
 
         #endregion
 
