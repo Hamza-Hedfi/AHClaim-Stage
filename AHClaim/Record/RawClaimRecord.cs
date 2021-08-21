@@ -2,95 +2,863 @@
 
 namespace AHClaim.Record
 {
+    /// <summary>
+    /// Raw Segment as defined in file.
+    /// It defines how the file should be read.
+    /// Till FieldOrder is introduced the order of the properties is important.
+    /// This class is never instantiated directly.
+    /// It is used by FileHelper engine to process the data source 'file'.
+    ///
+    /// The order of the properties is as it is defined in the datasource 'file' spec.
+    /// 
+    /// DO NOT MODIFY THE ORDER OF THE PROPERTIES, UNLESS YOU KNOW WHAT YOU ARE DOING
+    ///     OR [FieldOrder] IS PRESENT FOR ALL PROPERTIES
+    /// </summary>
     [FixedLengthRecord(FixedMode.AllowVariableLength)]
     public class RawClaimRecord
     {
         #region Header Segment
 
-        [FieldFixedLength(2)] public string HeaderSegmentClaimFileRecordIndicator { get; set; }
-        [FieldFixedLength(2)] public string HeaderSegmentVersionNumber { get; set; }
-        [FieldFixedLength(2)] public string HeaderSegmentMinorVersionNumber { get; set; }
+        /// <summary>
+        /// Field #: 1
+        /// Field Name: Claim File Record Indicator ($C)
+        /// Format: AN 
+        /// Length: 2
+        /// Values: $C
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string HeaderSegmentClaimFileRecordIndicator { get; set; }
+
+        /// <summary>
+        /// Field #: 2
+        /// Field Name: Version Number
+        /// Format: AN 
+        /// Length: 2
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string HeaderSegmentVersionNumber { get; set; }
+
+        /// <summary>
+        /// Field #: 3
+        /// Field Name: Minor Version Number
+        /// Format: AN 
+        /// Length: 2
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string HeaderSegmentMinorVersionNumber { get; set; }
 
         #endregion
 
         #region Claim Segment
 
-        [FieldFixedLength(1)] public string ClaimSegmentSeparatorCharacter { get; set; }
-        [FieldFixedLength(2)] public string ClaimSegmentIdentifier { get; set; }
-        [FieldFixedLength(20)] public string ClaimSegmentClaimAuthorizationNumber { get; set; }
-        [FieldFixedLength(20)] public string ClaimSegmentOriginalClaimAuthorizationNumber { get; set; }
-        [FieldFixedLength(20)] public string ClaimSegmentReversalClaimAuthorizationNumber { get; set; }
-        [FieldFixedLength(8)] public string ClaimSegmentDateProcessed { get; set; }
-        [FieldFixedLength(8)] public string ClaimSegmentTimeProcessed { get; set; }
-        [FieldFixedLength(1)] public string ClaimSegmentRejectionFlag { get; set; }
-        [FieldFixedLength(1)] public string ClaimSegmentDuplicateFlag { get; set; }
-        [FieldFixedLength(1)] public string ClaimSegmentReversalFlag { get; set; }
-        [FieldFixedLength(15)] public string ClaimSegmentPharmacyNcpdpidNumber { get; set; }
-        [FieldFixedLength(35)] public string ClaimSegmentPharmacyName { get; set; }
-        [FieldFixedLength(4)] public string ClaimSegmentPharmacyChainNumber { get; set; }
-        [FieldFixedLength(35)] public string ClaimSegmentPharmacyChainName { get; set; }
-        [FieldFixedLength(1)] public string ClaimSegmentPharmacyType { get; set; }
-        [FieldFixedLength(3)] public string ClaimSegmentCarrierCode { get; set; }
-        [FieldFixedLength(3)] public string ClaimSegmentSubmittedCarrierCode { get; set; }
-        [FieldFixedLength(10)] public string ClaimSegmentTpaBrokerCode { get; set; }
-        [FieldFixedLength(35)] public string ClaimSegmentTpaBrokerName { get; set; }
-        [FieldFixedLength(10)] public string ClaimSegmentSponsorCode { get; set; }
-        [FieldFixedLength(35)] public string ClaimSegmentSponsorName { get; set; }
-        [FieldFixedLength(15)] public string ClaimSegmentGroupNumber { get; set; }
-        [FieldFixedLength(35)] public string ClaimSegmentGroupName { get; set; }
-        [FieldFixedLength(20)] public string ClaimSegmentCardholderIdNumber { get; set; }
-        [FieldFixedLength(3)] public string ClaimSegmentPatientPersonCode { get; set; }
-        [FieldFixedLength(15)] public string ClaimSegmentPatientLastName { get; set; }
-        [FieldFixedLength(12)] public string ClaimSegmentPatientFirstName { get; set; }
-        [FieldFixedLength(15)] public string ClaimSegmentPrescriberId { get; set; }
-        [FieldFixedLength(35)] public string ClaimSegmentPrescriberName { get; set; }
-        [FieldFixedLength(8)] public string ClaimSegmentDateFilled { get; set; }
-        [FieldFixedLength(8)] public string ClaimSegmentDateWritten { get; set; }
-        [FieldFixedLength(12)] public string ClaimSegmentRxNumber { get; set; }
-        [FieldFixedLength(2)] public string ClaimSegmentFillNumber { get; set; }
-        [FieldFixedLength(2)] public string ClaimSegmentNumberOfRefillsAuthorized { get; set; }
-        [FieldFixedLength(19)] public string ClaimSegmentDrugNdcNumber { get; set; }
-        [FieldFixedLength(35)] public string ClaimSegmentDrugName { get; set; }
-        [FieldFixedLength(10)] public string ClaimSegmentDrugStrengthDescription { get; set; }
-        [FieldFixedLength(10)] public string ClaimSegmentDrugDoseFormDescription { get; set; }
-        [FieldFixedLength(1)] public string ClaimSegmentSubmittedCompoundCode { get; set; }
-        [FieldFixedLength(11)] public string ClaimSegmentSubmittedRouteOfAdmin { get; set; }
-        [FieldFixedLength(1)] public string ClaimSegmentDrugProcessedSigCode { get; set; }
-        [FieldFixedLength(1)] public string ClaimSegmentDrugMonyCode { get; set; }
-        [FieldFixedLength(12)] public string ClaimSegmentQuantityDispensed { get; set; }
-        [FieldFixedLength(4)] public string ClaimSegmentDaysSupply { get; set; }
-        [FieldFixedLength(1)] public string ClaimSegmentDawCode { get; set; }
-        [FieldFixedLength(10)] public string ClaimSegmentPlanIngredientCost { get; set; }
-        [FieldFixedLength(10)] public string ClaimSegmentPlanDispensingFee { get; set; }
-        [FieldFixedLength(10)] public string ClaimSegmentPlanSalesTax { get; set; }
-        [FieldFixedLength(10)] public string ClaimSegmentIncentiveFee { get; set; }
-        [FieldFixedLength(10)] public string ClaimSegmentClaimSegmentProcessorFee { get; set; }
-        [FieldFixedLength(10)] public string ClaimSegmentPlanGrossAmount { get; set; }
-        [FieldFixedLength(10)] public string ClaimSegmentOtherPayerAmount { get; set; }
-        [FieldFixedLength(10)] public string ClaimSegmentTotalPatientPayAmount { get; set; }
-        [FieldFixedLength(10)] public string ClaimSegmentPlanPharmacyAmount { get; set; }
-        [FieldFixedLength(3)] public string ClaimSegmentPlanBasisOfCost { get; set; }
-        [FieldFixedLength(3)] public string ClaimSegmentPlanBasisOfReimbursement { get; set; }
-        [FieldFixedLength(10)] public string ClaimSegmentCalculatedAwp { get; set; }
-        [FieldFixedLength(2)] public string ClaimSegmentSubmissionClarificationCode { get; set; }
-        [FieldFixedLength(2)] public string ClaimSegmentOtherCoverageCode { get; set; }
-        [FieldFixedLength(4)] public string ClaimSegmentMedicaidCode { get; set; }
-        [FieldFixedLength(35)] public string ClaimSegmentMedicaidName { get; set; }
-        [FieldFixedLength(15)] public string ClaimSegmentCouponNumber { get; set; }
-        [FieldFixedLength(15)] public string ClaimSegmentPharmacyNationalProviderId { get; set; }
-        [FieldFixedLength(2)] public string ClaimSegmentPharmacyIdQualifierSubmitted { get; set; }
-        [FieldFixedLength(10)] public string ClaimSegmentCalculatedFedmac { get; set; }
-        [FieldFixedLength(1)] public string ClaimSegmentCalculatedAwpSource { get; set; }
-        [FieldFixedLength(10)] public string ClaimSegmentCalculatedWac { get; set; }
-        [FieldFixedLength(3)] public string ClaimSegmentCouponActualUseNumber { get; set; }
-        [FieldFixedLength(1)] public string ClaimSegmentProcessedSingleSourceGenericIndicator { get; set; }
-        [FieldFixedLength(20)] public string ClaimSegmentManufacturerName { get; set; }
-        [FieldFixedLength(12)] public string ClaimSegmentAdjudicatedUnitPrice { get; set; }
-        [FieldFixedLength(10)] public string ClaimSegmentPreCopayRoundingAmount { get; set; }
-        [FieldFixedLength(1)] public string ClaimSegmentNumberOfCouponUses { get; set; }
-        [FieldFixedLength(3)] public string ClaimSegmentCombinedCouponUses { get; set; }
-        [FieldFixedLength(20)] public string ClaimSegmentRejectReprocessOriginalAuthorizationNumber { get; set; }
-        [FieldFixedLength(119)] public string ClaimSegmentReservedForFutureUse { get; set; }
+        /// <summary>
+        /// Field #: 1
+        /// Field Name: Segment Separator Character
+        /// Format: AN
+        /// Length: 1
+        /// Values: >
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimSegmentSeparatorCharacter { get; set; }
+
+        /// <summary>
+        /// Field #: 2
+        /// Field Name: Segment Identifier
+        /// Format: AN 
+        /// Length: 2
+        /// Values: CS
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string ClaimSegmentSegmentIdentifier { get; set; }
+
+        /// <summary>
+        /// Field #: 3
+        /// Field Name: Claim Authorization #
+        /// Format: AN 
+        /// Length: 20
+        /// Definition: The unique Authorization number assigned to every transaction
+        /// </summary>
+        [FieldFixedLength(20)]
+        public string ClaimSegmentClaimAuthorizationNumber { get; set; }
+
+        /// <summary>
+        /// Field #: 4
+        /// Field Name: Original Claim Authorization #
+        /// Format: AN 
+        /// Length: 20
+        /// Definition: In the case of a reversal, the value will be the Claim Auth. Number of the corresponding paid claim.Otherwise, it is equal to field #3.
+        /// </summary>
+        [FieldFixedLength(20)]
+        public string ClaimSegmentOriginalClaimAuthorizationNumber { get; set; }
+
+        /// <summary>
+        /// Field #: 5
+        /// Field Name: Reversal Claim Authorization #
+        /// Format: AN 
+        /// Length: 20
+        /// Definition: In the case of a paid claim that has been reversed, the value will be the Claim Auth. Number of the reversal. Otherwise, blank 
+        /// </summary>
+        [FieldFixedLength(20)]
+        public string ClaimSegmentReversalClaimAuthorizationNumber { get; set; }
+
+        /// <summary>
+        /// Field #: 6
+        /// Field Name: Date Processed
+        /// Format: N
+        /// Length: 8
+        /// Definition: The date that the claim was processed by Change Healthcare
+        /// </summary>
+        [FieldFixedLength(8)]
+        public string ClaimSegmentDateProcessed { get; set; }
+
+        /// <summary>
+        /// Field #: 7
+        /// Field Name: Time Processed
+        /// Format: AN
+        /// Length: 8
+        /// Definition: The time that the claim was processed by Change Healthcare / hh:mm:ss
+        /// </summary>
+        [FieldFixedLength(8)]
+        public string ClaimSegmentTimeProcessed { get; set; }
+
+        /// <summary>
+        /// Field #: 8
+        /// Field Name: Rejection Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Rejection
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimSegmentRejectionFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 9
+        /// Field Name: Duplicate Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Paid Duplicate
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimSegmentDuplicateFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimSegmentReversalFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 11
+        /// Field Name: Pharmacy NCPDP ID Number 
+        /// Format: N
+        /// Length: 15
+        /// Definition: Unique pharmacy identifier assigned by NCPDP
+        /// </summary>
+        [FieldFixedLength(15)]
+        public string ClaimSegmentPharmacyNcpdpIdNumber { get; set; }
+
+        /// <summary>
+        /// Field #: 12
+        /// Field Name: Pharmacy Name
+        /// Format: AN
+        /// Length: 35
+        /// Definition: As provided by NCPDP 
+        /// </summary>
+        [FieldFixedLength(35)]
+        public string ClaimSegmentPharmacyName { get; set; }
+
+        /// <summary>
+        /// Field #: 13
+        /// Field Name: Pharmacy Chain #
+        /// Format: N
+        /// Length: 4
+        /// Definition: As provided by NCPDP
+        /// </summary>
+        [FieldFixedLength(4)]
+        public string ClaimSegmentPharmacyChainNumber { get; set; }
+
+        /// <summary>
+        /// Field #: 14
+        /// Field Name: Pharmacy Chain Name
+        /// Format: AN
+        /// Length: 35
+        /// </summary>
+        [FieldFixedLength(35)]
+        public string ClaimSegmentPharmacyChainName { get; set; }
+
+        /// <summary>
+        /// Field #: 15
+        /// Field Name: Pharmacy Type (Retail 1, Retail 2, Mail Order) 
+        /// Format: AN
+        /// Length: 1
+        /// Values: 1, 2, M
+        /// Definition: "1"=Retail 1, "2"=Retail 2, "M"=MailOrder
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimSegmentPharmacyType { get; set; }
+
+        /// <summary>
+        /// Field #: 16
+        /// Field Name: Carrier Code
+        /// Format: AN
+        /// Length: 3
+        /// Definition: Carrier code as processed
+        /// </summary>
+        [FieldFixedLength(3)]
+        public string ClaimSegmentCarrierCode { get; set; }
+
+        /// <summary>
+        /// Field #: 17
+        /// Field Name: Submitted Carrier Code
+        /// Format: AN
+        /// Length: 3
+        /// Definition: Carrier code submitted via PCN, or assigned from group routing
+        /// </summary>
+        [FieldFixedLength(3)]
+        public string ClaimSegmentSubmittedCarrierCode { get; set; }
+
+        /// <summary>
+        /// Field #: 18
+        /// Field Name: TPA/Broker Code
+        /// Format: AN
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimSegmentTpaBrokerCode { get; set; }
+
+        /// <summary>
+        /// Field #: 19
+        /// Field Name: TPA/Broker Name 
+        /// Format: AN
+        /// Length: 35
+        /// </summary>
+        [FieldFixedLength(35)]
+        public string ClaimSegmentTpaBrokerName { get; set; }
+
+        /// <summary>
+        /// Field #: 20
+        /// Field Name: Sponsor Code
+        /// Format: AN
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimSegmentSponsorCode { get; set; }
+
+        /// <summary>
+        /// Field #: 21
+        /// Field Name: Sponsor Name
+        /// Format: AN
+        /// Length: 35
+        /// </summary>
+        [FieldFixedLength(35)]
+        public string ClaimSegmentSponsorName { get; set; }
+
+        /// <summary>
+        /// Field #: 22
+        /// Field Name: Group #
+        /// Format: AN
+        /// Length: 15
+        /// </summary>
+        [FieldFixedLength(15)]
+        public string ClaimSegmentGroupNumber { get; set; }
+
+        /// <summary>
+        /// Field #: 23
+        /// Field Name: Group Name
+        /// Format: AN
+        /// Length: 35
+        /// </summary>
+        [FieldFixedLength(35)]
+        public string ClaimSegmentGroupName { get; set; }
+
+        /// <summary>
+        /// Field #: 24
+        /// Field Name: Cardholder ID #
+        /// Format: AN
+        /// Length: 20
+        /// Definition: Base member identification number
+        /// </summary>
+        [FieldFixedLength(20)]
+        public string ClaimSegmentCardholderIdNumber { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(3)]
+        public string ClaimSegmentPatientPersonCode { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(15)]
+        public string ClaimSegmentPatientLastName { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(12)]
+        public string ClaimSegmentPatientFirstName { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(15)]
+        public string ClaimSegmentPrescriberId { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(35)]
+        public string ClaimSegmentPrescriberName { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(8)]
+        public string ClaimSegmentDateFilled { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(8)]
+        public string ClaimSegmentDateWritten { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(12)]
+        public string ClaimSegmentRxNumber { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string ClaimSegmentFillNumber { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string ClaimSegmentNumberOfRefillsAuthorized { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(19)]
+        public string ClaimSegmentDrugNdcNumber { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(35)]
+        public string ClaimSegmentDrugName { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimSegmentDrugStrengthDescription { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimSegmentDrugDoseFormDescription { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimSegmentSubmittedCompoundCode { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(11)]
+        public string ClaimSegmentSubmittedRouteOfAdmin { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimSegmentDrugProcessedSigCode { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimSegmentDrugMonyCode { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(12)]
+        public string ClaimSegmentQuantityDispensed { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(4)]
+        public string ClaimSegmentDaysSupply { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimSegmentDawCode { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimSegmentPlanIngredientCost { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimSegmentPlanDispensingFee { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimSegmentPlanSalesTax { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimSegmentIncentiveFee { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimSegmentClaimSegmentProcessorFee { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimSegmentPlanGrossAmount { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimSegmentOtherPayerAmount { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimSegmentTotalPatientPayAmount { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimSegmentPlanPharmacyAmount { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(3)]
+        public string ClaimSegmentPlanBasisOfCost { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(3)]
+        public string ClaimSegmentPlanBasisOfReimbursement { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimSegmentCalculatedAwp { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string ClaimSegmentSubmissionClarificationCode { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string ClaimSegmentOtherCoverageCode { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(4)]
+        public string ClaimSegmentMedicaidCode { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(35)]
+        public string ClaimSegmentMedicaidName { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(15)]
+        public string ClaimSegmentCouponNumber { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(15)]
+        public string ClaimSegmentPharmacyNationalProviderId { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string ClaimSegmentPharmacyIdQualifierSubmitted { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimSegmentCalculatedFedmac { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimSegmentCalculatedAwpSource { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimSegmentCalculatedWac { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(3)]
+        public string ClaimSegmentCouponActualUseNumber { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimSegmentProcessedSingleSourceGenericIndicator { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(20)]
+        public string ClaimSegmentManufacturerName { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(12)]
+        public string ClaimSegmentAdjudicatedUnitPrice { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimSegmentPreCopayRoundingAmount { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimSegmentNumberOfCouponUses { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(3)]
+        public string ClaimSegmentCombinedCouponUses { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(20)]
+        public string ClaimSegmentRejectReprocessOriginalAuthorizationNumber { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Reversal Flag
+        /// Format: N
+        /// Length: 1
+        /// Values: 0, 1
+        /// Definition: "1" = Claim is a Reversal
+        /// </summary>
+        [FieldFixedLength(119)]
+        public string ClaimSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
