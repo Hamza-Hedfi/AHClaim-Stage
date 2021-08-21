@@ -5,8 +5,6 @@
     /// </summary>
     public class ClaimSegment
     {
-        public string SeparatorCharacter { get; set; }
-        public string SegmentIdentifier { get; set; }
         public string ClaimAuthorizationNumber { get; set; }
         public string OriginalClaimAuthorizationNumber { get; set; }
         public string ReversalClaimAuthorizationNumber { get; set; }
