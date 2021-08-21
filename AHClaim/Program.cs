@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using AHClaim.Record;
 using AHClaim.Segment;
@@ -22,11 +21,11 @@ namespace AHClaim
             var headerResult = headerEngine.ReadString(engine.HeaderText);
             var footerResult = footerEngine.ReadString(engine.FooterText);
 
-            
+
             // Transform
             var claimSegments = SegmentFactory.GetClaimSegments(result);
-            
-            
+            // var segments = claimSegments.GroupBy(segment => segment.OriginalClaimAuthorizationNumber).Count();
+
             // Load 
             // TODO: 
         }
