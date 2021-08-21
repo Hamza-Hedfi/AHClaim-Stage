@@ -48,6 +48,7 @@
         <Compile Include="Record\HeaderRecord.cs" />
         <Compile Include="Record\RawClaimRecord.cs" />
         <Compile Include="Segment\ClaimSegment.cs" />
+        <Compile Include="Segment\SegmentFactory.cs" />
         <Compile Include="Segment\HeaderSegment.cs" />
     </ItemGroup>
     <ItemGroup>
