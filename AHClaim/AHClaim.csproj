@@ -47,10 +47,31 @@
         <Compile Include="Record\FileTrailerRecord.cs" />
         <Compile Include="Record\HeaderRecord.cs" />
         <Compile Include="Record\RawClaimRecord.cs" />
+        <Compile Include="Segment\AddtlPatientInfoSegment.cs" />
+        <Compile Include="Segment\AddtlSubmittedPharmacyPricing.cs" />
+        <Compile Include="Segment\AddtlSubmittedValuesSegment.cs" />
+        <Compile Include="Segment\ClaimBalancesSegment.cs" />
         <Compile Include="Segment\ClaimIndicatorSegment.cs" />
+        <Compile Include="Segment\ClaimRejectSegment.cs" />
         <Compile Include="Segment\ClaimSegment.cs" />
+        <Compile Include="Segment\DrugClassificationSegment.cs" />
+        <Compile Include="Segment\DURSegment.cs" />
+        <Compile Include="Segment\EnhancedPrescriberSegment.cs" />
+        <Compile Include="Segment\EnhancedSubmittedMemberSegment.cs" />
+        <Compile Include="Segment\PaperClaimInfoSegment.cs" />
+        <Compile Include="Segment\PatientPaySegment.cs" />
+        <Compile Include="Segment\PharmacyPricingSegment.cs" />
+        <Compile Include="Segment\PharmacySegment.cs" />
+        <Compile Include="Segment\PlanCodesUsedSegment.cs" />
+        <Compile Include="Segment\PrescriberSegment.cs" />
+        <Compile Include="Segment\PriorAuthorizationSegment.cs" />
         <Compile Include="Segment\SegmentFactory.cs" />
         <Compile Include="Segment\HeaderSegment.cs" />
+        <Compile Include="Segment\SubmittedDurOverrideSegment.cs" />
+        <Compile Include="Segment\SubmittedMemberSegment.cs" />
+        <Compile Include="Segment\SubmittedOcbInformation.cs" />
+        <Compile Include="Segment\TransactionMessaging.cs" />
+        <Compile Include="Segment\WorkersCompensationSegment.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="packages.config" />
