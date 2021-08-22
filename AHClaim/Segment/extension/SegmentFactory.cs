@@ -254,5 +254,38 @@ namespace AHClaim.Segment
                 Dur5ConflictingAuthorizationNumber = r.DurSegmentDur5ConflictingAuthorizationNumber
             });
         }
+
+        /// <summary>
+        /// Factory method for Submitted DUR Override Segment
+        /// </summary>
+        /// <param name="container">Raw Claim Records</param>
+        /// <returns>IEnumerable&lt;DurSegment&gt;</returns>
+        public static IEnumerable<SubmittedDurOverrideSegment> GetSubmittedDurOverrideSegments(
+            this IEnumerable<RawClaimRecord> container)
+        {
+            return container.Select(r => new SubmittedDurOverrideSegment()
+            {
+                ReasonForServiceConflict1 = r.SubmittedDurOverrideSegmentReasonForServiceConflict1,
+                ProfessionalServiceCodeIntervention1 =
+                    r.SubmittedDurOverrideSegmentProfessionalServiceCodeIntervention1,
+                ResultOfServiceCodeOutcome1 = r.SubmittedDurOverrideSegmentResultOfServiceCodeOutcome1,
+                ReasonForServiceConflict2 = r.SubmittedDurOverrideSegmentReasonForServiceConflict2,
+                ProfessionalServiceCodeIntervention2 =
+                    r.SubmittedDurOverrideSegmentProfessionalServiceCodeIntervention2,
+                ResultOfServiceCodeOutcome2 = r.SubmittedDurOverrideSegmentResultOfServiceCodeOutcome2,
+                ReasonForServiceConflict3 = r.SubmittedDurOverrideSegmentReasonForServiceConflict3,
+                ProfessionalServiceCodeIntervention3 =
+                    r.SubmittedDurOverrideSegmentProfessionalServiceCodeIntervention3,
+                ResultOfServiceCodeOutcome3 = r.SubmittedDurOverrideSegmentResultOfServiceCodeOutcome3,
+                ReasonForServiceConflict4 = r.SubmittedDurOverrideSegmentReasonForServiceConflict4,
+                ProfessionalServiceCodeIntervention4 =
+                    r.SubmittedDurOverrideSegmentProfessionalServiceCodeIntervention4,
+                ResultOfServiceCodeOutcome4 = r.SubmittedDurOverrideSegmentResultOfServiceCodeOutcome4,
+                ReasonForServiceConflict5 = r.SubmittedDurOverrideSegmentReasonForServiceConflict5,
+                ProfessionalServiceCodeIntervention5 =
+                    r.SubmittedDurOverrideSegmentProfessionalServiceCodeIntervention5,
+                ResultOfServiceCodeOutcome5 = r.SubmittedDurOverrideSegmentResultOfServiceCodeOutcome5
+            });
+        }
     }
 }
