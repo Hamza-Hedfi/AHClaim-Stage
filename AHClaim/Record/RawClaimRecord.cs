@@ -1698,28 +1698,232 @@ namespace AHClaim.Record
 
         #region DUR Segment
 
-        [FieldFixedLength(1)] public string DurSegmentSegmentSeparatorCharacter { get; set; }
-        [FieldFixedLength(2)] public string DurSegmentSegmentIdentifier { get; set; }
-        [FieldFixedLength(2)] public string DurSegmentDur1ConflictCode { get; set; }
-        [FieldFixedLength(1)] public string DurSegmentDur1SeverityIndex { get; set; }
-        [FieldFixedLength(1)] public string DurSegmentDur1HitDisposition { get; set; }
-        [FieldFixedLength(20)] public string DurSegmentDur1ConflictingAuthorizationNumber { get; set; }
-        [FieldFixedLength(2)] public string DurSegmentDur2ConflictCode { get; set; }
-        [FieldFixedLength(1)] public string DurSegmentDur2SeverityIndex { get; set; }
-        [FieldFixedLength(1)] public string DurSegmentDur2HitDisposition { get; set; }
-        [FieldFixedLength(20)] public string DurSegmentDur2ConflictingAuthorizationNumber { get; set; }
-        [FieldFixedLength(2)] public string DurSegmentDur3ConflictCode { get; set; }
-        [FieldFixedLength(1)] public string DurSegmentDur3SeverityIndex { get; set; }
-        [FieldFixedLength(1)] public string DurSegmentDur3HitDisposition { get; set; }
-        [FieldFixedLength(20)] public string DurSegmentDur3ConflictingAuthorizationNumber { get; set; }
-        [FieldFixedLength(2)] public string DurSegmentDur4ConflictCode { get; set; }
-        [FieldFixedLength(1)] public string DurSegmentDur4SeverityIndex { get; set; }
-        [FieldFixedLength(1)] public string DurSegmentDur4HitDisposition { get; set; }
-        [FieldFixedLength(20)] public string DurSegmentDur4ConflictingAuthorizationNumber { get; set; }
-        [FieldFixedLength(2)] public string DurSegmentDur5ConflictCode { get; set; }
-        [FieldFixedLength(1)] public string DurSegmentDur5SeverityIndex { get; set; }
-        [FieldFixedLength(1)] public string DurSegmentDur5HitDisposition { get; set; }
-        [FieldFixedLength(20)] public string DurSegmentDur5ConflictingAuthorizationNumber { get; set; }
+        /// <summary>
+        /// Field #: 1 
+        /// Field Name: Segment Separator Character 
+        /// Format: AN
+        /// Length: 1
+        /// Value: >
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string DurSegmentSegmentSeparatorCharacter { get; set; }
+
+        /// <summary>
+        /// Field #: 2 
+        /// Field Name: Segment Identifier ( DU ) 
+        /// Format: AN
+        /// Length: 2
+        /// Value: DU
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string DurSegmentSegmentIdentifier { get; set; }
+
+        /// <summary>
+        /// Field #: 3 
+        /// Field Name: DUR 1 Conflict Code 
+        /// Format: AN
+        /// Length: 2
+        /// Definition: NCPCP Conflict code incurred
+        /// </summary>
+
+        [FieldFixedLength(2)]
+        public string DurSegmentDur1ConflictCode { get; set; }
+
+        /// <summary>
+        /// Field #: 4 
+        /// Field Name: DUR 1 Severity Index 
+        /// Format: AN
+        /// Length: 1
+        /// Definition: NCPDP Severity code, if applicable
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string DurSegmentDur1SeverityIndex { get; set; }
+
+        /// <summary>
+        /// Field #: 5 
+        /// Field Name: DUR 1 Hit Disposition 
+        /// Format: AN
+        /// Length: 1
+        /// Value: A,R
+        /// Definition: "A" = Advisory, "R" = Reject, blank = no notification to pharmacy per plan
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string DurSegmentDur1HitDisposition { get; set; }
+
+        /// <summary>
+        /// Field #: 6 
+        /// Field Name: DUR 1 Conflicting Authorization Number 
+        /// Format: AN
+        /// Length: 20
+        /// Definition: Auth Number of conflicting Rx, if applicable
+        /// </summary>
+        [FieldFixedLength(20)]
+        public string DurSegmentDur1ConflictingAuthorizationNumber { get; set; }
+
+        /// <summary>
+        /// Field #: 7 
+        /// Field Name: DUR 2 Conflict Code 
+        /// Format: AN
+        /// Length: 2
+        /// Definition: NCPCP Conflict code incurred
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string DurSegmentDur2ConflictCode { get; set; }
+
+        /// <summary>
+        /// Field #: 8 
+        /// Field Name: DUR 2 Severity Index 
+        /// Format: AN
+        /// Length: 1
+        /// Definition: NCPDP Severity code, if applicable
+        /// </summary>
+
+        [FieldFixedLength(1)]
+        public string DurSegmentDur2SeverityIndex { get; set; }
+
+        /// <summary>
+        /// Field #: 9 
+        /// Field Name: DUR 2 Hit Disposition 
+        /// Format: AN
+        /// Length: 1
+        /// Value: A,R
+        /// Definition: "A" = Advisory, "R" = Reject, blank = no notification to pharmacy per plan
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string DurSegmentDur2HitDisposition { get; set; }
+
+        /// <summary>
+        /// Field #: 10 
+        /// Field Name: DUR 2 Conflicting Authorization Number 
+        /// Format: AN
+        /// Length: 20
+        /// Definition: Auth Number of conflicting Rx, if applicable
+        /// </summary>
+        [FieldFixedLength(20)]
+        public string DurSegmentDur2ConflictingAuthorizationNumber { get; set; }
+
+        /// <summary>
+        /// Field #: 11 
+        /// Field Name: DUR 3 Conflict Code 
+        /// Format: AN
+        /// Length: 2
+        /// Definition: NCPCP Conflict code incurred
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string DurSegmentDur3ConflictCode { get; set; }
+
+        /// <summary>
+        /// Field #: 12 
+        /// Field Name: DUR 3 Severity Index 
+        /// Format: AN
+        /// Length: 1
+        /// Definition: NCPDP Severity code, if applicable
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string DurSegmentDur3SeverityIndex { get; set; }
+
+        /// <summary>
+        /// Field #: 13 
+        /// Field Name: DUR 3 Hit Disposition 
+        /// Format: AN
+        /// Length: 1
+        /// Value: A,R 
+        /// Definition: "A" = Advisory, "R" = Reject, blank = no notification to pharmacy per plan
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string DurSegmentDur3HitDisposition { get; set; }
+
+        /// <summary>
+        /// Field #: 14 
+        /// Field Name: DUR 3 Conflicting Authorization Number 
+        /// Format: AN
+        /// Length: 20
+        /// Definition: Auth Number of conflicting Rx, if applicable
+        /// </summary>
+        [FieldFixedLength(20)]
+        public string DurSegmentDur3ConflictingAuthorizationNumber { get; set; }
+
+        /// <summary>
+        /// Field #: 15 
+        /// Field Name: DUR 4 Conflict Code 
+        /// Format: AN
+        /// Length: 2
+        /// Definition: NCPCP Conflict code incurred
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string DurSegmentDur4ConflictCode { get; set; }
+
+        /// <summary>
+        /// Field #: 16 
+        /// Field Name: DUR 4 Severity Index 
+        /// Format: AN
+        /// Length: 1
+        /// Definition: NCPDP Severity code, if applicable
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string DurSegmentDur4SeverityIndex { get; set; }
+
+        /// <summary>
+        /// Field #: 17 
+        /// Field Name: DUR 4 Hit Disposition 
+        /// Format: AN
+        /// Length: 1
+        /// Value: A,R 
+        /// Definition: "A" = Advisory, "R" = Reject, blank = no notification to pharmacy per plan
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string DurSegmentDur4HitDisposition { get; set; }
+
+        /// <summary>
+        /// Field #: 18 
+        /// Field Name: DUR 4 Conflicting Authorization Number 
+        /// Format: AN
+        /// Length: 20
+        /// Definition: Auth Number of conflicting Rx, if applicable
+        /// </summary>
+        [FieldFixedLength(20)]
+        public string DurSegmentDur4ConflictingAuthorizationNumber { get; set; }
+
+        /// <summary>
+        /// Field #: 19 
+        /// Field Name: DUR 5 Conflict Code 
+        /// Format: AN
+        /// Length: 2
+        /// Definition: NCPCP Conflict code incurred
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string DurSegmentDur5ConflictCode { get; set; }
+
+        /// <summary>
+        /// Field #: 20 
+        /// Field Name: DUR 5 Severity Index 
+        /// Format: AN
+        /// Length: 1
+        /// Definition: NCPDP Severity code, if applicable
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string DurSegmentDur5SeverityIndex { get; set; }
+
+        /// <summary>
+        /// Field #: 21 
+        /// Field Name: DUR 5 Hit Disposition 
+        /// Format: AN
+        /// Length: 1
+        /// Value: A,R 
+        /// Definition: "A" = Advisory, "R" = Reject, blank = no notification to pharmacy per plan
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string DurSegmentDur5HitDisposition { get; set; }
+
+        /// <summary>
+        /// Field #: 22 
+        /// Field Name: DUR 5 Conflicting Authorization Number 
+        /// Format: AN
+        /// Length: 20
+        /// Definition: Auth Number of conflicting Rx, if applicable
+        /// </summary>
+        [FieldFixedLength(20)]
+        public string DurSegmentDur5ConflictingAuthorizationNumber { get; set; }
 
         #endregion
 
