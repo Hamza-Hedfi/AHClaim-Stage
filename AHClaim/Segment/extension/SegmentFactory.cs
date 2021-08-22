@@ -6,6 +6,7 @@ namespace AHClaim.Segment
 {
     public static class SegmentFactory
     {
+        
         public static IEnumerable<ClaimSegment> GetClaimSegments(this IEnumerable<RawClaimRecord> container)
         {
             return container.Select(r => new ClaimSegment()
@@ -123,6 +124,44 @@ namespace AHClaim.Segment
                 CompensableClaimIndicator = r.ClaimIndicatorSegmentCompensableClaimIndicator,
                 DataFeedTransaction = r.ClaimIndicatorSegmentDataFeedTransaction,
                 ReservedForFutureUse = r.ClaimIndicatorSegmentReservedForFutureUse
+            });
+        }
+
+        public static IEnumerable<AddtlPatientInfoSegment> GetAddtlPatientInfoSegments(
+            this IEnumerable<RawClaimRecord> container)
+        {
+            return container.Select(r => new AddtlPatientInfoSegment()
+            {
+                CardholderLastName = r.AddtlPatientInfoSegmentCardholderLastName,
+                CardholderFirstName = r.AddtlPatientInfoSegmentCardholderFirstName,
+                PatientMiddleInitial = r.AddtlPatientInfoSegmentPatientMiddleInitial,
+                PatientNameSuffix = r.AddtlPatientInfoSegmentPatientNameSuffix,
+                AddressLine1 = r.AddtlPatientInfoSegmentAddressLine1,
+                AddressLine2 = r.AddtlPatientInfoSegmentAddressLine2,
+                City = r.AddtlPatientInfoSegmentCity,
+                State = r.AddtlPatientInfoSegmentState,
+                ZipCode = r.AddtlPatientInfoSegmentZipCode,
+                PhoneNumber = r.AddtlPatientInfoSegmentPhoneNumber,
+                EffectiveDate = r.AddtlPatientInfoSegmentEffectiveDate,
+                TerminationDate = r.AddtlPatientInfoSegmentTerminationDate,
+                DateOfBirth = r.AddtlPatientInfoSegmentDateOfBirth,
+                GenderCode = r.AddtlPatientInfoSegmentGenderCode,
+                RelationshipCode = r.AddtlPatientInfoSegmentRelationshipCode,
+                CoverageCode = r.AddtlPatientInfoSegmentCoverageCode,
+                ReservedForFutureUse1 = r.AddtlPatientInfoSegmentReservedForFutureUse1,
+                StudentFlag = r.AddtlPatientInfoSegmentStudentFlag,
+                ReservedForFutureUse2 = r.AddtlPatientInfoSegmentReservedForFutureUse2,
+                LocationCode = r.AddtlPatientInfoSegmentLocationCode,
+                LocationName = r.AddtlPatientInfoSegmentLocationName,
+                SecondaryCoverage = r.AddtlPatientInfoSegmentSecondaryCoverage,
+                PharmacyLockIn = r.AddtlPatientInfoSegmentPharmacyLockIn,
+                PhysicianLockIn = r.AddtlPatientInfoSegmentPhysicianLockIn,
+                TestMemberFlag = r.AddtlPatientInfoSegmentTestMemberFlag,
+                EligibilityCreatedByUserId = r.AddtlPatientInfoSegmentEligibilityCreatedByUserId,
+                EligibilityCreatedDate = r.AddtlPatientInfoSegmentEligibilityCreatedDate,
+                EligibilityModifiedByUserId = r.AddtlPatientInfoSegmentEligibilityModifiedByUserId,
+                EligibilityModifiedDate = r.AddtlPatientInfoSegmentEligibilityModifiedDate,
+                ReservedForFutureUse3 = r.AddtlPatientInfoSegmentReservedForFutureUse3
             });
         }
     }

@@ -1465,7 +1465,7 @@ namespace AHClaim.Record
         /// Length: 15
         /// </summary>
         [FieldFixedLength(15)]
-        public string AddtlPatientInfoReservedForFutureUse3 { get; set; }
+        public string AddtlPatientInfoSegmentReservedForFutureUse3 { get; set; }
 
         #endregion
 
