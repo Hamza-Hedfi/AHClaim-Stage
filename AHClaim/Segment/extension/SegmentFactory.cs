@@ -200,5 +200,26 @@ namespace AHClaim.Segment
                 EccRejectCode5 = r.ClaimRejectSegmentEccRejectCode5
             });
         }
+
+        /// <summary>
+        /// Factory method for Prior Authorization Segment
+        /// </summary>
+        /// <param name="container">Raw Claim Records</param>
+        /// <returns>IEnumerable&lt;ClaimRejectSegment&gt;</returns>
+        public static IEnumerable<PriorAuthorizationSegment> GetPriorAuthorizationSegments(
+            this IEnumerable<RawClaimRecord> container)
+        {
+            return container.Select(r => new PriorAuthorizationSegment()
+            {
+                PaTypeSubmitted = r.PriorAuthorizationSegmentPaTypeSubmitted,
+                PaNumberSubmitted = r.PriorAuthorizationSegmentPaNumberSubmitted,
+                ActualPaNumberUsed = r.PriorAuthorizationSegmentActualPaNumberUsed,
+                PaTypeManualAuto = r.PriorAuthorizationSegmentPaTypeManualAuto,
+                PaEffectiveDate = r.PriorAuthorizationSegmentPaEffectiveDate,
+                PaTerminationDate = r.PriorAuthorizationSegmentPaTerminationDate,
+                PaDescription = r.PriorAuthorizationSegmentPaDescription,
+                ReservedForFutureUse = r.PriorAuthorizationSegmentReservedForFutureUse
+            });
+        }
     }
 }
