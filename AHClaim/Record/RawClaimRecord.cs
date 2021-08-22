@@ -1595,18 +1595,104 @@ namespace AHClaim.Record
 
         #region Prior Authorization Segment
 
-        [FieldFixedLength(1)] public string PriorAuthorizationSegmentSeparatorCharacter { get; set; }
-        [FieldFixedLength(2)] public string PriorAuthorizationSegmentIdentifier { get; set; }
-        [FieldFixedLength(2)] public string PriorAuthorizationSegmentPaTypeSubmitted { get; set; }
-        [FieldFixedLength(11)] public string PriorAuthorizationSegmentPaNumberSubmitted { get; set; }
-        [FieldFixedLength(11)] public string PriorAuthorizationSegmentActualPaNumberUsed { get; set; }
-        [FieldFixedLength(1)] public string PriorAuthorizationSegmentPaTypeManualAuto { get; set; }
-        [FieldFixedLength(8)] public string PriorAuthorizationSegmentPaEffectiveDate { get; set; }
-        [FieldFixedLength(8)] public string PriorAuthorizationSegmentPaTerminationDate { get; set; }
-        [FieldFixedLength(35)] public string PriorAuthorizationSegmentPaDescription { get; set; }
+        /// <summary>
+        /// Field #: 1 
+        /// Field Name: Segment Separator Character 
+        /// Format: AN 
+        /// Length: 1 
+        /// Value: >
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string PriorAuthorizationSegmentSeparatorCharacter { get; set; }
 
+        /// <summary>
+        /// Field #: 2 
+        /// Field Name: Segment Identifier ( PA ) 
+        /// Format: AN
+        /// Length: 2
+        /// Value: PA
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string PriorAuthorizationSegmentIdentifier { get; set; }
+
+        /// <summary>
+        /// Field #: 3 
+        /// Field Name: PA Type Submitted 
+        /// Format: N 
+        /// Length: 2
+        /// Definition: NCPDP PA Type ("01")
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string PriorAuthorizationSegmentPaTypeSubmitted { get; set; }
+
+        /// <summary>
+        /// Field #: 4 
+        /// Field Name: PA # Submitted 
+        /// Format: N 
+        /// Length: 11
+        /// Definition: PA Number submitted by pharmacy
+        /// </summary>
+        [FieldFixedLength(11)]
+        public string PriorAuthorizationSegmentPaNumberSubmitted { get; set; }
+
+        /// <summary>
+        /// Field #: 5 
+        /// Field Name: Actual PA # Used 
+        /// Format: N 
+        /// Length: 11
+        /// Definition: PA Number utilized in processing
+        /// </summary>
+        [FieldFixedLength(11)]
+        public string PriorAuthorizationSegmentActualPaNumberUsed { get; set; }
+
+        /// <summary>
+        /// Field #: 6 
+        /// Field Name: PA Type - Manual/Auto 
+        /// Format: A 
+        /// Length: 1
+        /// Value: A,M 
+        /// Definition: "A" = Automatic, "M" = Manual
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string PriorAuthorizationSegmentPaTypeManualAuto { get; set; }
+
+        /// <summary>
+        /// Field #: 7 
+        /// Field Name: PA Effective Date 
+        /// Format: N 
+        /// Length:8
+        /// Definition: Effective date associated with PA record used
+        /// </summary>
+        [FieldFixedLength(8)]
+        public string PriorAuthorizationSegmentPaEffectiveDate { get; set; }
+
+        /// <summary>
+        /// Field #: 8 
+        /// Field Name: PA Termination Date 
+        /// Format: N 
+        /// Length: 8
+        /// Definition: Termination date associated with PA record used 
+        /// </summary>
+        [FieldFixedLength(8)]
+        public string PriorAuthorizationSegmentPaTerminationDate { get; set; }
+
+        /// <summary>
+        /// Field #: 9 
+        /// Field Name: PA Description 
+        /// Format: AN
+        /// Length: 35 
+        /// Definition: Description associated with PA record used 
+        /// </summary>
+        [FieldFixedLength(35)]
+        public string PriorAuthorizationSegmentPaDescription { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name:  Reserved for Future Use 
+        /// Length: 30
+        /// </summary>
         [FieldFixedLength(30)]
-        public string PriorAuthorizationSegmentPriorAuthorizationSegmentReservedForFutureUse { get; set; }
+        public string PriorAuthorizationSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
