@@ -221,5 +221,38 @@ namespace AHClaim.Segment
                 ReservedForFutureUse = r.PriorAuthorizationSegmentReservedForFutureUse
             });
         }
+
+        /// <summary>
+        /// Factory method for DUR Segment
+        /// </summary>
+        /// <param name="container">Raw Claim Records</param>
+        /// <returns>IEnumerable&lt;DurSegment&gt;</returns>
+        public static IEnumerable<DurSegment> GetDurSegments(
+            this IEnumerable<RawClaimRecord> container)
+        {
+            return container.Select(r => new DurSegment()
+            {
+                Dur1ConflictCode = r.DurSegmentDur1ConflictCode,
+                Dur1SeverityIndex = r.DurSegmentDur1SeverityIndex,
+                Dur1HitDisposition = r.DurSegmentDur1HitDisposition,
+                Dur1ConflictingAuthorizationNumber = r.DurSegmentDur1ConflictingAuthorizationNumber,
+                Dur2ConflictCode = r.DurSegmentDur2ConflictCode,
+                Dur2SeverityIndex = r.DurSegmentDur2SeverityIndex,
+                Dur2HitDisposition = r.DurSegmentDur2HitDisposition,
+                Dur2ConflictingAuthorizationNumber = r.DurSegmentDur2ConflictingAuthorizationNumber,
+                Dur3ConflictCode = r.DurSegmentDur3ConflictCode,
+                Dur3SeverityIndex = r.DurSegmentDur3SeverityIndex,
+                Dur3HitDisposition = r.DurSegmentDur3HitDisposition,
+                Dur3ConflictingAuthorizationNumber = r.DurSegmentDur3ConflictingAuthorizationNumber,
+                Dur4ConflictCode = r.DurSegmentDur4ConflictCode,
+                Dur4SeverityIndex = r.DurSegmentDur4SeverityIndex,
+                Dur4HitDisposition = r.DurSegmentDur4HitDisposition,
+                Dur4ConflictingAuthorizationNumber = r.DurSegmentDur4ConflictingAuthorizationNumber,
+                Dur5ConflictCode = r.DurSegmentDur5ConflictCode,
+                Dur5SeverityIndex = r.DurSegmentDur5SeverityIndex,
+                Dur5HitDisposition = r.DurSegmentDur5HitDisposition,
+                Dur5ConflictingAuthorizationNumber = r.DurSegmentDur5ConflictingAuthorizationNumber
+            });
+        }
     }
 }
