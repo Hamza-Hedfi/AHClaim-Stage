@@ -9,7 +9,7 @@
         /// Length: 3
         /// Value: NCPDP Rejection Code
         /// </summary>
-        public string ClaimRejectSegmentRejectCode1 { get; set; }
+        public string RejectCode1 { get; set; }
 
         /// <summary>
         /// Firld #: 4 
@@ -18,7 +18,7 @@
         /// Length: 3
         /// Definition: NCPDP Rejection Code 
         /// </summary>
-        public string ClaimRejectSegmentRejectCode2 { get; set; }
+        public string RejectCode2 { get; set; }
 
         /// <summary>
         /// Firld #: 5 
@@ -27,7 +27,7 @@
         /// Length: 3
         /// Definition:  NCPDP Rejection Code 
         /// </summary>
-        public string ClaimRejectSegmentRejectCode3 { get; set; }
+        public string RejectCode3 { get; set; }
 
         /// <summary>
         /// Firld #: 6 
@@ -36,7 +36,7 @@
         /// Length: 3
         /// Definition:  NCPDP Rejection Code 
         /// </summary>
-        public string ClaimRejectSegmentRejectCode4 { get; set; }
+        public string RejectCode4 { get; set; }
 
         /// <summary>
         /// Firld #: 7 
@@ -45,7 +45,7 @@
         /// Length: 3
         /// Definition:  NCPDP Rejection Code 
         /// </summary>
-        public string ClaimRejectSegmentRejectCode5 { get; set; }
+        public string RejectCode5 { get; set; }
 
         /// <summary>
         /// Firld #: 8 
@@ -54,7 +54,7 @@
         /// Length: 3
         /// Definition:  Error clarification code for Rej Code 1 
         /// </summary>
-        public string ClaimRejectSegmentEccRejectCode1 { get; set; }
+        public string EccRejectCode1 { get; set; }
 
         /// <summary>
         /// Firld #: 9 
@@ -63,7 +63,7 @@
         /// Length: 3
         /// Definition:  Error clarification code for Rej Code 2 
         /// </summary>
-        public string ClaimRejectSegmentEccRejectCode2 { get; set; }
+        public string EccRejectCode2 { get; set; }
 
         /// <summary>
         /// Firld #: 10
@@ -72,7 +72,7 @@
         /// Length: 3
         /// Definition:  Error clarification code for Rej Code 3 
         /// </summary>
-        public string ClaimRejectSegmentEccRejectCode3 { get; set; }
+        public string EccRejectCode3 { get; set; }
 
         /// <summary>
         /// Firld #: 11
@@ -81,7 +81,7 @@
         /// Length: 3
         /// Definition:  Error clarification code for Rej Code 4 
         /// </summary>
-        public string ClaimRejectSegmentEccRejectCode4 { get; set; }
+        public string EccRejectCode4 { get; set; }
 
         /// <summary>
         /// Firld #: 12
@@ -90,6 +90,6 @@
         /// Length: 3
         /// Definition: Error clarification code for Rej Code 5
         /// </summary>
-        public string ClaimRejectSegmentEccRejectCode5 { get; set; }
+        public string EccRejectCode5 { get; set; }
     }
 }

@@ -178,5 +178,22 @@ namespace AHClaim.Segment
                 ReservedForFutureUse3 = r.AddtlPatientInfoSegmentReservedForFutureUse3
             });
         }
+
+        public static IEnumerable<ClaimRejectSegment> GetClaimRejectSegments(this IEnumerable<RawClaimRecord> container)
+        {
+            return container.Select(r => new ClaimRejectSegment()
+            {
+                RejectCode1 = r.ClaimRejectSegmentRejectCode1,
+                RejectCode2 = r.ClaimRejectSegmentRejectCode2,
+                RejectCode3 = r.ClaimRejectSegmentRejectCode3,
+                RejectCode4 = r.ClaimRejectSegmentRejectCode4,
+                RejectCode5 = r.ClaimRejectSegmentRejectCode5,
+                EccRejectCode1 = r.ClaimRejectSegmentEccRejectCode1,
+                EccRejectCode2 = r.ClaimRejectSegmentEccRejectCode2,
+                EccRejectCode3 = r.ClaimRejectSegmentEccRejectCode3,
+                EccRejectCode4 = r.ClaimRejectSegmentEccRejectCode4,
+                EccRejectCode5 = r.ClaimRejectSegmentEccRejectCode5
+            });
+        }
     }
 }
