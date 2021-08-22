@@ -1162,38 +1162,310 @@ namespace AHClaim.Record
 
         #region Addtl. Patient Info Segment
 
-        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentSeparatorCharacter { get; set; }
-        [FieldFixedLength(2)] public string AddtlPatientInfoSegmentIdentifier { get; set; }
-        [FieldFixedLength(15)] public string AddtlPatientInfoSegmentCardholderLastName { get; set; }
-        [FieldFixedLength(12)] public string AddtlPatientInfoSegmentCardholderFirstName { get; set; }
-        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentPatientMiddleInitial { get; set; }
-        [FieldFixedLength(3)] public string AddtlPatientInfoSegmentPatientNameSuffix { get; set; }
-        [FieldFixedLength(35)] public string AddtlPatientInfoSegmentAddressLine1 { get; set; }
-        [FieldFixedLength(35)] public string AddtlPatientInfoSegmentAddressLine2 { get; set; }
-        [FieldFixedLength(18)] public string AddtlPatientInfoSegmentCity { get; set; }
-        [FieldFixedLength(2)] public string AddtlPatientInfoSegmentState { get; set; }
-        [FieldFixedLength(9)] public string AddtlPatientInfoSegmentZipCode { get; set; }
-        [FieldFixedLength(10)] public string AddtlPatientInfoSegmentPhoneNumber { get; set; }
-        [FieldFixedLength(8)] public string AddtlPatientInfoSegmentEffectiveDate { get; set; }
-        [FieldFixedLength(8)] public string AddtlPatientInfoSegmentTerminationDate { get; set; }
-        [FieldFixedLength(8)] public string AddtlPatientInfoSegmentDateOfBirth { get; set; }
-        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentGenderCode { get; set; }
-        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentRelationshipCode { get; set; }
-        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentCoverageCode { get; set; }
-        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentReservedForFutureUse1 { get; set; }
-        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentStudentFlag { get; set; }
-        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentReservedForFutureUse2 { get; set; }
-        [FieldFixedLength(20)] public string AddtlPatientInfoSegmentLocationCode { get; set; }
-        [FieldFixedLength(35)] public string AddtlPatientInfoSegmentLocationName { get; set; }
-        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentSecondaryCoverage { get; set; }
-        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentPharmacyLockIn { get; set; }
-        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentPhysicianLockIn { get; set; }
-        [FieldFixedLength(1)] public string AddtlPatientInfoSegmentTestMemberFlag { get; set; }
-        [FieldFixedLength(10)] public string AddtlPatientInfoSegmentEligibilityCreatedByUserId { get; set; }
-        [FieldFixedLength(8)] public string AddtlPatientInfoSegmentEligibilityCreatedDate { get; set; }
-        [FieldFixedLength(10)] public string AddtlPatientInfoSegmentEligibilityModifiedByUserId { get; set; }
-        [FieldFixedLength(8)] public string AddtlPatientInfoSegmentEligibilityModifiedDate { get; set; }
-        [FieldFixedLength(15)] public string AddtlPatientInfoReservedForFutureUse3 { get; set; }
+        /// <summary>
+        /// Field #: 1 
+        /// Field Name: Segment Separator Character 
+        /// Format: AN 
+        /// Length: 1
+        /// Value: >
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string AddtlPatientInfoSegmentSeparatorCharacter { get; set; }
+
+        /// <summary>
+        /// Field #: 2 
+        /// Field Name: Segment Identifier ( PT ) 
+        /// Format: AN 
+        /// Length: 2
+        /// Value: PT
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string AddtlPatientInfoSegmentIdentifier { get; set; }
+
+        /// <summary>
+        /// Field #: 3 
+        /// Field Name: Cardholder Last Name 
+        /// Format: AN 
+        /// Length: 15
+        /// Definition: Value associated with Primary/Cardholder record
+        /// </summary>
+        [FieldFixedLength(15)]
+        public string AddtlPatientInfoSegmentCardholderLastName { get; set; }
+
+        /// <summary>
+        /// Field #: 4 
+        /// Field Name: Cardholder First Name 
+        /// Format: AN 
+        /// Length: 12
+        /// Definition: Value associated with Primary/Cardholder record
+        /// </summary>
+        [FieldFixedLength(12)]
+        public string AddtlPatientInfoSegmentCardholderFirstName { get; set; }
+
+        /// <summary>
+        /// Field #: 5 
+        /// Field Name: Patient Middle Initial 
+        /// Format: AN 
+        /// Length: 1
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string AddtlPatientInfoSegmentPatientMiddleInitial { get; set; }
+
+        /// <summary>
+        /// Field #: 6 
+        /// Field Name: Patient Name Suffix 
+        /// Format: AN 
+        /// Length: 3
+        /// </summary>
+        [FieldFixedLength(3)]
+        public string AddtlPatientInfoSegmentPatientNameSuffix { get; set; }
+
+        /// <summary>
+        /// Field #: 7 
+        /// Field Name: Address Line 1 
+        /// Format: AN 
+        /// Length: 35
+        /// </summary>
+        [FieldFixedLength(35)]
+        public string AddtlPatientInfoSegmentAddressLine1 { get; set; }
+
+        /// <summary>
+        /// Field #: 8 
+        /// Field Name: Address Line 2 
+        /// Format: AN 
+        /// Length: 35
+        /// </summary>
+        [FieldFixedLength(35)]
+        public string AddtlPatientInfoSegmentAddressLine2 { get; set; }
+
+        /// <summary>
+        /// Field #: 9 
+        /// Field Name: City 
+        /// Format: AN 
+        /// Length: 18
+        /// </summary>
+        [FieldFixedLength(18)]
+        public string AddtlPatientInfoSegmentCity { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name:  State 
+        /// Format: AN 
+        /// Length: 2
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string AddtlPatientInfoSegmentState { get; set; }
+
+        /// <summary>
+        /// Field #: 11
+        /// Field Name:  Zip Code + 4 
+        /// Format: N 
+        /// Length: 9
+        /// </summary>
+        [FieldFixedLength(9)]
+        public string AddtlPatientInfoSegmentZipCode { get; set; }
+
+        /// <summary>
+        /// Field #: 12
+        /// Field Name:  Phone Number 
+        /// Format: N 
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string AddtlPatientInfoSegmentPhoneNumber { get; set; }
+
+        /// <summary>
+        /// Field #: 13
+        /// Field Name:  Effective Date 
+        /// Format: N 
+        /// Length: 8
+        /// </summary>
+        [FieldFixedLength(8)]
+        public string AddtlPatientInfoSegmentEffectiveDate { get; set; }
+
+        /// <summary>
+        /// Field #: 14
+        /// Field Name:  Termination Date 
+        /// Format: N 
+        /// Length: 8
+        /// </summary>
+        [FieldFixedLength(8)]
+        public string AddtlPatientInfoSegmentTerminationDate { get; set; }
+
+        /// <summary>
+        /// Field #: 15
+        /// Field Name:  Date Of Birth 
+        /// Format: N 
+        /// Length: 8
+        /// </summary>
+        [FieldFixedLength(8)]
+        public string AddtlPatientInfoSegmentDateOfBirth { get; set; }
+
+        /// <summary>
+        /// Field #: 16
+        /// Field Name:  Gender Code
+        /// Format:  N 
+        /// Length: 1
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string AddtlPatientInfoSegmentGenderCode { get; set; }
+
+        /// <summary>
+        /// Field #: 17
+        /// Field Name:  Relationship Code 
+        /// Format: N 
+        /// Length: 1
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string AddtlPatientInfoSegmentRelationshipCode { get; set; }
+
+        /// <summary>
+        /// Field #: 18
+        /// Field Name:  Coverage Code 
+        /// Format: N 
+        /// Length: 1
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string AddtlPatientInfoSegmentCoverageCode { get; set; }
+
+        /// <summary>
+        /// Field #: 19
+        /// Field Name:  Reserved for Future Use 
+        /// Format: N 
+        /// Length: 1
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string AddtlPatientInfoSegmentReservedForFutureUse1 { get; set; }
+
+        /// <summary>
+        /// Field #: 20
+        /// Field Name:  Student Flag 
+        /// Format: N 
+        /// Length: 1
+        /// Value: 0,1 
+        /// Definition: "1" = true
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string AddtlPatientInfoSegmentStudentFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 21
+        /// Field Name:  Reserved for Future Use 
+        /// Format: N 
+        /// Length: 1
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string AddtlPatientInfoSegmentReservedForFutureUse2 { get; set; }
+
+        /// <summary>
+        /// Field #: 22
+        /// Field Name:  Location Code 
+        /// Format: AN 
+        /// Length: 20
+        /// Definition: Value associated with Member/Patient ID
+        /// </summary>
+        [FieldFixedLength(20)]
+        public string AddtlPatientInfoSegmentLocationCode { get; set; }
+
+        /// <summary>
+        /// Field #: 23
+        /// Field Name:  Location Name 
+        /// Format: AN 
+        /// Length: 35
+        /// Dfinition: Value associated with Location Code
+        /// </summary>
+        [FieldFixedLength(35)]
+        public string AddtlPatientInfoSegmentLocationName { get; set; }
+
+        /// <summary>
+        /// Field #: 24
+        /// Field Name:  Secondary Coverage 
+        /// Format: N 
+        /// Length: 1
+        /// Value: 0,1
+        /// Definition: "1" = true
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string AddtlPatientInfoSegmentSecondaryCoverage { get; set; }
+
+        /// <summary>
+        /// Field #: 25
+        /// Field Name:  Pharmacy Lock-in 
+        /// Format: N 
+        /// Length: 1
+        /// Value: 0,1 
+        /// Definition: "1" = true, lock-in exists
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string AddtlPatientInfoSegmentPharmacyLockIn { get; set; }
+
+        /// <summary>
+        /// Field #: 26
+        /// Field Name:  Physician Lock-in 
+        /// Format: N 
+        /// Length: 1
+        /// Value: 0,1 
+        /// Definition: "1" = true, lock-in exists
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string AddtlPatientInfoSegmentPhysicianLockIn { get; set; }
+
+        /// <summary>
+        /// Field #: 27
+        /// Field Name:  Test Member Flag 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1
+        /// Definition: "1" = true B
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string AddtlPatientInfoSegmentTestMemberFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 28
+        /// Field Name:  Eligibility Created By User ID 
+        /// Format: AN 
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string AddtlPatientInfoSegmentEligibilityCreatedByUserId { get; set; }
+
+        /// <summary>
+        /// Field #: 29
+        /// Field Name:  Eligibility Created Date 
+        /// Format: N 
+        /// Length: 8
+        /// Definition: Date initial eligibility record was created
+        /// </summary>
+        [FieldFixedLength(8)]
+        public string AddtlPatientInfoSegmentEligibilityCreatedDate { get; set; }
+
+        /// <summary>
+        /// Field #: 30
+        /// Field Name:  Eligibility Modified By User ID 
+        /// Format: AN 
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string AddtlPatientInfoSegmentEligibilityModifiedByUserId { get; set; }
+
+        /// <summary>
+        /// Field #: 31
+        /// Field Name:  Eligibility Modified Date 
+        /// Format: N 
+        /// Length: 8
+        /// Definition: Date of most recent eligibility modification 
+        /// </summary>
+        [FieldFixedLength(8)]
+        public string AddtlPatientInfoSegmentEligibilityModifiedDate { get; set; }
+
+        /// <summary>
+        /// Field #: 32
+        /// Field Name:  Reserved for Future Use 
+        /// Length: 15
+        /// </summary>
+        [FieldFixedLength(15)]
+        public string AddtlPatientInfoReservedForFutureUse3 { get; set; }
 
         #endregion
 
