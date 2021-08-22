@@ -1929,38 +1929,175 @@ namespace AHClaim.Record
 
         #region Submitted DUR Override Segment
 
-        [FieldFixedLength(1)] public string SubmittedDurOverrideSegmentSeparatorCharacter { get; set; }
-        [FieldFixedLength(2)] public string SubmittedDurOverrideSegmentIdentifier { get; set; }
-        [FieldFixedLength(2)] public string SubmittedDurOverrideSegmentReasonForServiceConflict1 { get; set; }
+        /// <summary>
+        /// Field #: 1 
+        /// Field Name: Segment Separator Character
+        /// Format: AN
+        /// Length: 1
+        /// Value: >
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string SubmittedDurOverrideSegmentSeparatorCharacter { get; set; }
 
+        /// <summary>
+        /// Field #: 2 
+        /// Field Name: Segment Identifier ( DO ) 
+        /// Format: AN 
+        /// Length: 2 
+        /// Value: DO
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string SubmittedDurOverrideSegmentIdentifier { get; set; }
+
+        /// <summary>
+        /// Field #: 3
+        /// Field Name: Reason for Service (Conflict) 1 
+        /// Format: AN
+        /// Length: 2 
+        /// Definition: NCPDP Reason for Service submitted by pharmacy
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string SubmittedDurOverrideSegmentReasonForServiceConflict1 { get; set; }
+
+        /// <summary>
+        /// Field #: 4
+        /// Field Name: Professional Service Code (Intervention) 1 
+        /// Format: AN
+        /// Length: 2 
+        /// Definition: NCPDP Profess Service Code submitted by pharmacy
+        /// </summary>
         [FieldFixedLength(2)]
         public string SubmittedDurOverrideSegmentProfessionalServiceCodeIntervention1 { get; set; }
 
-        [FieldFixedLength(2)] public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome1 { get; set; }
-        [FieldFixedLength(2)] public string SubmittedDurOverrideSegmentReasonForServiceConflict2 { get; set; }
+        /// <summary>
+        /// Field #: 5
+        /// Field Name: Result of Service Code (Outcome) 1 
+        /// Format: AN
+        /// Length: 2 
+        /// Definition: NCPDP Result of Service Code submitted by pharmacy
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome1 { get; set; }
 
+        /// <summary>
+        /// Field #: 6
+        /// Field Name: Reason for Service (Conflict) 2 
+        /// Format: AN
+        /// Length: 2 
+        /// Definition: NCPDP Reason for Service submitted by pharmacy
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string SubmittedDurOverrideSegmentReasonForServiceConflict2 { get; set; }
+
+        /// <summary>
+        /// Field #: 7
+        /// Field Name: Professional Service Code (Intervention) 2 
+        /// Format: AN
+        /// Length: 2 
+        /// Definition: NCPDP Profess Service Code submitted by pharmacy
+        /// </summary>
         [FieldFixedLength(2)]
         public string SubmittedDurOverrideSegmentProfessionalServiceCodeIntervention2 { get; set; }
 
-        [FieldFixedLength(2)] public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome2 { get; set; }
-        [FieldFixedLength(2)] public string SubmittedDurOverrideSegmentReasonForServiceConflict3 { get; set; }
+        /// <summary>
+        /// Field #: 8
+        /// Field Name: Result of Service Code (Outcome) 2 
+        /// Format: AN
+        /// Length: 2 
+        /// Definition: NCPDP Result of Service Code submitted by pharmacy
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome2 { get; set; }
 
+        /// <summary>
+        /// Field #: 9
+        /// Field Name: Reason for Service (Conflict) 3 
+        /// Format: AN
+        /// Length: 2 
+        /// Definition: NCPDP Reason for Service submitted by pharmacy
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string SubmittedDurOverrideSegmentReasonForServiceConflict3 { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Professional Service Code (Intervention) 3 
+        /// Format: AN
+        /// Length: 2 
+        /// Definition: NCPDP Profess Service Code submitted by pharmacy
+        /// </summary>
         [FieldFixedLength(2)]
         public string SubmittedDurOverrideSegmentProfessionalServiceCodeIntervention3 { get; set; }
 
-        [FieldFixedLength(2)] public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome3 { get; set; }
-        [FieldFixedLength(2)] public string SubmittedDurOverrideSegmentReasonForServiceConflict4 { get; set; }
+        /// <summary>
+        /// Field #: 11
+        /// Field Name: Result of Service Code (Outcome) 3 
+        /// Format: AN
+        /// Length: 2 
+        /// Definition: NCPDP Result of Service Code submitted by pharmacy
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome3 { get; set; }
 
+        /// <summary>
+        /// Field #: 12
+        /// Field Name: Reason for Service (Conflict) 4 
+        /// Format: AN
+        /// Length: 2 
+        /// Definition: NCPDP Reason for Service submitted by pharmacy
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string SubmittedDurOverrideSegmentReasonForServiceConflict4 { get; set; }
+
+        /// <summary>
+        /// Field #: 13
+        /// Field Name: Professional Service Code (Intervention) 4 
+        /// Format: AN
+        /// Length: 2 
+        /// Definition: NCPDP Profess Service Code submitted by pharmacy
+        /// </summary>
         [FieldFixedLength(2)]
         public string SubmittedDurOverrideSegmentProfessionalServiceCodeIntervention4 { get; set; }
 
-        [FieldFixedLength(2)] public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome4 { get; set; }
-        [FieldFixedLength(2)] public string SubmittedDurOverrideSegmentReasonForServiceConflict5 { get; set; }
+        /// <summary>
+        /// Field #: 14
+        /// Field Name: Result of Service Code (Outcome) 4 
+        /// Format: AN
+        /// Length: 2 
+        /// Definition: NCPDP Result of Service Code submitted by pharmacy
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome4 { get; set; }
 
+        /// <summary>
+        /// Field #: 15
+        /// Field Name: Reason for Service (Conflict) 5 
+        /// Format: AN
+        /// Length: 2 
+        /// Definition: NCPDP Reason for Service submitted by pharmacy
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string SubmittedDurOverrideSegmentReasonForServiceConflict5 { get; set; }
+
+        /// <summary>
+        /// Field #: 16
+        /// Field Name: Professional Service Code (Intervention) 5 
+        /// Format: AN
+        /// Length: 2 
+        /// Definition: NCPDP Profess Service Code submitted by pharmacy
+        /// </summary>
         [FieldFixedLength(2)]
         public string SubmittedDurOverrideSegmentProfessionalServiceCodeIntervention5 { get; set; }
 
-        [FieldFixedLength(2)] public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome5 { get; set; }
+        /// <summary>
+        /// Field #: 17
+        /// Field Name: Result of Service Code (Outcome) 5 
+        /// Format: AN
+        /// Length: 2 
+        /// Definition: NCPDP Result of Service Code submitted by pharmacy
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string SubmittedDurOverrideSegmentResultOfServiceCodeOutcome5 { get; set; }
 
         #endregion
 
