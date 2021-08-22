@@ -179,6 +179,11 @@ namespace AHClaim.Segment
             });
         }
 
+        /// <summary>
+        /// Factory method for Claim Reject Segments
+        /// </summary>
+        /// <param name="container">Raw Claim Records</param>
+        /// <returns>IEnumerable&lt;ClaimRejectSegment&gt;</returns>
         public static IEnumerable<ClaimRejectSegment> GetClaimRejectSegments(this IEnumerable<RawClaimRecord> container)
         {
             return container.Select(r => new ClaimRejectSegment()
