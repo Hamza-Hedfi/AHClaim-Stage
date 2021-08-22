@@ -55,7 +55,7 @@
         <Compile Include="Segment\ClaimRejectSegment.cs" />
         <Compile Include="Segment\ClaimSegment.cs" />
         <Compile Include="Segment\DrugClassificationSegment.cs" />
-        <Compile Include="Segment\DURSegment.cs" />
+        <Compile Include="Segment\DurSegment.cs" />
         <Compile Include="Segment\EnhancedPrescriberSegment.cs" />
         <Compile Include="Segment\EnhancedSubmittedMemberSegment.cs" />
         <Compile Include="Segment\extension\SegmentFactory.cs" />
