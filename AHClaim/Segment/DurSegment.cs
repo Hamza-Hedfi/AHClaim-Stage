@@ -55,7 +55,6 @@
         /// Length: 1
         /// Definition: NCPDP Severity code, if applicable
         /// </summary>
-
         public string Dur2SeverityIndex { get; set; }
 
         /// <summary>
