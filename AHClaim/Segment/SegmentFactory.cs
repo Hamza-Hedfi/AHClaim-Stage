@@ -86,5 +86,44 @@ namespace AHClaim.Segment
                 ReservedForFutureUse = r.ClaimSegmentReservedForFutureUse
             });
         }
+
+        public static IEnumerable<ClaimIndicatorSegment> GetClaimIndicatorSegments(
+            this IEnumerable<RawClaimRecord> container)
+        {
+            return container.Select(r => new ClaimIndicatorSegment()
+            {
+                PaperClaimFlag = r.ClaimIndicatorSegmentPaperClaimFlag,
+                DirectReimbursementFlag = r.ClaimIndicatorSegmentDirectReimbursementFlag,
+                TestClaimFlag = r.ClaimIndicatorSegmentTestClaimFlag,
+                BatchProcessedFlag = r.ClaimIndicatorSegmentBatchProcessedFlag,
+                OtherProcessorFlag = r.ClaimIndicatorSegmentOtherProcessorFlag,
+                FormularyDrugFlag = r.ClaimIndicatorSegmentFormularyDrugFlag,
+                NetworkPharmacyFlag = r.ClaimIndicatorSegmentNetworkPharmacyFlag,
+                NetworkPhysicianFlag = r.ClaimIndicatorSegmentNetworkPhysicianFlag,
+                ShoeboxClaimFlag = r.ClaimIndicatorSegmentShoeboxClaimFlag,
+                ProductQtyClaimFlag = r.ClaimIndicatorSegmentProductQtyClaimFlag,
+                StarterDoseFlag = r.ClaimIndicatorSegmentStarterDoseFlag,
+                PriorAuthFlag = r.ClaimIndicatorSegmentPriorAuthFlag,
+                DurFlag = r.ClaimIndicatorSegmentDurFlag,
+                DurOverrideFlag = r.ClaimIndicatorSegmentDurOverrideFlag,
+                IgCopayFlag = r.ClaimIndicatorSegmentIgCopayFlag,
+                MultiIngredCompoundFlag = r.ClaimIndicatorSegmentMultiIngredCompoundFlag,
+                PartialFillDispensingStatus = r.ClaimIndicatorSegmentPartialFillDispensingStatus,
+                MedicaidFlag = r.ClaimIndicatorSegmentMedicaidFlag,
+                ForceUcFlag = r.ClaimIndicatorSegmentForceUcFlag,
+                NdcRemapped = r.ClaimIndicatorSegmentNdcRemapped,
+                ForcePharmacyDue = r.ClaimIndicatorSegmentForcePharmacyDue,
+                AdditionalLowerOfStateRateUsed = r.ClaimIndicatorSegmentAdditionalLowerOfStateRateUsed,
+                PosMedicaidFlag = r.ClaimIndicatorSegmentPosMedicaidFlag,
+                AlternateProcessingBypass = r.ClaimIndicatorSegmentAlternateProcessingBypass,
+                TaxExemptIndicator = r.ClaimIndicatorSegmentTaxExemptIndicator,
+                AlternateDrugRecord = r.ClaimIndicatorSegmentAlternateDrugRecord,
+                ClaimRoundingUsed = r.ClaimIndicatorSegmentClaimRoundingUsed,
+                MedicalClaimIndicator = r.ClaimIndicatorSegmentMedicalClaimIndicator,
+                CompensableClaimIndicator = r.ClaimIndicatorSegmentCompensableClaimIndicator,
+                DataFeedTransaction = r.ClaimIndicatorSegmentDataFeedTransaction,
+                ReservedForFutureUse = r.ClaimIndicatorSegmentReservedForFutureUse
+            });
+        }
     }
 }
