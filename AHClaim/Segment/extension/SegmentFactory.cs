@@ -205,7 +205,7 @@ namespace AHClaim.Segment
         /// Factory method for Prior Authorization Segment
         /// </summary>
         /// <param name="container">Raw Claim Records</param>
-        /// <returns>IEnumerable&lt;ClaimRejectSegment&gt;</returns>
+        /// <returns>IEnumerable&lt;PriorAuthorizationSegment&gt;</returns>
         public static IEnumerable<PriorAuthorizationSegment> GetPriorAuthorizationSegments(
             this IEnumerable<RawClaimRecord> container)
         {
