@@ -799,39 +799,364 @@ namespace AHClaim.Record
 
         #region Claim Indicator Segment
 
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentSeparatorCharacter { get; set; }
-        [FieldFixedLength(2)] public string ClaimIndicatorSegmentIdentifier { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentPaperClaimFlag { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentDirectReimbursementFlag { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentTestClaimFlag { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentBatchProcessedFlag { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentOtherProcessorFlag { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentFormularyDrugFlag { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentNetworkPharmacyFlag { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentNetworkPhysicianFlag { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentShoeboxClaimFlag { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentProductQtyClaimFlag { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentStarterDoseFlag { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentPriorAuthFlag { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentDurFlag { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentDurOverrideFlag { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentIgCopayFlag { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentMultiIngredCompoundFlag { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentPartialFillDispensingStatus { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentMedicaidFlag { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentForceUcFlag { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentNdcRemapped { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentForcePharmacyDue { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentAdditionalLowerOfStateRateUsed { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentPosMedicaidFlag { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentAlternateProcessingBypass { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentTaxExemptIndicator { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentAlternateDrugRecord { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentClaimRoundingUsed { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentMedicalClaimIndicator { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentCompensableClaimIndicator { get; set; }
-        [FieldFixedLength(1)] public string ClaimIndicatorSegmentDataFeedTransaction { get; set; }
-        [FieldFixedLength(27)] public string ClaimIndicatorSegmentReservedForFutureUse { get; set; }
+        /// <summary>
+        /// Field #: 1 
+        /// Field Name: Segment Separator Character 
+        /// Format: AN 
+        /// Length: 1 
+        /// Value: >
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentSeparatorCharacter { get; set; }
+
+        /// <summary>
+        /// Field #: 2 
+        /// Field Name: Segment Identifier ( CI ) 
+        /// Format: AN 
+        /// Length: 2 
+        /// Value: CI
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string ClaimIndicatorSegmentIdentifier { get; set; }
+
+        /// <summary>
+        /// Field #: 3 
+        /// Field Name: Paper Claim Flag 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1"= processed as Paper Claim
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentPaperClaimFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 4 
+        /// Field Name: Direct Reimbursement Flag 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = processed as a Direct Member Reimbursement
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentDirectReimbursementFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 5 
+        /// Field Name: Test Claim Flag 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = processed as a Test claim
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentTestClaimFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 6 
+        /// Field Name: Batch Processed Flag 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = processed via batch mode
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentBatchProcessedFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 7 
+        /// Field Name: Other Processor Flag 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = inserted from external processing system
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentOtherProcessorFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 8 
+        /// Field Name: Formulary Drug Flag 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = processed as "Formulary" per plan setup
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentFormularyDrugFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 9 
+        /// Field Name: Network Pharmacy Flag 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = processed as "Network Pharmacy" per plan setup
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentNetworkPharmacyFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name:  Network Physician Flag 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = processed as"Network Physician" per plan setup
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentNetworkPhysicianFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 11
+        /// Field Name:  Shoebox Claim Flag 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = processed as "Shoebox" claim per plan setup
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentShoeboxClaimFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 12
+        /// Field Name:  Product/QTY Claim Flag 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = processed as "Cognitive Services", "2" = processed as "Gross Price"
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentProductQtyClaimFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 13
+        /// Field Name:  Starter Dose Flag 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = processed as Starter Dose limited first dose per plan setup
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentStarterDoseFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 14
+        /// Field Name:  Prior Auth Flag 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = a Prior Authorization (Manual or Automatic) was used in processing the claim
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentPriorAuthFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 15
+        /// Field Name:  DUR Flag 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = claim incurred a DUR rejection or warning
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentDurFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 16
+        /// Field Name:  DUR Override Flag 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = claim incurred an override of at least one DUR occurrence
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentDurOverrideFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 17
+        /// Field Name:  I/G Copay Flag 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = claim incurred an I/G difference copayment
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentIgCopayFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 18
+        /// Field Name:  Multi Ingred Compound Flag 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = claim is a compound utilizing the Compound Segment
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentMultiIngredCompoundFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 19
+        /// Field Name:  Partial Fill Dispensing Status 
+        /// Format: A 
+        /// Length: 1 
+        /// Value: P,C 
+        /// Definition: "P" = initial partial fill, "C" = completion of partial fill
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentPartialFillDispensingStatus { get; set; }
+
+        /// <summary>
+        /// Field #: 20
+        /// Field Name:  Medicaid Flag 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: “1” = processed as Medicaid Claim
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentMedicaidFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 21
+        /// Field Name:  Force U&C Flag 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1,2,3 
+        /// Definition: “1” = plan edit forced price to U&C, “2”=user forced U&C, "3"=Force U&C/PA
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentForceUcFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 22
+        /// Field Name:  NDC Remapped 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: “1” = processed with a Remapped NDC
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentNdcRemapped { get; set; }
+
+        /// <summary>
+        /// Field #: 23
+        /// Field Name:  Force $0 Pharmacy Due 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: “1” = processed with pharmacy due forced to $0
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentForcePharmacyDue { get; set; }
+
+        /// <summary>
+        /// Field #: 24
+        /// Field Name: Additional Lower of / State Rate Used 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: “1” = State Rate used for reimbursement as part of lower of. 
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentAdditionalLowerOfStateRateUsed { get; set; }
+
+        /// <summary>
+        /// Field #: 25
+        /// Field Name: POS Medicaid Flag 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: “1” = processed as a POS Medicaid claim. 
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentPosMedicaidFlag { get; set; }
+
+        /// <summary>
+        /// Field #: 26
+        /// Field Name: Alternate Processing Bypass 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1,2,3,4 
+        /// Definition: "1"= Bypass via Prior Auth, "2"= Carrier Bypass Invoked, "3"= '404' returned on a B1, claim processed as a standard non debit claim; "4" = Timed out Transaction (zz). 
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentAlternateProcessingBypass { get; set; }
+
+        /// <summary>
+        /// Field #: 27
+        /// Field Name: Tax Exempt Indicator 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = processed as Tax Exempt 
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentTaxExemptIndicator { get; set; }
+
+        /// <summary>
+        /// Field #: 28
+        /// Field Name: Alternate Drug Record 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = processed based on Alternate Drug File 
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentAlternateDrugRecord { get; set; }
+
+        /// <summary>
+        /// Field #: 29
+        /// Field Name: Claim Rounding Used 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = Claim Rounding was used in final price response 
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentClaimRoundingUsed { get; set; }
+
+        /// <summary>
+        /// Field #: 30
+        /// Field Name: Medical Claim Indicator 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = Originating Claim was from a Medical Distributor 
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentMedicalClaimIndicator { get; set; }
+
+        /// <summary>
+        /// Field #: 31
+        /// Field Name: Compensable Claim Indicator 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = Claim is determined to be compensable 
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentCompensableClaimIndicator { get; set; }
+
+        /// <summary>
+        /// Field #: 32
+        /// Field Name: Data Feed Transaction 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = An attempt to send transaction data via data feed was made. 
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimIndicatorSegmentDataFeedTransaction { get; set; }
+
+        /// <summary>
+        /// Field #: 33
+        /// Field Name: Reserved for Future Use 
+        /// Format: N 
+        /// Length: 27
+        /// </summary>
+        [FieldFixedLength(27)]
+        public string ClaimIndicatorSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
