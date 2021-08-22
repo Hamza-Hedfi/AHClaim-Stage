@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using AHClaim.Record;
 using AHClaim.Segment;
 using FileHelpers;

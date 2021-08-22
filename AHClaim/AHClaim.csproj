@@ -58,6 +58,7 @@
         <Compile Include="Segment\DURSegment.cs" />
         <Compile Include="Segment\EnhancedPrescriberSegment.cs" />
         <Compile Include="Segment\EnhancedSubmittedMemberSegment.cs" />
+        <Compile Include="Segment\extension\SegmentFactory.cs" />
         <Compile Include="Segment\PaperClaimInfoSegment.cs" />
         <Compile Include="Segment\PatientPaySegment.cs" />
         <Compile Include="Segment\PharmacyPricingSegment.cs" />
@@ -65,7 +66,6 @@
         <Compile Include="Segment\PlanCodesUsedSegment.cs" />
         <Compile Include="Segment\PrescriberSegment.cs" />
         <Compile Include="Segment\PriorAuthorizationSegment.cs" />
-        <Compile Include="Segment\SegmentFactory.cs" />
         <Compile Include="Segment\HeaderSegment.cs" />
         <Compile Include="Segment\SubmittedDurOverrideSegment.cs" />
         <Compile Include="Segment\SubmittedMemberSegment.cs" />
