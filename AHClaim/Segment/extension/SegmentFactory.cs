@@ -6,7 +6,11 @@ namespace AHClaim.Segment
 {
     public static class SegmentFactory
     {
-        
+        /// <summary>
+        /// Factory method for Claim Segment
+        /// </summary>
+        /// <param name="container">Raw Claim Records</param>
+        /// <returns>IEnumerable&lt;ClaimSegment&gt;</returns>
         public static IEnumerable<ClaimSegment> GetClaimSegments(this IEnumerable<RawClaimRecord> container)
         {
             return container.Select(r => new ClaimSegment()
@@ -88,6 +92,11 @@ namespace AHClaim.Segment
             });
         }
 
+        /// <summary>
+        /// Factory method for Claim Indicator Segment
+        /// </summary>
+        /// <param name="container">Raw Claim Records</param>
+        /// <returns>IEnumerable&lt;ClaimIndicatorSegment&gt;</returns>
         public static IEnumerable<ClaimIndicatorSegment> GetClaimIndicatorSegments(
             this IEnumerable<RawClaimRecord> container)
         {
@@ -127,6 +136,11 @@ namespace AHClaim.Segment
             });
         }
 
+        /// <summary>
+        /// Factory method for Addtl. Patient Info Segment
+        /// </summary>
+        /// <param name="container">Raw Claim Records</param>
+        /// <returns>IEnumerable&lt;AddtlPatientInfoSegment&gt;</returns>
         public static IEnumerable<AddtlPatientInfoSegment> GetAddtlPatientInfoSegments(
             this IEnumerable<RawClaimRecord> container)
         {
