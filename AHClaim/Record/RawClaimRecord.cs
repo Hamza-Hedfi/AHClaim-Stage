@@ -2103,31 +2103,57 @@ namespace AHClaim.Record
 
         #region Drug Classification Segment
 
+        
         [FieldFixedLength(1)] public string DrugClassificationSegmentSeparatorCharacter { get; set; }
+        
         [FieldFixedLength(2)] public string DrugClassificationSegmentIdentifier { get; set; }
+        
         [FieldFixedLength(1)] public string DrugClassificationSegmentCategoryCode { get; set; }
+        
         [FieldFixedLength(1)] public string DrugClassificationSegmentClassCode { get; set; }
+        
         [FieldFixedLength(1)] public string DrugClassificationSegmentGc1Code { get; set; }
+        
         [FieldFixedLength(2)] public string DrugClassificationSegmentGc2Code { get; set; }
+        
         [FieldFixedLength(3)] public string DrugClassificationSegmentGc3Code { get; set; }
+        
         [FieldFixedLength(4)] public string DrugClassificationSegmentGc4Code { get; set; }
+        
         [FieldFixedLength(3)] public string DrugClassificationSegmentSpecificTherapeuticClass { get; set; }
+        
         [FieldFixedLength(5)] public string DrugClassificationSegmentGcnCode { get; set; }
+        
         [FieldFixedLength(6)] public string DrugClassificationSegmentGcnSequenceNumber { get; set; }
+        
         [FieldFixedLength(2)] public string DrugClassificationSegmentStandardTherapeuticClass { get; set; }
+        
         [FieldFixedLength(2)] public string DrugClassificationSegmentGenericTherapeuticClass { get; set; }
+        
         [FieldFixedLength(6)] public string DrugClassificationSegmentAhfsTherapeuticClass { get; set; }
+        
         [FieldFixedLength(3)] public string DrugClassificationSegmentOrangeBookCode { get; set; }
+        
         [FieldFixedLength(1)] public string DrugClassificationSegmentRouteOfAdministrationCode { get; set; }
+        
         [FieldFixedLength(1)] public string DrugClassificationSegmentDrugFormCodeUnitOfMeasure { get; set; }
+        
         [FieldFixedLength(1)] public string DrugClassificationSegmentDeaCode { get; set; }
+        
         [FieldFixedLength(1)] public string DrugClassificationSegmentMaintenanceDrugIndicator { get; set; }
+        
         [FieldFixedLength(1)] public string DrugClassificationSegmentUnitOfUseIndicator { get; set; }
+        
         [FieldFixedLength(1)] public string DrugClassificationSegmentRepackageIndicator { get; set; }
+        
         [FieldFixedLength(1)] public string DrugClassificationSegmentUnitDoseIndicator { get; set; }
+        
         [FieldFixedLength(1)] public string DrugClassificationSegmentDesiDrugIndicator { get; set; }
+        
         [FieldFixedLength(8)] public string DrugClassificationSegmentDrugObsoleteDate { get; set; }
+        
         [FieldFixedLength(14)] public string DrugClassificationSegmentMedispanGpi { get; set; }
+        
         [FieldFixedLength(11)] public string DrugClassificationReservedForFutureUse { get; set; }
 
         #endregion

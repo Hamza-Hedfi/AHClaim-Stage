@@ -23,7 +23,8 @@ namespace AHClaim
 
 
             // Transform
-            var claimSegments = SegmentFactory.GetClaimSegments(result);
+            // var claimSegments = SegmentFactory.GetClaimSegments(result);
+            var claimSegments = result.GetClaimSegments();
             // var segments = claimSegments.GroupBy(segment => segment.OriginalClaimAuthorizationNumber).Count();
 
             // Load 

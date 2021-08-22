@@ -6,7 +6,7 @@ namespace AHClaim.Segment
 {
     public static class SegmentFactory
     {
-        public static IEnumerable<ClaimSegment> GetClaimSegments(IEnumerable<RawClaimRecord> container)
+        public static IEnumerable<ClaimSegment> GetClaimSegments(this IEnumerable<RawClaimRecord> container)
         {
             return container.Select(r => new ClaimSegment()
             {
