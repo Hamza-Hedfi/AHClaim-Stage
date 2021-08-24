@@ -353,7 +353,33 @@ namespace AHClaim.domain.Segment.extension
                 PharmacistIdQualifier = r.PharmacySegmentPharmacistIdQualifier,
                 PharmacistId = r.PharmacySegmentPharmacistId,
                 PrimaryPharmacyDispenserType = r.PharmacySegmentPrimaryPharmacyDispenserType,
-                ReservedForFutureUse2 = r.PharmacySegmentReservedForFutureUse2,
+                ReservedForFutureUse2 = r.PharmacySegmentReservedForFutureUse2
+            });
+        }
+
+        /// <summary>
+        /// Factory method for Prescriber Segment
+        /// </summary>
+        /// <param name="container">Raw Claim Records</param>
+        /// <returns>IEnumerable&lt;PrescriberSegment&gt;</returns>
+        public static IEnumerable<PrescriberSegment> GetPrescriberSegments(
+            this IEnumerable<RawClaimRecord> container)
+        {
+            return container.Select(r => new PrescriberSegment()
+            {
+                BusinessActivityCode = r.PrescriberSegmentBusinessActivityCode,
+                DrugSchedules = r.PrescriberSegmentDrugSchedules,
+                AddressLine1 = r.PrescriberSegmentAddressLine1,
+                AddressLine2 = r.PrescriberSegmentAddressLine2,
+                AddressLine3 = r.PrescriberSegmentAddressLine3,
+                AddressLine4 = r.PrescriberSegmentAddressLine4,
+                City = r.PrescriberSegmentCity,
+                State = r.PrescriberSegmentState,
+                ZipCode = r.PrescriberSegmentZipCode,
+                Dea = r.PrescriberSegmentDea,
+                Npi = r.PrescriberSegmentNpi,
+                PrescriberIdQualifier = r.PrescriberSegmentPrescriberIdQualifier,
+                ReservedForFutureUse = r.PrescriberSegmentReservedForFutureUse
             });
         }
     }
