@@ -3025,26 +3025,200 @@ namespace AHClaim.domain.Record
 
         #region Workers' Compensation Segment
 
-        [FieldFixedLength(1)] public string WorkersCompensationSegmentSeparatorCharacter { get; set; }
-        [FieldFixedLength(2)] public string WorkersCompensationSegmentIdentifier { get; set; }
-        [FieldFixedLength(8)] public string WorkersCompensationSegmentWcDateOfInjury { get; set; }
-        [FieldFixedLength(14)] public string WorkersCompensationSegmentWcClaimNumber { get; set; }
-        [FieldFixedLength(14)] public string WorkersCompensationSegmentWcRecordClaimNumberInfoOnly { get; set; }
-        [FieldFixedLength(10)] public string WorkersCompensationSegmentWcRecordAdjustorCode { get; set; }
-        [FieldFixedLength(35)] public string WorkersCompensationSegmentWcEmployerName { get; set; }
-        [FieldFixedLength(35)] public string WorkersCompensationSegmentWcEmployerAddress1 { get; set; }
-        [FieldFixedLength(35)] public string WorkersCompensationSegmentWcEmployerAddress2 { get; set; }
-        [FieldFixedLength(18)] public string WorkersCompensationSegmentWcEmployerCity { get; set; }
-        [FieldFixedLength(2)] public string WorkersCompensationSegmentWcEmployerState { get; set; }
-        [FieldFixedLength(9)] public string WorkersCompensationSegmentWcEmployerZipCode { get; set; }
-        [FieldFixedLength(10)] public string WorkersCompensationSegmentWcEmployerPhoneNumber { get; set; }
-        [FieldFixedLength(6)] public string WorkersCompensationSegmentWcRecordTherapyCategoryCode1 { get; set; }
-        [FieldFixedLength(6)] public string WorkersCompensationSegmentWcRecordTherapyCategoryCode2 { get; set; }
-        [FieldFixedLength(6)] public string WorkersCompensationSegmentWcRecordTherapyCategoryCode3 { get; set; }
-        [FieldFixedLength(6)] public string WorkersCompensationSegmentWcRecordTherapyCategoryCode4 { get; set; }
-        [FieldFixedLength(6)] public string WorkersCompensationSegmentWcRecordTherapyCategoryCode5 { get; set; }
-        [FieldFixedLength(8)] public string WorkersCompensationSegmentWcRecordTerminationDate { get; set; }
-        [FieldFixedLength(290)] public string WorkersCompensationSegmentReservedForFutureUse { get; set; }
+        /// <summary> 
+        /// Field #: 1 
+        /// Field Name: Segment Separator Character 
+        /// Format: AN 
+        /// Length: 1 
+        /// Value: >
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string WorkersCompensationSegmentSeparatorCharacter { get; set; }
+
+        /// <summary> 
+        /// Field #: 2 
+        /// Field Name: Segment Identifier ( WC ) 
+        /// Format: AN 
+        /// Length: 2 
+        /// Value: WC
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string WorkersCompensationSegmentIdentifier { get; set; }
+
+        /// <summary> 
+        /// Field #: 3 
+        /// Field Name: WC Date of Injury 
+        /// Format: N 
+        /// Length: 8 
+        /// Definition: Value associated w/ Work Comp record used in processing the claim or as submitted 
+        /// </summary>
+        [FieldFixedLength(8)]
+        public string WorkersCompensationSegmentWcDateOfInjury { get; set; }
+
+        /// <summary> 
+        /// Field #: 4 
+        /// Field Name: WC Claim Number 
+        /// Format: AN 
+        /// Length: 14 
+        /// Definition: Value associated w/ Work Comp record used in processing the claim or as submitted 
+        /// </summary>
+        [FieldFixedLength(14)]
+        public string WorkersCompensationSegmentWcClaimNumber { get; set; }
+
+        /// <summary> 
+        /// Field #: 5 
+        /// Field Name: WC Record Claim Number - Info Only 
+        /// Format: AN 
+        /// Length: 14 
+        /// Definition: Value associated w/ Work Comp record used in processing the claim 
+        /// </summary>
+        [FieldFixedLength(14)]
+        public string WorkersCompensationSegmentWcRecordClaimNumberInfoOnly { get; set; }
+
+        /// <summary> 
+        /// Field #: 6 
+        /// Field Name: WC Record Adjustor Code 
+        /// Format: AN 
+        /// Length: 10 
+        /// Definition: Value associated w/ Work Comp record used in processing the claim 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string WorkersCompensationSegmentWcRecordAdjustorCode { get; set; }
+
+        /// <summary> 
+        /// Field #: 7 
+        /// Field Name: WC Employer Name 
+        /// Format: AN 
+        /// Length: 35 
+        /// Definition: Value associated w/ Work Comp record used in processing the claim or as submitted 
+        /// </summary>
+        [FieldFixedLength(35)]
+        public string WorkersCompensationSegmentWcEmployerName { get; set; }
+
+        /// <summary> 
+        /// Field #: 8 
+        /// Field Name: WC Employer Address 1 
+        /// Format: AN 
+        /// Length: 35 
+        /// Definition: Value associated w/ Work Comp record used in processing the claim or as submitted 
+        /// </summary>
+        [FieldFixedLength(35)]
+        public string WorkersCompensationSegmentWcEmployerAddress1 { get; set; }
+
+        /// <summary> 
+        /// Field #: 9 
+        /// Field Name: WC Employer Address 2 
+        /// Format: AN 
+        /// Length: 35 
+        /// Definition: Value associated w/ Work Comp record used in processing the claim or as submitted 
+        /// </summary>
+        [FieldFixedLength(35)]
+        public string WorkersCompensationSegmentWcEmployerAddress2 { get; set; }
+
+        /// <summary> 
+        /// Field #: 10 
+        /// Field Name: WC Employer City 
+        /// Format: AN 
+        /// Length: 18 
+        /// Definition: Value associated w/ Work Comp record used in processing the claim or as submitted 
+        /// </summary>
+        [FieldFixedLength(18)]
+        public string WorkersCompensationSegmentWcEmployerCity { get; set; }
+
+        /// <summary> 
+        /// Field #: 11 
+        /// Field Name: WC Employer State AN 2 173 174 Value associated w/ Work Comp record used in processing the claim or as submitted B
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string WorkersCompensationSegmentWcEmployerState { get; set; }
+
+        /// <summary> 
+        /// Field #: 12 
+        /// Field Name: WC Employer Zip Code 
+        /// Format: N 
+        /// Length: 9 
+        /// Definition: Value associated w/ Work Comp record used in processing the claim or as submitted 
+        /// </summary>
+        [FieldFixedLength(9)]
+        public string WorkersCompensationSegmentWcEmployerZipCode { get; set; }
+
+        /// <summary> 
+        /// Field #: 13 
+        /// Field Name: WC Employer Phone Number 
+        /// Format: N 
+        /// Length: 10 
+        /// Definition: Value associated w/ Work Comp record used in processing the claim or as submitted 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string WorkersCompensationSegmentWcEmployerPhoneNumber { get; set; }
+
+        /// <summary> 
+        /// Field #: 14 
+        /// Field Name: WC Record Therapy Category Code 1 
+        /// Format: AN 
+        /// Length: 6 
+        /// Definition: Value associated w/ Work Comp record used in processing the claim 
+        /// </summary>
+        [FieldFixedLength(6)]
+        public string WorkersCompensationSegmentWcRecordTherapyCategoryCode1 { get; set; }
+
+        /// <summary> 
+        /// Field #: 15 
+        /// Field Name: WC Record Therapy Category Code 2 
+        /// Format: AN 
+        /// Length: 6 
+        /// Definition: Value associated w/ Work Comp record used in processing the claim 
+        /// </summary>
+        [FieldFixedLength(6)]
+        public string WorkersCompensationSegmentWcRecordTherapyCategoryCode2 { get; set; }
+
+        /// <summary> 
+        /// Field #: 16 
+        /// Field Name: WC Record Therapy Category Code 3 
+        /// Format: AN 
+        /// Length: 6 
+        /// Definition: Value associated w/ Work Comp record used in processing the claim 
+        /// </summary>
+        [FieldFixedLength(6)]
+        public string WorkersCompensationSegmentWcRecordTherapyCategoryCode3 { get; set; }
+
+        /// <summary> 
+        /// Field #: 17 
+        /// Field Name: WC Record Therapy Category Code 4 
+        /// Format: AN 
+        /// Length: 6 
+        /// Definition: Value associated w/ Work Comp record used in processing the claim 
+        /// </summary>
+        [FieldFixedLength(6)]
+        public string WorkersCompensationSegmentWcRecordTherapyCategoryCode4 { get; set; }
+
+        /// <summary> 
+        /// Field #: 18 
+        /// Field Name: WC Record Therapy Category Code 5 
+        /// Format: AN 
+        /// Length: 6 
+        /// Definition: Value associated w/ Work Comp record used in processing the claim 
+        /// </summary>
+        [FieldFixedLength(6)]
+        public string WorkersCompensationSegmentWcRecordTherapyCategoryCode5 { get; set; }
+
+        /// <summary> 
+        /// Field #: 19 
+        /// Field Name: WC Record Termination Date 
+        /// Format: N 
+        /// Length: 8 
+        /// Definition: Value associated w/ Work Comp record used in processing the claim 
+        /// </summary>
+        [FieldFixedLength(8)]
+        public string WorkersCompensationSegmentWcRecordTerminationDate { get; set; }
+
+        /// <summary> 
+        /// Field #: 20 
+        /// Field Name: Reserved for Future Use 
+        /// Length: 290
+        /// </summary>
+        [FieldFixedLength(290)]
+        public string WorkersCompensationSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
