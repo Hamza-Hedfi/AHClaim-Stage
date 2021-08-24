@@ -382,5 +382,51 @@ namespace AHClaim.domain.Segment.extension
                 ReservedForFutureUse = r.PrescriberSegmentReservedForFutureUse
             });
         }
+
+        /// <summary>
+        /// Factory method for Enhanced Prescriber Segment
+        /// </summary>
+        /// <param name="container">Raw Claim Records</param>
+        /// <returns>IEnumerable&lt;EnhancedPrescriberSegment&gt;</returns>
+        public static IEnumerable<EnhancedPrescriberSegment> GetEnhancedPrescriberSegments(
+            this IEnumerable<RawClaimRecord> container)
+        {
+            return container.Select(r => new EnhancedPrescriberSegment()
+            {
+                PrescriberName = r.EnhancedPrescriberSegmentPrescriberName,
+                Dea = r.EnhancedPrescriberSegmentDea,
+                Npi = r.EnhancedPrescriberSegmentNpi,
+                BusinessActivityCode = r.EnhancedPrescriberSegmentBusinessActivityCode,
+                BusinessActivitySubCode = r.EnhancedPrescriberSegmentBusinessActivitySubCode,
+                DrugSchedules = r.EnhancedPrescriberSegmentDrugSchedules,
+                AddressLine1 = r.EnhancedPrescriberSegmentAddressLine1,
+                AddressLine2 = r.EnhancedPrescriberSegmentAddressLine2,
+                City = r.EnhancedPrescriberSegmentCity,
+                State = r.EnhancedPrescriberSegmentState,
+                ZipCode = r.EnhancedPrescriberSegmentZipCode,
+                Phone = r.EnhancedPrescriberSegmentPhone,
+                FaxNumber = r.EnhancedPrescriberSegmentFaxNumber,
+                Credentials = r.EnhancedPrescriberSegmentCredentials,
+                PractitionerType = r.EnhancedPrescriberSegmentPractitionerType,
+                Specialty1 = r.EnhancedPrescriberSegmentSpecialty1,
+                Specialty2 = r.EnhancedPrescriberSegmentSpecialty2,
+                StateLicenseNumber1 = r.EnhancedPrescriberSegmentStateLicenseNumber1,
+                StateLicenseNumber1State = r.EnhancedPrescriberSegmentStateLicenseNumber1State,
+                StateLicenseNumber2 = r.EnhancedPrescriberSegmentStateLicenseNumber2,
+                StateLicenseNumber2State = r.EnhancedPrescriberSegmentStateLicenseNumber2State,
+                StateLicenseNumber3 = r.EnhancedPrescriberSegmentStateLicenseNumber3,
+                StateLicenseNumber3State = r.EnhancedPrescriberSegmentStateLicenseNumber3State,
+                MedicaidIdNumber1 = r.EnhancedPrescriberSegmentMedicaidIdNumber1,
+                MedicaidIdNumber1State = r.EnhancedPrescriberSegmentMedicaidIdNumber1State,
+                MedicaidIdNumber2 = r.EnhancedPrescriberSegmentMedicaidIdNumber2,
+                MedicaidIdNumber2State = r.EnhancedPrescriberSegmentMedicaidIdNumber2State,
+                MedicaidIdNumber3 = r.EnhancedPrescriberSegmentMedicaidIdNumber3,
+                MedicaidIdNumber3State = r.EnhancedPrescriberSegmentMedicaidIdNumber3State,
+                TaxId = r.EnhancedPrescriberSegmentTaxId,
+                ExpirationDate = r.EnhancedPrescriberSegmentExpirationDate,
+                PrescriberIdQualifier = r.EnhancedPrescriberSegmentPrescriberIdQualifier,
+                ReservedForFutureUse = r.EnhancedPrescriberSegmentReservedForFutureUse
+            });
+        }
     }
 }
