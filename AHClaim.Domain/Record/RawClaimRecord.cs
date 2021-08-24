@@ -2370,27 +2370,196 @@ namespace AHClaim.Record
 
         #region Pharmacy Segment
 
-        [FieldFixedLength(1)] public string PharmacySegmentSeparatorCharacter { get; set; }
-        [FieldFixedLength(2)] public string PharmacySegmentIdentifier { get; set; }
-        [FieldFixedLength(35)] public string PharmacySegmentPhysicalAddressLine1 { get; set; }
-        [FieldFixedLength(35)] public string PharmacySegmentPhysicalAddressLine2 { get; set; }
-        [FieldFixedLength(18)] public string PharmacySegmentPhysicalCity { get; set; }
-        [FieldFixedLength(2)] public string PharmacySegmentPhysicalState { get; set; }
-        [FieldFixedLength(9)] public string PharmacySegmentPhysicalZipCode { get; set; }
-        [FieldFixedLength(10)] public string PharmacySegmentPhoneNumber { get; set; }
-        [FieldFixedLength(10)] public string PharmacySegmentReservedForFutureUse1 { get; set; }
-        [FieldFixedLength(10)] public string PharmacySegmentFaxNumber { get; set; }
-        [FieldFixedLength(12)] public string PharmacySegmentFederalLicenseNumber { get; set; }
-        [FieldFixedLength(15)] public string PharmacySegmentFederalTaxIdNumber { get; set; }
-        [FieldFixedLength(20)] public string PharmacySegmentStateLicenseNumber { get; set; }
-        [FieldFixedLength(15)] public string PharmacySegmentStateTaxIdNumber { get; set; }
-        [FieldFixedLength(20)] public string PharmacySegmentStateMedicaidNumber { get; set; }
-        [FieldFixedLength(10)] public string PharmacySegmentPharmacyStoreNumber { get; set; }
-        [FieldFixedLength(1)] public string PharmacySegmentTestPharmacyFlag { get; set; }
-        [FieldFixedLength(2)] public string PharmacySegmentPharmacistIdQualifier { get; set; }
-        [FieldFixedLength(15)] public string PharmacySegmentPharmacistId { get; set; }
-        [FieldFixedLength(2)] public string PharmacySegmentPrimaryPharmacyDispenserType { get; set; }
-        [FieldFixedLength(6)] public string PharmacySegmentReservedForFutureUse2 { get; set; }
+        /// <summary>
+        /// Field #: 1 
+        /// Field Name: Segment Separator Character 
+        /// Format: AN 
+        /// Length: 1
+        /// Value: >
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string PharmacySegmentSeparatorCharacter { get; set; }
+
+        /// <summary>
+        /// Field #: 2 
+        /// Field Name: Segment Identifier ( PH ) 
+        /// Format: AN 
+        /// Length: 2
+        /// Value: PH
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string PharmacySegmentIdentifier { get; set; }
+
+        /// <summary> 
+        /// Field #: 3 
+        /// Field Name: Physical Address Line 1 
+        /// Format: AN
+        /// Lenght: 35
+        /// </summary>
+        [FieldFixedLength(35)]
+        public string PharmacySegmentPhysicalAddressLine1 { get; set; }
+
+        /// <summary> 
+        /// Field #: 4 
+        /// Field Name: Physical Address Line 2 
+        /// Format: AN
+        /// Lenght: 35
+        /// </summary>
+        [FieldFixedLength(35)]
+        public string PharmacySegmentPhysicalAddressLine2 { get; set; }
+
+        /// <summary> 
+        /// Field #: 5 
+        /// Field Name: Physical City 
+        /// Format: AN
+        /// Lenght: 18
+        /// </summary>
+        [FieldFixedLength(18)]
+        public string PharmacySegmentPhysicalCity { get; set; }
+
+        /// <summary> 
+        /// Field #: 6 
+        /// Field Name: Physical State 
+        /// Format: AN
+        /// Lenght: 2
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string PharmacySegmentPhysicalState { get; set; }
+
+        /// <summary> 
+        /// Field #: 7 
+        /// Field Name: Physical Zip Code + 4 
+        /// Format: N
+        /// Lenght: 9
+        /// </summary>
+        [FieldFixedLength(9)]
+        public string PharmacySegmentPhysicalZipCode { get; set; }
+
+        /// <summary> 
+        /// Field #: 8 
+        /// Field Name: Phone Number 
+        /// Format: N
+        /// Lenght: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PharmacySegmentPhoneNumber { get; set; }
+
+        /// <summary> 
+        /// Field #: 9 
+        /// Field Name: Reserved for Future Use 
+        /// Format: AN
+        /// Lenght: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PharmacySegmentReservedForFutureUse1 { get; set; }
+
+        /// <summary> 
+        /// Field #: 10 
+        /// Field Name: Fax Number 
+        /// Format: N
+        /// Lenght: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PharmacySegmentFaxNumber { get; set; }
+
+        /// <summary> 
+        /// Field #: 11 
+        /// Field Name: Federal License Number 
+        /// Format: AN
+        /// Lenght: 12
+        /// </summary>
+        [FieldFixedLength(12)]
+        public string PharmacySegmentFederalLicenseNumber { get; set; }
+
+        /// <summary> 
+        /// Field #: 12 
+        /// Field Name: Federal Tax ID Number 
+        /// Format: AN
+        /// Lenght: 15
+        /// </summary>
+        [FieldFixedLength(15)]
+        public string PharmacySegmentFederalTaxIdNumber { get; set; }
+
+        /// <summary> 
+        /// Field #: 13 
+        /// Field Name: State License Number 
+        /// Format: AN
+        /// Lenght: 20
+        /// </summary>
+        [FieldFixedLength(20)]
+        public string PharmacySegmentStateLicenseNumber { get; set; }
+
+        /// <summary> 
+        /// Field #: 14 
+        /// Field Name: State Tax ID Number 
+        /// Format: AN
+        /// Lenght: 15
+        /// </summary>
+        [FieldFixedLength(15)]
+        public string PharmacySegmentStateTaxIdNumber { get; set; }
+
+        /// <summary> 
+        /// Field #: 15 
+        /// Field Name: State Medicaid Number 
+        /// Format: AN
+        /// Lenght: 20
+        /// </summary>
+        [FieldFixedLength(20)]
+        public string PharmacySegmentStateMedicaidNumber { get; set; }
+
+        /// <summary> 
+        /// Field #: 16 
+        /// Field Name: Pharmacy Store Number 
+        /// Format: AN
+        /// Lenght: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PharmacySegmentPharmacyStoreNumber { get; set; }
+
+        /// <summary> 
+        /// Field #: 17 
+        /// Field Name: Test Pharmacy Flag 
+        /// Format: N
+        /// Lenght: 1
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string PharmacySegmentTestPharmacyFlag { get; set; }
+
+        /// <summary> 
+        /// Field #: 18 
+        /// Field Name: Pharmacist ID Qualifier 
+        /// Format: AN
+        /// Lenght: 2
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string PharmacySegmentPharmacistIdQualifier { get; set; }
+
+        /// <summary> 
+        /// Field #: 19 
+        /// Field Name: Pharmacist ID 
+        /// Format: AN
+        /// Lenght: 15
+        /// </summary>
+        [FieldFixedLength(15)]
+        public string PharmacySegmentPharmacistId { get; set; }
+
+        /// <summary>
+        /// Field #: 20
+        /// Field Name: Primary Pharmacy Dispenser Type 
+        /// Format: N 
+        /// Length: 2
+        /// Definition: Numeric Value indicating the Primary Dispenser Type for the Pharmacy
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string PharmacySegmentPrimaryPharmacyDispenserType { get; set; }
+
+        /// <summary>
+        /// Field #: 21
+        /// Field Name: Reserved for Future Use 
+        /// Length: 6
+        /// </summary>
+        [FieldFixedLength(6)]
+        public string PharmacySegmentReservedForFutureUse2 { get; set; }
 
         #endregion
 
