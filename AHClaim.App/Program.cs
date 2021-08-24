@@ -9,6 +9,13 @@ namespace AHClaim.App
     {
         public static void Main(string[] args)
         {
+            /*
+             * 
+             * The below code is just for testing for the time being
+             * It is not neither the final product nor the final architecture and should not be
+             * 
+             */
+            
             // Extract 
             var engine = new FixedFileEngine<RawClaimRecord>() {Options = {IgnoreFirstLines = 1, IgnoreLastLines = 1}};
             var headerEngine = new FixedFileEngine<HeaderRecord>();
