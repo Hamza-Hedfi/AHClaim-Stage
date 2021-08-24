@@ -2364,7 +2364,7 @@ namespace AHClaim.Record
         /// Length: 11
         /// </summary>
         [FieldFixedLength(11)]
-        public string DrugClassificationReservedForFutureUse { get; set; }
+        public string DrugClassificationSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
