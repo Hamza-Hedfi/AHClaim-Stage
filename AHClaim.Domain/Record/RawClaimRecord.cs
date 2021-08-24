@@ -2103,58 +2103,268 @@ namespace AHClaim.Record
 
         #region Drug Classification Segment
 
-        
-        [FieldFixedLength(1)] public string DrugClassificationSegmentSeparatorCharacter { get; set; }
-        
-        [FieldFixedLength(2)] public string DrugClassificationSegmentIdentifier { get; set; }
-        
-        [FieldFixedLength(1)] public string DrugClassificationSegmentCategoryCode { get; set; }
-        
-        [FieldFixedLength(1)] public string DrugClassificationSegmentClassCode { get; set; }
-        
-        [FieldFixedLength(1)] public string DrugClassificationSegmentGc1Code { get; set; }
-        
-        [FieldFixedLength(2)] public string DrugClassificationSegmentGc2Code { get; set; }
-        
-        [FieldFixedLength(3)] public string DrugClassificationSegmentGc3Code { get; set; }
-        
-        [FieldFixedLength(4)] public string DrugClassificationSegmentGc4Code { get; set; }
-        
-        [FieldFixedLength(3)] public string DrugClassificationSegmentSpecificTherapeuticClass { get; set; }
-        
-        [FieldFixedLength(5)] public string DrugClassificationSegmentGcnCode { get; set; }
-        
-        [FieldFixedLength(6)] public string DrugClassificationSegmentGcnSequenceNumber { get; set; }
-        
-        [FieldFixedLength(2)] public string DrugClassificationSegmentStandardTherapeuticClass { get; set; }
-        
-        [FieldFixedLength(2)] public string DrugClassificationSegmentGenericTherapeuticClass { get; set; }
-        
-        [FieldFixedLength(6)] public string DrugClassificationSegmentAhfsTherapeuticClass { get; set; }
-        
-        [FieldFixedLength(3)] public string DrugClassificationSegmentOrangeBookCode { get; set; }
-        
-        [FieldFixedLength(1)] public string DrugClassificationSegmentRouteOfAdministrationCode { get; set; }
-        
-        [FieldFixedLength(1)] public string DrugClassificationSegmentDrugFormCodeUnitOfMeasure { get; set; }
-        
-        [FieldFixedLength(1)] public string DrugClassificationSegmentDeaCode { get; set; }
-        
-        [FieldFixedLength(1)] public string DrugClassificationSegmentMaintenanceDrugIndicator { get; set; }
-        
-        [FieldFixedLength(1)] public string DrugClassificationSegmentUnitOfUseIndicator { get; set; }
-        
-        [FieldFixedLength(1)] public string DrugClassificationSegmentRepackageIndicator { get; set; }
-        
-        [FieldFixedLength(1)] public string DrugClassificationSegmentUnitDoseIndicator { get; set; }
-        
-        [FieldFixedLength(1)] public string DrugClassificationSegmentDesiDrugIndicator { get; set; }
-        
-        [FieldFixedLength(8)] public string DrugClassificationSegmentDrugObsoleteDate { get; set; }
-        
-        [FieldFixedLength(14)] public string DrugClassificationSegmentMedispanGpi { get; set; }
-        
-        [FieldFixedLength(11)] public string DrugClassificationReservedForFutureUse { get; set; }
+        /// <summary> 
+        /// Field #: 1 
+        /// Field Name: Segment Separator Character 
+        /// Format: AN 
+        /// Length: 1 
+        /// Value: >
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string DrugClassificationSegmentSeparatorCharacter { get; set; }
+
+        /// <summary> 
+        /// Field #: 2 
+        /// Field Name: Segment Identifier ( DC ) 
+        /// Format: AN 
+        /// Length: 2 
+        /// Value: DC
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string DrugClassificationSegmentIdentifier { get; set; }
+
+        /// <summary> 
+        /// Field #: 3 
+        /// Field Name: Category Code 
+        /// Format: AN 
+        /// Length: 1 
+        /// Definition: FDB Code from Drug file
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string DrugClassificationSegmentCategoryCode { get; set; }
+
+        /// <summary> 
+        /// Field #: 4 
+        /// Field Name: Class Code 
+        /// Format: AN 
+        /// Length: 1 
+        /// Definition: FDB Code from Drug file
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string DrugClassificationSegmentClassCode { get; set; }
+
+        /// <summary> 
+        /// Field #: 5 
+        /// Field Name: GC1 Code 
+        /// Format: AN 
+        /// Length: 1 
+        /// Definition: FDB Code from Drug file
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string DrugClassificationSegmentGc1Code { get; set; }
+
+        /// <summary> 
+        /// Field #: 6 
+        /// Field Name: GC2 Code 
+        /// Format: AN 
+        /// Length: 2 
+        /// Definition: FDB Code from Drug file
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string DrugClassificationSegmentGc2Code { get; set; }
+
+        /// <summary> 
+        /// Field #: 7 
+        /// Field Name: GC3 Code 
+        /// Format: AN 
+        /// Length: 3 
+        /// Definition: FDB Code from Drug file
+        /// </summary>
+        [FieldFixedLength(3)]
+        public string DrugClassificationSegmentGc3Code { get; set; }
+
+        /// <summary> 
+        /// Field #: 8 
+        /// Field Name: GC4 Code 
+        /// Format: AN 
+        /// Length: 4 
+        /// Definition: FDB Code from Drug file
+        /// </summary>
+        [FieldFixedLength(4)]
+        public string DrugClassificationSegmentGc4Code { get; set; }
+
+        /// <summary> 
+        /// Field #: 9 
+        /// Field Name: Specific Therapeutic Class 
+        /// Format: AN 
+        /// Length: 3 
+        /// Definition: FDB Code from Drug file
+        /// </summary>
+        [FieldFixedLength(3)]
+        public string DrugClassificationSegmentSpecificTherapeuticClass { get; set; }
+
+        /// <summary> 
+        /// Field #: 10 
+        /// Field Name: GCN Code 
+        /// Format: N 
+        /// Length: 5 
+        /// Definition: FDB Code from Drug file
+        /// </summary>
+        [FieldFixedLength(5)]
+        public string DrugClassificationSegmentGcnCode { get; set; }
+
+        /// <summary> 
+        /// Field #: 11 
+        /// Field Name: GCN Sequence Number 
+        /// Format: N 
+        /// Length: 6 
+        /// Definition: FDB Code from Drug file
+        /// </summary>
+        [FieldFixedLength(6)]
+        public string DrugClassificationSegmentGcnSequenceNumber { get; set; }
+
+        /// <summary> 
+        /// Field #: 12 
+        /// Field Name: Standard Therapeutic Class 
+        /// Format: N 
+        /// Length: 2 
+        /// Definition: FDB Code from Drug file
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string DrugClassificationSegmentStandardTherapeuticClass { get; set; }
+
+        /// <summary> 
+        /// Field #: 13 
+        /// Field Name: Generic Therapeutic Class 
+        /// Format: N 
+        /// Length: 2 
+        /// Definition: FDB Code from Drug file
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string DrugClassificationSegmentGenericTherapeuticClass { get; set; }
+
+        /// <summary> 
+        /// Field #: 14 
+        /// Field Name: AHFS Therapeutic Class 
+        /// Format: N 
+        /// Length: 6 
+        /// Definition: Code from Drug file
+        /// </summary>
+        [FieldFixedLength(6)]
+        public string DrugClassificationSegmentAhfsTherapeuticClass { get; set; }
+
+        /// <summary> 
+        /// Field #: 15 
+        /// Field Name: Orange Book Code 
+        /// Format: AN 
+        /// Length: 3 
+        /// Definition: Code from Drug file
+        /// </summary>
+        [FieldFixedLength(3)]
+        public string DrugClassificationSegmentOrangeBookCode { get; set; }
+
+        /// <summary> 
+        /// Field #: 16 
+        /// Field Name: Route of Administration Code 
+        /// Format: AN 
+        /// Length: 1 
+        /// Definition: FDB Code from Drug file
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string DrugClassificationSegmentRouteOfAdministrationCode { get; set; }
+
+        /// <summary> 
+        /// Field #: 17 
+        /// Field Name: Drug Form Code (Unit of Measure) 
+        /// Format: N 
+        /// Length: 1 
+        /// Definition: FDB Code from Drug file
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string DrugClassificationSegmentDrugFormCodeUnitOfMeasure { get; set; }
+
+        /// <summary> 
+        /// Field #: 18 
+        /// Field Name: DEA Code 
+        /// Format: N 
+        /// Length: 1 
+        /// Definition: Code from Drug file
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string DrugClassificationSegmentDeaCode { get; set; }
+
+        /// <summary> 
+        /// Field #: 19 
+        /// Field Name: Maintenance Drug Indicator 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = true, from Drug file
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string DrugClassificationSegmentMaintenanceDrugIndicator { get; set; }
+
+        /// <summary> 
+        /// Field #: 20 
+        /// Field Name: Unit of Use Indicator 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = true, from Drug file
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string DrugClassificationSegmentUnitOfUseIndicator { get; set; }
+
+        /// <summary> 
+        /// Field #: 21 
+        /// Field Name: Repackage Indicator 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = true, from Drug file
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string DrugClassificationSegmentRepackageIndicator { get; set; }
+
+        /// <summary> 
+        /// Field #: 22 
+        /// Field Name: Unit Dose Indicator 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = true, from Drug file
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string DrugClassificationSegmentUnitDoseIndicator { get; set; }
+
+        /// <summary> 
+        /// Field #: 23 
+        /// Field Name: DESI Drug Indicator 
+        /// Format: N 
+        /// Length: 1 
+        /// Value: 0,1 
+        /// Definition: "1" = true, from Drug file
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string DrugClassificationSegmentDesiDrugIndicator { get; set; }
+
+        /// <summary> 
+        /// Field #: 24 
+        /// Field Name: Drug Obsolete Date 
+        /// Format: N 
+        /// Length: 8 
+        /// Definition: Date that NDC became obsolete
+        /// </summary>
+        [FieldFixedLength(8)]
+        public string DrugClassificationSegmentDrugObsoleteDate { get; set; }
+
+        /// <summary> 
+        /// Field #: 25 
+        /// Field Name: Medispan GPI 
+        /// Format: AN 
+        /// Length: 14 
+        /// Value: Medispan Code from Drug file
+        /// </summary>
+        [FieldFixedLength(14)]
+        public string DrugClassificationSegmentMedispanGpi { get; set; }
+
+        /// <summary> 
+        /// Field #: 26 
+        /// Field Name: Reserved for Future Use 
+        /// Length: 11
+        /// </summary>
+        [FieldFixedLength(11)]
+        public string DrugClassificationReservedForFutureUse { get; set; }
 
         #endregion
 
