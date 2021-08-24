@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("AHClaim")]
+[assembly: AssemblyTitle("AHClaim.Domain")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("AHClaim")]
+[assembly: AssemblyProduct("AHClaim.Domain")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("B135435B-AAB7-4754-8714-6CC409EEF1B5")]
+[assembly: Guid("28324D7C-D29E-4FCE-80B5-2B6337D2E346")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -3,7 +3,7 @@ using AHClaim.Record;
 using AHClaim.Segment;
 using FileHelpers;
 
-namespace AHClaim
+namespace AHClaim.App
 {
     internal class Program
     {
