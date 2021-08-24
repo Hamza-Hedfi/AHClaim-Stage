@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using AHClaim.Record;
+using AHClaim.domain.Record;
 
-namespace AHClaim.Segment
+namespace AHClaim.domain.Segment.extension
 {
     public static class SegmentFactory
     {

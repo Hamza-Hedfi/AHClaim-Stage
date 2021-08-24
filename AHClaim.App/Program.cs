@@ -1,6 +1,6 @@
 ﻿using System;
-using AHClaim.Record;
-using AHClaim.Segment;
+using AHClaim.domain.Record;
+using AHClaim.domain.Segment.extension;
 using FileHelpers;
 
 namespace AHClaim.App

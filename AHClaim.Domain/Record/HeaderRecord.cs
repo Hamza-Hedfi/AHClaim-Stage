@@ -1,6 +1,6 @@
 ﻿using FileHelpers;
 
-namespace AHClaim.Record
+namespace AHClaim.domain.Record
 {
     /// <summary>
     /// Header Record

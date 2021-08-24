@@ -1,4 +1,4 @@
-﻿namespace AHClaim.Segment
+﻿namespace AHClaim.domain.Segment
 {
     /// <summary>
     /// Header Segment
