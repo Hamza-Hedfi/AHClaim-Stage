@@ -459,5 +459,46 @@ namespace AHClaim.domain.Segment.extension
                 ReservedForFutureUse = r.WorkersCompensationSegmentReservedForFutureUse
             });
         }
+
+        /// <summary>
+        /// Factory method for Claim Balances Segment
+        /// </summary>
+        /// <param name="container">Raw Claim Records</param>
+        /// <returns>IEnumerable&lt;ClaimBalancesSegment&gt;</returns>
+        public static IEnumerable<ClaimBalancesSegment> GetClaimBalancesSegments(
+            this IEnumerable<RawClaimRecord> container)
+        {
+            return container.Select(r => new ClaimBalancesSegment()
+            {
+                IndividualDeductibleAmount = r.ClaimBalancesSegmentIndividualDeductibleAmount,
+                IndividualMemberAmount = r.ClaimBalancesSegmentIndividualMemberAmount,
+                IndividualSponsorAmount = r.ClaimBalancesSegmentIndividualSponsorAmount,
+                IndividualStartingDeductibleAccumulation =
+                    r.ClaimBalancesSegmentIndividualStartingDeductibleAccumulation,
+                IndividualEndingDeductibleAccumulation = r.ClaimBalancesSegmentIndividualEndingDeductibleAccumulation,
+                IndividualRemainingDeductibleAmount = r.ClaimBalancesSegmentIndividualRemainingDeductibleAmount,
+                IndividualStartingMemberAccumulation = r.ClaimBalancesSegmentIndividualStartingMemberAccumulation,
+                IndividualEndingMemberAccumulation = r.ClaimBalancesSegmentIndividualEndingMemberAccumulation,
+                IndividualStartingSponsorAccumulation = r.ClaimBalancesSegmentIndividualStartingSponsorAccumulation,
+                IndividualEndingSponsorAccumulation = r.ClaimBalancesSegmentIndividualEndingSponsorAccumulation,
+                IndividualStartingTierLevel = r.ClaimBalancesSegmentIndividualStartingTierLevel,
+                IndividualEndingTierLevel = r.ClaimBalancesSegmentIndividualEndingTierLevel,
+                FamilyDeductibleAmount = r.ClaimBalancesSegmentFamilyDeductibleAmount,
+                FamilyMemberAmount = r.ClaimBalancesSegmentFamilyMemberAmount,
+                FamilySponsorAmount = r.ClaimBalancesSegmentFamilySponsorAmount,
+                FamilyStartingDeductibleAccumulation = r.ClaimBalancesSegmentFamilyStartingDeductibleAccumulation,
+                FamilyEndingDeductibleAccumulation = r.ClaimBalancesSegmentFamilyEndingDeductibleAccumulation,
+                FamilyRemainingDeductibleAmount = r.ClaimBalancesSegmentFamilyRemainingDeductibleAmount,
+                FamilyStartingMemberAccumulation = r.ClaimBalancesSegmentFamilyStartingMemberAccumulation,
+                FamilyEndingMemberAccumulation = r.ClaimBalancesSegmentFamilyEndingMemberAccumulation,
+                FamilyStartingSponsorAccumulation = r.ClaimBalancesSegmentFamilyStartingSponsorAccumulation,
+                FamilyEndingSponsorAccumulation = r.ClaimBalancesSegmentFamilyEndingSponsorAccumulation,
+                FamilyStartingTierLevel = r.ClaimBalancesSegmentFamilyStartingTierLevel,
+                FamilyEndingTierLevel = r.ClaimBalancesSegmentFamilyEndingTierLevel,
+                CardValue = r.ClaimBalancesSegmentCardValue,
+                RebateAdjustment = r.ClaimBalancesSegmentRebateAdjustment,
+                ReservedForFutureUse = r.ClaimBalancesSegmentReservedForFutureUse
+            });
+        }
     }
 }
