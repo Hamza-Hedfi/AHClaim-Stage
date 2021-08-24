@@ -428,5 +428,36 @@ namespace AHClaim.domain.Segment.extension
                 ReservedForFutureUse = r.EnhancedPrescriberSegmentReservedForFutureUse
             });
         }
+
+        /// <summary>
+        /// Factory method for Workers' Compensation Segment
+        /// </summary>
+        /// <param name="container">Raw Claim Records</param>
+        /// <returns>IEnumerable&lt;WorkersCompensationSegment&gt;</returns>
+        public static IEnumerable<WorkersCompensationSegment> GetWorkersCompensationSegments(
+            this IEnumerable<RawClaimRecord> container)
+        {
+            return container.Select(r => new WorkersCompensationSegment()
+            {
+                WcDateOfInjury = r.WorkersCompensationSegmentWcDateOfInjury,
+                WcClaimNumber = r.WorkersCompensationSegmentWcClaimNumber,
+                WcRecordClaimNumberInfoOnly = r.WorkersCompensationSegmentWcRecordClaimNumberInfoOnly,
+                WcRecordAdjustorCode = r.WorkersCompensationSegmentWcRecordAdjustorCode,
+                WcEmployerName = r.WorkersCompensationSegmentWcEmployerName,
+                WcEmployerAddress1 = r.WorkersCompensationSegmentWcEmployerAddress1,
+                WcEmployerAddress2 = r.WorkersCompensationSegmentWcEmployerAddress2,
+                WcEmployerCity = r.WorkersCompensationSegmentWcEmployerCity,
+                WcEmployerState = r.WorkersCompensationSegmentWcEmployerState,
+                WcEmployerZipCode = r.WorkersCompensationSegmentWcEmployerZipCode,
+                WcEmployerPhoneNumber = r.WorkersCompensationSegmentWcEmployerPhoneNumber,
+                WcRecordTherapyCategoryCode1 = r.WorkersCompensationSegmentWcRecordTherapyCategoryCode1,
+                WcRecordTherapyCategoryCode2 = r.WorkersCompensationSegmentWcRecordTherapyCategoryCode2,
+                WcRecordTherapyCategoryCode3 = r.WorkersCompensationSegmentWcRecordTherapyCategoryCode3,
+                WcRecordTherapyCategoryCode4 = r.WorkersCompensationSegmentWcRecordTherapyCategoryCode4,
+                WcRecordTherapyCategoryCode5 = r.WorkersCompensationSegmentWcRecordTherapyCategoryCode5,
+                WcRecordTerminationDate = r.WorkersCompensationSegmentWcRecordTerminationDate,
+                ReservedForFutureUse = r.WorkersCompensationSegmentReservedForFutureUse
+            });
+        }
     }
 }
