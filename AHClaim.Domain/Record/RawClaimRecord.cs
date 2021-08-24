@@ -3224,35 +3224,268 @@ namespace AHClaim.domain.Record
 
         #region Claim Balances Segment
 
-        [FieldFixedLength(1)] public string ClaimBalancesSegmentSeparatorCharacter { get; set; }
-        [FieldFixedLength(2)] public string ClaimBalancesSegmentIdentifier { get; set; }
-        [FieldFixedLength(10)] public string ClaimBalancesSegmentIndividualDeductibleAmount { get; set; }
-        [FieldFixedLength(10)] public string ClaimBalancesSegmentIndividualMemberAmount { get; set; }
-        [FieldFixedLength(10)] public string ClaimBalancesSegmentIndividualSponsorAmount { get; set; }
-        [FieldFixedLength(10)] public string ClaimBalancesSegmentIndividualStartingDeductibleAccumulation { get; set; }
-        [FieldFixedLength(10)] public string ClaimBalancesSegmentIndividualEndingDeductibleAccumulation { get; set; }
-        [FieldFixedLength(10)] public string ClaimBalancesSegmentIndividualRemainingDeductibleAmount { get; set; }
-        [FieldFixedLength(10)] public string ClaimBalancesSegmentIndividualStartingMemberAccumulation { get; set; }
-        [FieldFixedLength(10)] public string ClaimBalancesSegmentIndividualEndingMemberAccumulation { get; set; }
-        [FieldFixedLength(10)] public string ClaimBalancesSegmentIndividualStartingSponsorAccumulation { get; set; }
-        [FieldFixedLength(10)] public string ClaimBalancesSegmentIndividualEndingSponsorAccumulation { get; set; }
-        [FieldFixedLength(1)] public string ClaimBalancesSegmentIndividualStartingTierLevel { get; set; }
-        [FieldFixedLength(1)] public string ClaimBalancesSegmentIndividualEndingTierLevel { get; set; }
-        [FieldFixedLength(10)] public string ClaimBalancesSegmentFamilyDeductibleAmount { get; set; }
-        [FieldFixedLength(10)] public string ClaimBalancesSegmentFamilyMemberAmount { get; set; }
-        [FieldFixedLength(10)] public string ClaimBalancesSegmentFamilySponsorAmount { get; set; }
-        [FieldFixedLength(10)] public string ClaimBalancesSegmentFamilyStartingDeductibleAccumulation { get; set; }
-        [FieldFixedLength(10)] public string ClaimBalancesSegmentFamilyEndingDeductibleAccumulation { get; set; }
-        [FieldFixedLength(10)] public string ClaimBalancesSegmentFamilyRemainingDeductibleAmount { get; set; }
-        [FieldFixedLength(10)] public string ClaimBalancesSegmentFamilyStartingMemberAccumulation { get; set; }
-        [FieldFixedLength(10)] public string ClaimBalancesSegmentFamilyEndingMemberAccumulation { get; set; }
-        [FieldFixedLength(10)] public string ClaimBalancesSegmentFamilyStartingSponsorAccumulation { get; set; }
-        [FieldFixedLength(10)] public string ClaimBalancesSegmentFamilyEndingSponsorAccumulation { get; set; }
-        [FieldFixedLength(1)] public string ClaimBalancesSegmentFamilyStartingTierLevel { get; set; }
-        [FieldFixedLength(1)] public string ClaimBalancesSegmentFamilyEndingTierLevel { get; set; }
-        [FieldFixedLength(10)] public string ClaimBalancesSegmentCardValue { get; set; }
-        [FieldFixedLength(7)] public string ClaimBalancesSegmentRebateAdjustment { get; set; }
-        [FieldFixedLength(73)] public string ClaimBalancesSegmentReservedForFutureUse { get; set; }
+        /// <summary>
+        /// Field #: 1
+        /// Field Name: Segment Separator Character 
+        /// Format: AN 
+        /// Length: 1 
+        /// Value: >
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimBalancesSegmentSeparatorCharacter { get; set; }
+
+        /// <summary>
+        /// Field #: 2
+        /// Field Name: Segment Identifier ( CB ) 
+        /// Format: AN 
+        /// Length: 2 
+        /// Value: CB
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string ClaimBalancesSegmentIdentifier { get; set; }
+
+        /// <summary>
+        /// Field #: 3
+        /// Field Name: Individual Deductible Amount 
+        /// Format: D 
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimBalancesSegmentIndividualDeductibleAmount { get; set; }
+
+        /// <summary>
+        /// Field #: 4
+        /// Field Name: Individual Member Amount 
+        /// Format: D 
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimBalancesSegmentIndividualMemberAmount { get; set; }
+
+        /// <summary>
+        /// Field #: 5
+        /// Field Name: Individual Sponsor Amount 
+        /// Format: D 
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimBalancesSegmentIndividualSponsorAmount { get; set; }
+
+        /// <summary>
+        /// Field #: 6
+        /// Field Name: Individual Starting Deductible Accumulation 
+        /// Format: D 
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimBalancesSegmentIndividualStartingDeductibleAccumulation { get; set; }
+
+        /// <summary>
+        /// Field #: 7
+        /// Field Name: Individual Ending Deductible Accumulation 
+        /// Format: D 
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimBalancesSegmentIndividualEndingDeductibleAccumulation { get; set; }
+
+        /// <summary>
+        /// Field #: 8
+        /// Field Name: Individual Remaining Deductible Amount 
+        /// Format: D 
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimBalancesSegmentIndividualRemainingDeductibleAmount { get; set; }
+
+        /// <summary>
+        /// Field #: 9
+        /// Field Name: Individual Starting Member Accumulation 
+        /// Format: D 
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimBalancesSegmentIndividualStartingMemberAccumulation { get; set; }
+
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Individual Ending Member Accumulation 
+        /// Format: D 
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimBalancesSegmentIndividualEndingMemberAccumulation { get; set; }
+
+        /// <summary>
+        /// Field #: 11
+        /// Field Name: Individual Starting Sponsor Accumulation 
+        /// Format: D 
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimBalancesSegmentIndividualStartingSponsorAccumulation { get; set; }
+
+        /// <summary>
+        /// Field #: 12
+        /// Field Name: Individual Ending Sponsor Accumulation 
+        /// Format: D 
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimBalancesSegmentIndividualEndingSponsorAccumulation { get; set; }
+
+        /// <summary>
+        /// Field #: 13
+        /// Field Name: Individual Starting Tier Level 
+        /// Format: N 
+        /// Length: 1 
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimBalancesSegmentIndividualStartingTierLevel { get; set; }
+
+        /// <summary>
+        /// Field #: 14
+        /// Field Name: Individual Ending Tier Level 
+        /// Format: N 
+        /// Length: 1 
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimBalancesSegmentIndividualEndingTierLevel { get; set; }
+
+        /// <summary>
+        /// Field #: 15
+        /// Field Name: Family Deductible Amount 
+        /// Format: D 
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimBalancesSegmentFamilyDeductibleAmount { get; set; }
+
+        /// <summary>
+        /// Field #: 16
+        /// Field Name: Family Member Amount 
+        /// Format: D 
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimBalancesSegmentFamilyMemberAmount { get; set; }
+
+        /// <summary>
+        /// Field #: 17
+        /// Field Name: Family Sponsor Amount 
+        /// Format: D 
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimBalancesSegmentFamilySponsorAmount { get; set; }
+
+        /// <summary>
+        /// Field #: 18
+        /// Field Name: Family Starting Deductible Accumulation 
+        /// Format: D 
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimBalancesSegmentFamilyStartingDeductibleAccumulation { get; set; }
+
+        /// <summary>
+        /// Field #: 19
+        /// Field Name: Family Ending Deductible Accumulation 
+        /// Format: D 
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimBalancesSegmentFamilyEndingDeductibleAccumulation { get; set; }
+
+        /// <summary>
+        /// Field #: 20
+        /// Field Name: Family Remaining Deductible Amount 
+        /// Format: D 
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimBalancesSegmentFamilyRemainingDeductibleAmount { get; set; }
+
+        /// <summary>
+        /// Field #: 21
+        /// Field Name: Family Starting Member Accumulation 
+        /// Format: D 
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimBalancesSegmentFamilyStartingMemberAccumulation { get; set; }
+
+        /// <summary>
+        /// Field #: 22
+        /// Field Name: Family Ending Member Accumulation 
+        /// Format: D 
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimBalancesSegmentFamilyEndingMemberAccumulation { get; set; }
+
+        /// <summary>
+        /// Field #: 23
+        /// Field Name: Family Starting Sponsor Accumulation 
+        /// Format: D 
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimBalancesSegmentFamilyStartingSponsorAccumulation { get; set; }
+
+        /// <summary>
+        /// Field #: 24
+        /// Field Name: Family Ending Sponsor Accumulation 
+        /// Format: D 
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimBalancesSegmentFamilyEndingSponsorAccumulation { get; set; }
+
+        /// <summary>
+        /// Field #: 25
+        /// Field Name: Family Starting Tier Level 
+        /// Format: N 
+        /// Length: 1 
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimBalancesSegmentFamilyStartingTierLevel { get; set; }
+
+        /// <summary>
+        /// Field #: 26
+        /// Field Name: Family Ending Tier Level 
+        /// Format: N 
+        /// Length: 1 
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string ClaimBalancesSegmentFamilyEndingTierLevel { get; set; }
+
+        /// <summary>
+        /// Field #: 27
+        /// Field Name: Card Value 
+        /// Format: D 
+        /// Length: 10 
+        /// Definition: Dollar Amount Sent to Debit Card Vendor 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string ClaimBalancesSegmentCardValue { get; set; }
+
+        /// <summary>
+        /// Field #: 28
+        /// Field Name: Rebate Adjustment 
+        /// Format: D 
+        /// Length: 7 
+        /// </summary>
+        [FieldFixedLength(7)]
+        public string ClaimBalancesSegmentRebateAdjustment { get; set; }
+
+        /// <summary>
+        /// Field #: 29
+        /// Field Name: Reserved for Future Use 
+        /// Length: 73
+        /// </summary>
+        [FieldFixedLength(73)]
+        public string ClaimBalancesSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
