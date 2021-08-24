@@ -287,5 +287,42 @@ namespace AHClaim.Segment
                 ResultOfServiceCodeOutcome5 = r.SubmittedDurOverrideSegmentResultOfServiceCodeOutcome5
             });
         }
+
+        /// <summary>
+        /// Factory method for Drug Classification Segment
+        /// </summary>
+        /// <param name="container">Raw Claim Records</param>
+        /// <returns>IEnumerable&lt;DrugClassificationSegment&gt;</returns>
+        public static IEnumerable<DrugClassificationSegment> GetDrugClassificationSegments(
+            this IEnumerable<RawClaimRecord> container)
+        {
+            return container.Select(r => new DrugClassificationSegment()
+            {
+                CategoryCode = r.DrugClassificationSegmentCategoryCode,
+                ClassCode = r.DrugClassificationSegmentClassCode,
+                Gc1Code = r.DrugClassificationSegmentGc1Code,
+                Gc2Code = r.DrugClassificationSegmentGc2Code,
+                Gc3Code = r.DrugClassificationSegmentGc3Code,
+                Gc4Code = r.DrugClassificationSegmentGc4Code,
+                SpecificTherapeuticClass = r.DrugClassificationSegmentSpecificTherapeuticClass,
+                GcnCode = r.DrugClassificationSegmentGcnCode,
+                GcnSequenceNumber = r.DrugClassificationSegmentGcnSequenceNumber,
+                StandardTherapeuticClass = r.DrugClassificationSegmentStandardTherapeuticClass,
+                GenericTherapeuticClass = r.DrugClassificationSegmentGenericTherapeuticClass,
+                AhfsTherapeuticClass = r.DrugClassificationSegmentAhfsTherapeuticClass,
+                OrangeBookCode = r.DrugClassificationSegmentOrangeBookCode,
+                RouteOfAdministrationCode = r.DrugClassificationSegmentRouteOfAdministrationCode,
+                DrugFormCodeUnitOfMeasure = r.DrugClassificationSegmentDrugFormCodeUnitOfMeasure,
+                DeaCode = r.DrugClassificationSegmentDeaCode,
+                MaintenanceDrugIndicator = r.DrugClassificationSegmentMaintenanceDrugIndicator,
+                UnitOfUseIndicator = r.DrugClassificationSegmentUnitOfUseIndicator,
+                RepackageIndicator = r.DrugClassificationSegmentRepackageIndicator,
+                UnitDoseIndicator = r.DrugClassificationSegmentUnitDoseIndicator,
+                DesiDrugIndicator = r.DrugClassificationSegmentDesiDrugIndicator,
+                DrugObsoleteDate = r.DrugClassificationSegmentDrugObsoleteDate,
+                MedispanGpi = r.DrugClassificationSegmentMedispanGpi,
+                ReservedForFutureUse = r.DrugClassificationSegmentReservedForFutureUse
+            });
+        }
     }
 }
