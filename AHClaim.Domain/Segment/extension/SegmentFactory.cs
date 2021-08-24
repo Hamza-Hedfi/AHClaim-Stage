@@ -324,5 +324,37 @@ namespace AHClaim.Segment
                 ReservedForFutureUse = r.DrugClassificationSegmentReservedForFutureUse
             });
         }
+
+        /// <summary>
+        /// Factory method for Pharmacy Segment
+        /// </summary>
+        /// <param name="container">Raw Claim Records</param>
+        /// <returns>IEnumerable&lt;PharmacySegment&gt;</returns>
+        public static IEnumerable<PharmacySegment> GetPharmacySegments(
+            this IEnumerable<RawClaimRecord> container)
+        {
+            return container.Select(r => new PharmacySegment()
+            {
+                PhysicalAddressLine1 = r.PharmacySegmentPhysicalAddressLine1,
+                PhysicalAddressLine2 = r.PharmacySegmentPhysicalAddressLine2,
+                PhysicalCity = r.PharmacySegmentPhysicalCity,
+                PhysicalState = r.PharmacySegmentPhysicalState,
+                PhysicalZipCode = r.PharmacySegmentPhysicalZipCode,
+                PhoneNumber = r.PharmacySegmentPhoneNumber,
+                ReservedForFutureUse1 = r.PharmacySegmentReservedForFutureUse1,
+                FaxNumber = r.PharmacySegmentFaxNumber,
+                FederalLicenseNumber = r.PharmacySegmentFederalLicenseNumber,
+                FederalTaxIdNumber = r.PharmacySegmentFederalTaxIdNumber,
+                StateLicenseNumber = r.PharmacySegmentStateLicenseNumber,
+                StateTaxIdNumber = r.PharmacySegmentStateTaxIdNumber,
+                StateMedicaidNumber = r.PharmacySegmentStateMedicaidNumber,
+                PharmacyStoreNumber = r.PharmacySegmentPharmacyStoreNumber,
+                TestPharmacyFlag = r.PharmacySegmentTestPharmacyFlag,
+                PharmacistIdQualifier = r.PharmacySegmentPharmacistIdQualifier,
+                PharmacistId = r.PharmacySegmentPharmacistId,
+                PrimaryPharmacyDispenserType = r.PharmacySegmentPrimaryPharmacyDispenserType,
+                ReservedForFutureUse2 = r.PharmacySegmentReservedForFutureUse2,
+            });
+        }
     }
 }
