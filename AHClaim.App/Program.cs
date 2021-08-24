@@ -28,11 +28,11 @@ namespace AHClaim.App
             var footerResult = footerEngine.ReadString(engine.FooterText);
 
 
-            // Transform
             // var claimSegments = SegmentFactory.GetClaimSegments(result);
             var claimSegments = result.GetClaimSegments();
             // var segments = claimSegments.GroupBy(segment => segment.OriginalClaimAuthorizationNumber).Count();
 
+            // Transform
             // Load 
             // TODO: 
         }
