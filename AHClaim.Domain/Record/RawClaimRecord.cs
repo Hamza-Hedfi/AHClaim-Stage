@@ -2705,41 +2705,321 @@ namespace AHClaim.domain.Record
 
         #region Enhanced Prescriber Segment
 
-        [FieldFixedLength(1)] public string EnhancedPrescriberSegmentSeparatorCharacter { get; set; }
-        [FieldFixedLength(2)] public string EnhancedPrescriberSegmentIdentifier { get; set; }
-        [FieldFixedLength(35)] public string EnhancedPrescriberSegmentPrescriberName { get; set; }
-        [FieldFixedLength(9)] public string EnhancedPrescriberSegmentDea { get; set; }
-        [FieldFixedLength(10)] public string EnhancedPrescriberSegmentNpi { get; set; }
-        [FieldFixedLength(1)] public string EnhancedPrescriberSegmentBusinessActivityCode { get; set; }
-        [FieldFixedLength(1)] public string EnhancedPrescriberSegmentBusinessActivitySubCode { get; set; }
-        [FieldFixedLength(12)] public string EnhancedPrescriberSegmentDrugSchedules { get; set; }
-        [FieldFixedLength(40)] public string EnhancedPrescriberSegmentAddressLine1 { get; set; }
-        [FieldFixedLength(40)] public string EnhancedPrescriberSegmentAddressLine2 { get; set; }
-        [FieldFixedLength(24)] public string EnhancedPrescriberSegmentCity { get; set; }
-        [FieldFixedLength(2)] public string EnhancedPrescriberSegmentState { get; set; }
-        [FieldFixedLength(9)] public string EnhancedPrescriberSegmentZipCode { get; set; }
-        [FieldFixedLength(10)] public string EnhancedPrescriberSegmentPhone { get; set; }
-        [FieldFixedLength(10)] public string EnhancedPrescriberSegmentFaxNumber { get; set; }
-        [FieldFixedLength(10)] public string EnhancedPrescriberSegmentCredentials { get; set; }
-        [FieldFixedLength(25)] public string EnhancedPrescriberSegmentPractitionerType { get; set; }
-        [FieldFixedLength(40)] public string EnhancedPrescriberSegmentSpecialty1 { get; set; }
-        [FieldFixedLength(40)] public string EnhancedPrescriberSegmentSpecialty2 { get; set; }
-        [FieldFixedLength(15)] public string EnhancedPrescriberSegmentStateLicenseNumber1 { get; set; }
-        [FieldFixedLength(2)] public string EnhancedPrescriberSegmentStateLicenseNumber1State { get; set; }
-        [FieldFixedLength(15)] public string EnhancedPrescriberSegmentStateLicenseNumber2 { get; set; }
-        [FieldFixedLength(2)] public string EnhancedPrescriberSegmentStateLicenseNumber2State { get; set; }
-        [FieldFixedLength(15)] public string EnhancedPrescriberSegmentStateLicenseNumber3 { get; set; }
-        [FieldFixedLength(2)] public string EnhancedPrescriberSegmentStateLicenseNumber3State { get; set; }
-        [FieldFixedLength(15)] public string EnhancedPrescriberSegmentMedicaidIdNumber1 { get; set; }
-        [FieldFixedLength(2)] public string EnhancedPrescriberSegmentMedicaidIdNumber1State { get; set; }
-        [FieldFixedLength(15)] public string EnhancedPrescriberSegmentMedicaidIdNumber2 { get; set; }
-        [FieldFixedLength(2)] public string EnhancedPrescriberSegmentMedicaidIdNumber2State { get; set; }
-        [FieldFixedLength(15)] public string EnhancedPrescriberSegmentMedicaidIdNumber3 { get; set; }
-        [FieldFixedLength(2)] public string EnhancedPrescriberSegmentMedicaidIdNumber3State { get; set; }
-        [FieldFixedLength(9)] public string EnhancedPrescriberSegmentTaxId { get; set; }
-        [FieldFixedLength(8)] public string EnhancedPrescriberSegmentExpirationDate { get; set; }
-        [FieldFixedLength(2)] public string EnhancedPrescriberSegmentPrescriberIdQualifier { get; set; }
-        [FieldFixedLength(99)] public string EnhancedPrescriberSegmentReservedForFutureUse { get; set; }
+        /// <summary> 
+        /// Field #: 1 
+        /// Field Name: Segment Separator Character 
+        /// Format : AN 
+        /// Length: 1 
+        /// Value: >
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string EnhancedPrescriberSegmentSeparatorCharacter { get; set; }
+
+        /// <summary> 
+        /// Field #: 2 
+        /// Field Name: Segment Identifier ( EP ) 
+        /// Format : AN 
+        /// Length: 2 
+        /// Value: EP
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string EnhancedPrescriberSegmentIdentifier { get; set; }
+
+        /// <summary> 
+        /// Field #: 3 
+        /// Field Name: Prescriber Name 
+        /// Format: AN 
+        /// Length: 35
+        /// </summary>
+        [FieldFixedLength(35)]
+        public string EnhancedPrescriberSegmentPrescriberName { get; set; }
+
+        /// <summary> 
+        /// Field #: 4 
+        /// Field Name: DEA 
+        /// Format: AN 
+        /// Length: 9
+        /// </summary>
+        [FieldFixedLength(9)]
+        public string EnhancedPrescriberSegmentDea { get; set; }
+
+        /// <summary> 
+        /// Field #: 5 
+        /// Field Name: NPI 
+        /// Format: N 
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string EnhancedPrescriberSegmentNpi { get; set; }
+
+        /// <summary> 
+        /// Field #: 6 
+        /// Field Name: Business Activity Code 
+        /// Format: AN 
+        /// Length: 1
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string EnhancedPrescriberSegmentBusinessActivityCode { get; set; }
+
+        /// <summary> 
+        /// Field #: 7 
+        /// Field Name: Business Activity Sub Code 
+        /// Format: AN 
+        /// Length: 1
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string EnhancedPrescriberSegmentBusinessActivitySubCode { get; set; }
+
+        /// <summary> 
+        /// Field #: 8 
+        /// Field Name: Drug Schedules 
+        /// Format: AN 
+        /// Length: 12
+        /// </summary>
+        [FieldFixedLength(12)]
+        public string EnhancedPrescriberSegmentDrugSchedules { get; set; }
+
+        /// <summary> 
+        /// Field #: 9 
+        /// Field Name: Address Line 1 
+        /// Format: AN 
+        /// Length: 40
+        /// </summary>
+        [FieldFixedLength(40)]
+        public string EnhancedPrescriberSegmentAddressLine1 { get; set; }
+
+        /// <summary> 
+        /// Field #: 10 
+        /// Field Name: Address Line 2 
+        /// Format: AN 
+        /// Length: 40
+        /// </summary>
+        [FieldFixedLength(40)]
+        public string EnhancedPrescriberSegmentAddressLine2 { get; set; }
+
+        /// <summary> 
+        /// Field #: 11 
+        /// Field Name: City 
+        /// Format: AN 
+        /// Length: 24
+        /// </summary>
+        [FieldFixedLength(24)]
+        public string EnhancedPrescriberSegmentCity { get; set; }
+
+        /// <summary> 
+        /// Field #: 12 
+        /// Field Name: State 
+        /// Format: AN 
+        /// Length: 2
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string EnhancedPrescriberSegmentState { get; set; }
+
+        /// <summary> 
+        /// Field #: 13 
+        /// Field Name: Zip Code + 4 
+        /// Format: N 
+        /// Length: 9
+        /// </summary>
+        [FieldFixedLength(9)]
+        public string EnhancedPrescriberSegmentZipCode { get; set; }
+
+        /// <summary> 
+        /// Field #: 14 
+        /// Field Name: Phone 
+        /// Format: N 
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string EnhancedPrescriberSegmentPhone { get; set; }
+
+        /// <summary> 
+        /// Field #: 15 
+        /// Field Name: Fax # 
+        /// Format: N 
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string EnhancedPrescriberSegmentFaxNumber { get; set; }
+
+        /// <summary> 
+        /// Field #: 16 
+        /// Field Name: Credentials 
+        /// Format: AN 
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string EnhancedPrescriberSegmentCredentials { get; set; }
+
+        /// <summary> 
+        /// Field #: 17 
+        /// Field Name: Practitioner Type 
+        /// Format: AN 
+        /// Length: 25
+        /// </summary>
+        [FieldFixedLength(25)]
+        public string EnhancedPrescriberSegmentPractitionerType { get; set; }
+
+        /// <summary> 
+        /// Field #: 18 
+        /// Field Name: Specialty 1 
+        /// Format: AN 
+        /// Length: 40
+        /// </summary>
+        [FieldFixedLength(40)]
+        public string EnhancedPrescriberSegmentSpecialty1 { get; set; }
+
+        /// <summary> 
+        /// Field #: 19 
+        /// Field Name: Specialty 2 
+        /// Format: AN 
+        /// Length: 40
+        /// </summary>
+        [FieldFixedLength(40)]
+        public string EnhancedPrescriberSegmentSpecialty2 { get; set; }
+
+        /// <summary> 
+        /// Field #: 20 
+        /// Field Name: State License #1 
+        /// Format: AN 
+        /// Length: 15
+        /// </summary>
+        [FieldFixedLength(15)]
+        public string EnhancedPrescriberSegmentStateLicenseNumber1 { get; set; }
+
+        /// <summary> 
+        /// Field #: 21 
+        /// Field Name: State License #1 State 
+        /// Format: AN 
+        /// Length: 2
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string EnhancedPrescriberSegmentStateLicenseNumber1State { get; set; }
+
+        /// <summary> 
+        /// Field #: 22 
+        /// Field Name: State License #2 
+        /// Format: AN 
+        /// Length: 15
+        /// </summary>
+        [FieldFixedLength(15)]
+        public string EnhancedPrescriberSegmentStateLicenseNumber2 { get; set; }
+
+        /// <summary> 
+        /// Field #: 23 
+        /// Field Name: State License #2 State 
+        /// Format: AN 
+        /// Length: 2
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string EnhancedPrescriberSegmentStateLicenseNumber2State { get; set; }
+
+        /// <summary> 
+        /// Field #: 24 
+        /// Field Name: State License #3 
+        /// Format: AN 
+        /// Length: 15
+        /// </summary>
+        [FieldFixedLength(15)]
+        public string EnhancedPrescriberSegmentStateLicenseNumber3 { get; set; }
+
+        /// <summary> 
+        /// Field #: 25 
+        /// Field Name: State License #3 State 
+        /// Format: AN 
+        /// Length: 2
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string EnhancedPrescriberSegmentStateLicenseNumber3State { get; set; }
+
+        /// <summary> 
+        /// Field #: 26 
+        /// Field Name: Medicaid ID #1 
+        /// Format: AN 
+        /// Length: 15
+        /// </summary>
+        [FieldFixedLength(15)]
+        public string EnhancedPrescriberSegmentMedicaidIdNumber1 { get; set; }
+
+        /// <summary> 
+        /// Field #: 27 
+        /// Field Name: Medicaid ID #1 State 
+        /// Format: AN 
+        /// Length: 2
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string EnhancedPrescriberSegmentMedicaidIdNumber1State { get; set; }
+
+        /// <summary> 
+        /// Field #: 28 
+        /// Field Name: Medicaid ID #2 
+        /// Format: AN 
+        /// Length: 15
+        /// </summary>
+        [FieldFixedLength(15)]
+        public string EnhancedPrescriberSegmentMedicaidIdNumber2 { get; set; }
+
+        /// <summary> 
+        /// Field #: 29 
+        /// Field Name: Medicaid ID #2 State 
+        /// Format: AN 
+        /// Length: 2
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string EnhancedPrescriberSegmentMedicaidIdNumber2State { get; set; }
+
+        /// <summary> 
+        /// Field #: 30 
+        /// Field Name: Medicaid ID #3 
+        /// Format: AN 
+        /// Length: 15
+        /// </summary>
+        [FieldFixedLength(15)]
+        public string EnhancedPrescriberSegmentMedicaidIdNumber3 { get; set; }
+
+        /// <summary> 
+        /// Field #: 31 
+        /// Field Name: Medicaid ID #3 State 
+        /// Format: AN 
+        /// Length: 2
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string EnhancedPrescriberSegmentMedicaidIdNumber3State { get; set; }
+
+        /// <summary> 
+        /// Field #: 32 
+        /// Field Name: Tax ID 
+        /// Format: AN 
+        /// Length: 9
+        /// </summary>
+        [FieldFixedLength(9)]
+        public string EnhancedPrescriberSegmentTaxId { get; set; }
+
+        /// <summary> 
+        /// Field #: 33 
+        /// Field Name: Expiration Date 
+        /// Format: N 
+        /// Length: 8
+        /// </summary>
+        [FieldFixedLength(8)]
+        public string EnhancedPrescriberSegmentExpirationDate { get; set; }
+
+        /// <summary> 
+        /// Field #: 34 
+        /// Field Name: Prescriber ID Qualifier 
+        /// Format: N 
+        /// Length: 2
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string EnhancedPrescriberSegmentPrescriberIdQualifier { get; set; }
+
+        /// <summary>
+        /// Field #: 35 
+        /// Field Name: Reserved for Future Use 
+        /// Lenght: 99
+        /// </summary>
+        [FieldFixedLength(99)]
+        public string EnhancedPrescriberSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
