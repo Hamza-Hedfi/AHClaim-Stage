@@ -47,7 +47,7 @@
         <Compile Include="Record\HeaderRecord.cs" />
         <Compile Include="Record\RawClaimRecord.cs" />
         <Compile Include="Segment\AddtlPatientInfoSegment.cs" />
-        <Compile Include="Segment\AddtlSubmittedPharmacyPricing.cs" />
+        <Compile Include="Segment\AddtlSubmittedPharmacyPricingSegment.cs" />
         <Compile Include="Segment\AddtlSubmittedValuesSegment.cs" />
         <Compile Include="Segment\ClaimBalancesSegment.cs" />
         <Compile Include="Segment\ClaimIndicatorSegment.cs" />
@@ -68,7 +68,7 @@
         <Compile Include="Segment\PriorAuthorizationSegment.cs" />
         <Compile Include="Segment\SubmittedDurOverrideSegment.cs" />
         <Compile Include="Segment\SubmittedMemberSegment.cs" />
-        <Compile Include="Segment\SubmittedOcbInformation.cs" />
+        <Compile Include="Segment\SubmittedCobInformationSegment.cs" />
         <Compile Include="Segment\TransactionMessaging.cs" />
         <Compile Include="Segment\WorkersCompensationSegment.cs" />
     </ItemGroup>
