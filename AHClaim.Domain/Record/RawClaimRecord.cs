@@ -4199,7 +4199,7 @@ namespace AHClaim.domain.Record
         /// Value: SC
         /// </summary>
         [FieldFixedLength(2)]
-        public string SubmittedCobClaimInformationSegmentIdentifier { get; set; }
+        public string SubmittedCobClaimInformationSegmentSegmentIdentifier { get; set; }
 
         /// <summary> 
         /// Field #: 3
@@ -4209,7 +4209,7 @@ namespace AHClaim.domain.Record
         /// Value: 337-4C
         /// </summary>
         [FieldFixedLength(1)]
-        public string SubmittedCobClaimInformationCoordinationOfBenefitsOtherPaymentsCount { get; set; }
+        public string SubmittedCobClaimInformationSegmentCoordinationOfBenefitsOtherPaymentsCount { get; set; }
 
         /// <summary> 
         /// Field #: 4
@@ -4219,7 +4219,7 @@ namespace AHClaim.domain.Record
         /// Value: 338-5C
         /// </summary>
         [FieldFixedLength(2)]
-        public string SubmittedCobClaimInformationOtherPayerCoverageTypePrimarySubmission { get; set; }
+        public string SubmittedCobClaimInformationSegmentOtherPayerCoverageTypePrimarySubmission { get; set; }
 
         /// <summary> 
         /// Field #: 5
@@ -4229,7 +4229,7 @@ namespace AHClaim.domain.Record
         /// Value: 339-6C
         /// </summary>
         [FieldFixedLength(2)]
-        public string SubmittedCobClaimInformationOtherPayerIdQualifierPrimarySubmission { get; set; }
+        public string SubmittedCobClaimInformationSegmentOtherPayerIdQualifierPrimarySubmission { get; set; }
 
         /// <summary> 
         /// Field #: 6
@@ -4239,7 +4239,7 @@ namespace AHClaim.domain.Record
         /// Value: 340-7C
         /// </summary>
         [FieldFixedLength(10)]
-        public string SubmittedCobClaimInformationOtherPayerIdBinPrimarySubmission { get; set; }
+        public string SubmittedCobClaimInformationSegmentOtherPayerIdBinPrimarySubmission { get; set; }
 
         /// <summary> 
         /// Field #: 7
@@ -4249,7 +4249,7 @@ namespace AHClaim.domain.Record
         /// Definition: 443-E8 - format ccyymmdd 
         /// </summary>
         [FieldFixedLength(8)]
-        public string SubmittedCobClaimInformationOtherPayerDatePrimarySubmission { get; set; }
+        public string SubmittedCobClaimInformationSegmentOtherPayerDatePrimarySubmission { get; set; }
 
         /// <summary> 
         /// Field #: 8
@@ -4259,7 +4259,7 @@ namespace AHClaim.domain.Record
         /// Definition: 471-5E 
         /// </summary>
         [FieldFixedLength(2)]
-        public string SubmittedCobClaimInformationRejectCountPrimarySubmission { get; set; }
+        public string SubmittedCobClaimInformationSegmentRejectCountPrimarySubmission { get; set; }
 
         /// <summary> 
         /// Field #: 9
@@ -4269,7 +4269,7 @@ namespace AHClaim.domain.Record
         /// Definition: 472-6E 
         /// </summary>
         [FieldFixedLength(3)]
-        public string SubmittedCobClaimInformationRejectCodePrimarySubmission1 { get; set; }
+        public string SubmittedCobClaimInformationSegmentRejectCodePrimarySubmission1 { get; set; }
 
         /// <summary> 
         /// Field #: 10
@@ -4279,7 +4279,7 @@ namespace AHClaim.domain.Record
         /// Definition: 472-6E 
         /// </summary>
         [FieldFixedLength(3)]
-        public string SubmittedCobClaimInformationRejectCodePrimarySubmission2 { get; set; }
+        public string SubmittedCobClaimInformationSegmentRejectCodePrimarySubmission2 { get; set; }
 
         /// <summary> 
         /// Field #: 11
@@ -4289,7 +4289,7 @@ namespace AHClaim.domain.Record
         /// Definition: 472-6E 
         /// </summary>
         [FieldFixedLength(3)]
-        public string SubmittedCobClaimInformationRejectCodePrimarySubmission3 { get; set; }
+        public string SubmittedCobClaimInformationSegmentRejectCodePrimarySubmission3 { get; set; }
 
         /// <summary> 
         /// Field #: 12
@@ -4299,7 +4299,7 @@ namespace AHClaim.domain.Record
         /// Definition: 351-NP ,If multiple qualifiers are submitted, the first 5 will be presented in this field with '-' as seperator. 
         /// </summary>
         [FieldFixedLength(14)]
-        public string SubmittedCobClaimInformationOtherPayerPatientResponsibilityAmountQualifierPrimarySubmission
+        public string SubmittedCobClaimInformationSegmentOtherPayerPatientResponsibilityAmountQualifierPrimarySubmission
         {
             get;
             set;
@@ -4313,7 +4313,7 @@ namespace AHClaim.domain.Record
         /// Definition: SUM of 352-NQ for identified Payer. If 06 submitted in qualifier, submitted value is provided, else all OPPRA amounts are summed 
         /// </summary>
         [FieldFixedLength(10)]
-        public string SubmittedCobClaimInformationOtherPayerPatientResponsibilityAmountSumPrimarySubmission
+        public string SubmittedCobClaimInformationSegmentOtherPayerPatientResponsibilityAmountSumPrimarySubmission
         {
             get;
             set;
@@ -4327,7 +4327,7 @@ namespace AHClaim.domain.Record
         /// Definition: SUM of 431-DV for identfied Payer 
         /// </summary>
         [FieldFixedLength(10)]
-        public string SubmittedCobClaimInformationOtherPayerAmountPaidSumPrimarySubmission { get; set; }
+        public string SubmittedCobClaimInformationSegmentOtherPayerAmountPaidSumPrimarySubmission { get; set; }
 
         /// <summary> 
         /// Field #: 15
@@ -4337,7 +4337,7 @@ namespace AHClaim.domain.Record
         /// Definition: 338-5C
         /// </summary>
         [FieldFixedLength(2)]
-        public string SubmittedCobClaimInformationOtherPayerCoverageTypeSecondarySubmission { get; set; }
+        public string SubmittedCobClaimInformationSegmentOtherPayerCoverageTypeSecondarySubmission { get; set; }
 
         /// <summary> 
         /// Field #: 16
@@ -4347,7 +4347,7 @@ namespace AHClaim.domain.Record
         /// Definition: 339-6C
         /// </summary>
         [FieldFixedLength(2)]
-        public string SubmittedCobClaimInformationOtherPayerIdQualifierSecondarySubmission { get; set; }
+        public string SubmittedCobClaimInformationSegmentOtherPayerIdQualifierSecondarySubmission { get; set; }
 
         /// <summary> 
         /// Field #: 17
@@ -4357,7 +4357,7 @@ namespace AHClaim.domain.Record
         /// Definition: 340-7C
         /// </summary>
         [FieldFixedLength(10)]
-        public string SubmittedCobClaimInformationOtherPayerIdBinSecondarySubmission { get; set; }
+        public string SubmittedCobClaimInformationSegmentOtherPayerIdBinSecondarySubmission { get; set; }
 
         /// <summary> 
         /// Field #: 18
@@ -4367,7 +4367,7 @@ namespace AHClaim.domain.Record
         /// Definition: 443-E8 - format ccyymmdd
         /// </summary>
         [FieldFixedLength(8)]
-        public string SubmittedCobClaimInformationOtherPayerDateSecondarySubmission { get; set; }
+        public string SubmittedCobClaimInformationSegmentOtherPayerDateSecondarySubmission { get; set; }
 
         /// <summary> 
         /// Field #: 19
@@ -4377,7 +4377,7 @@ namespace AHClaim.domain.Record
         /// Definition: 471-5E
         /// </summary>
         [FieldFixedLength(2)]
-        public string SubmittedCobClaimInformationRejectCountSecondarySubmission { get; set; }
+        public string SubmittedCobClaimInformationSegmentRejectCountSecondarySubmission { get; set; }
 
         /// <summary> 
         /// Field #: 20
@@ -4387,7 +4387,7 @@ namespace AHClaim.domain.Record
         /// Definition: 472-6E
         /// </summary>
         [FieldFixedLength(3)]
-        public string SubmittedCobClaimInformationRejectCodeSecondarySubmission1 { get; set; }
+        public string SubmittedCobClaimInformationSegmentRejectCodeSecondarySubmission1 { get; set; }
 
         /// <summary> 
         /// Field #: 21
@@ -4397,7 +4397,7 @@ namespace AHClaim.domain.Record
         /// Definition: 472-6E
         /// </summary>
         [FieldFixedLength(3)]
-        public string SubmittedCobClaimInformationRejectCodeSecondarySubmission2 { get; set; }
+        public string SubmittedCobClaimInformationSegmentRejectCodeSecondarySubmission2 { get; set; }
 
         /// <summary> 
         /// Field #: 22
@@ -4407,7 +4407,7 @@ namespace AHClaim.domain.Record
         /// Definition: 472-6E
         /// </summary>
         [FieldFixedLength(3)]
-        public string SubmittedCobClaimInformationRejectCodeSecondarySubmission3 { get; set; }
+        public string SubmittedCobClaimInformationSegmentRejectCodeSecondarySubmission3 { get; set; }
 
         /// <summary> 
         /// Field #: 23
@@ -4417,7 +4417,8 @@ namespace AHClaim.domain.Record
         /// Definition: 351-NP, If multiple qualifiers are submitted, the first 5 will be presented in this field. 
         /// </summary>
         [FieldFixedLength(14)]
-        public string SubmittedCobClaimInformationOtherPayerPatientResponsibilityAmountQualifierSecondarySubmission
+        public string
+            SubmittedCobClaimInformationSegmentOtherPayerPatientResponsibilityAmountQualifierSecondarySubmission
         {
             get;
             set;
@@ -4431,7 +4432,7 @@ namespace AHClaim.domain.Record
         /// Definition: SUM of 352-NQ for identified Payer. If 06 submitted in qualifier, submitted value is provided, else all OPPRA amounts are summed 
         /// </summary>
         [FieldFixedLength(10)]
-        public string SubmittedCobClaimInformationOtherPayerPatientResponsibilityAmountSumSecondarySubmission
+        public string SubmittedCobClaimInformationSegmentOtherPayerPatientResponsibilityAmountSumSecondarySubmission
         {
             get;
             set;
@@ -4445,7 +4446,7 @@ namespace AHClaim.domain.Record
         /// Definition: SUM of 431-DV for identfied Payer 
         /// </summary>
         [FieldFixedLength(10)]
-        public string SubmittedCobClaimInformationOtherPayerAmountPaidSumSecondarySubmission { get; set; }
+        public string SubmittedCobClaimInformationSegmentOtherPayerAmountPaidSumSecondarySubmission { get; set; }
 
         /// <summary> 
         /// Field #: 26
@@ -4455,7 +4456,7 @@ namespace AHClaim.domain.Record
         /// Definition: 338-5C 
         /// </summary>
         [FieldFixedLength(2)]
-        public string SubmittedCobClaimInformationSubmission { get; set; }
+        public string SubmittedCobClaimInformationSegmentSubmission { get; set; }
 
         /// <summary> 
         /// Field #: 27
@@ -4465,7 +4466,7 @@ namespace AHClaim.domain.Record
         /// Definition: 339-6C 
         /// </summary>
         [FieldFixedLength(2)]
-        public string SubmittedCobClaimInformationOtherPayerIdQualifierTertiarySubmission { get; set; }
+        public string SubmittedCobClaimInformationSegmentOtherPayerIdQualifierTertiarySubmission { get; set; }
 
         /// <summary> 
         /// Field #: 28
@@ -4475,7 +4476,7 @@ namespace AHClaim.domain.Record
         /// Definition: 340-7C 
         /// </summary>
         [FieldFixedLength(10)]
-        public string SubmittedCobClaimInformationOtherPayerIdBinTertiarySubmission { get; set; }
+        public string SubmittedCobClaimInformationSegmentOtherPayerIdBinTertiarySubmission { get; set; }
 
         /// <summary> 
         /// Field #: 29
@@ -4485,7 +4486,7 @@ namespace AHClaim.domain.Record
         /// Definition: 443-E8 - format ccyymmdd 
         /// </summary>
         [FieldFixedLength(8)]
-        public string SubmittedCobClaimInformationOtherPayerDateTertiarySubmission { get; set; }
+        public string SubmittedCobClaimInformationSegmentOtherPayerDateTertiarySubmission { get; set; }
 
         /// <summary> 
         /// Field #: 30
@@ -4495,7 +4496,7 @@ namespace AHClaim.domain.Record
         /// Definition: 471-5E 
         /// </summary>
         [FieldFixedLength(2)]
-        public string SubmittedCobClaimInformationRejectCountTertiarySubmission { get; set; }
+        public string SubmittedCobClaimInformationSegmentRejectCountTertiarySubmission { get; set; }
 
         /// <summary> 
         /// Field #: 31
@@ -4505,7 +4506,7 @@ namespace AHClaim.domain.Record
         /// Definition: 472-6E 
         /// </summary>
         [FieldFixedLength(3)]
-        public string SubmittedCobClaimInformationRejectCodeTertiarySubmission1 { get; set; }
+        public string SubmittedCobClaimInformationSegmentRejectCodeTertiarySubmission1 { get; set; }
 
         /// <summary> 
         /// Field #: 32
@@ -4515,7 +4516,7 @@ namespace AHClaim.domain.Record
         /// Definition: 472-6E 
         /// </summary>
         [FieldFixedLength(3)]
-        public string SubmittedCobClaimInformationRejectCodeTertiarySubmission2 { get; set; }
+        public string SubmittedCobClaimInformationSegmentRejectCodeTertiarySubmission2 { get; set; }
 
         /// <summary> 
         /// Field #: 33
@@ -4525,7 +4526,7 @@ namespace AHClaim.domain.Record
         /// Definition: 472-6E 
         /// </summary>
         [FieldFixedLength(3)]
-        public string SubmittedCobClaimInformationRejectCodeTertiarySubmission3 { get; set; }
+        public string SubmittedCobClaimInformationSegmentRejectCodeTertiarySubmission3 { get; set; }
 
         /// <summary> 
         /// Field #: 34
@@ -4535,7 +4536,8 @@ namespace AHClaim.domain.Record
         /// Definition: 351-NP 
         /// </summary>
         [FieldFixedLength(14)]
-        public string SubmittedCobClaimInformationOtherPayerPatientResponsibilityAmountQualifierTertiarySubmission
+        public string
+            SubmittedCobClaimInformationSegmentOtherPayerPatientResponsibilityAmountQualifierTertiarySubmission
         {
             get;
             set;
@@ -4549,7 +4551,7 @@ namespace AHClaim.domain.Record
         /// Definition: SUM of 352-NQ for identified Payer. If 06 submitted in qualifier, submitted value is provided, else all OPPRA amounts are summed 
         /// </summary>
         [FieldFixedLength(10)]
-        public string SubmittedCobClaimInformationOtherPayerPatientResponsibilityAmountSumTertiarySubmission
+        public string SubmittedCobClaimInformationSegmentOtherPayerPatientResponsibilityAmountSumTertiarySubmission
         {
             get;
             set;
@@ -4563,7 +4565,7 @@ namespace AHClaim.domain.Record
         /// Definition: SUM of 431-DV for identfied Payer 
         /// </summary>
         [FieldFixedLength(10)]
-        public string SubmittedCobClaimInformationOtherPayerAmountPaidSumTertiarySubmission { get; set; }
+        public string SubmittedCobClaimInformationSegmentOtherPayerAmountPaidSumTertiarySubmission { get; set; }
 
         /// <summary> 
         /// Field #: 37
@@ -4572,7 +4574,7 @@ namespace AHClaim.domain.Record
         /// Length: 20
         /// </summary>
         [FieldFixedLength(20)]
-        public string SubmittedCobClaimInformationOtherPayerBinNamePrimary { get; set; }
+        public string SubmittedCobClaimInformationSegmentOtherPayerBinNamePrimary { get; set; }
 
         /// <summary> 
         /// Field #: 38
@@ -4581,7 +4583,7 @@ namespace AHClaim.domain.Record
         /// Length: 20
         /// </summary>
         [FieldFixedLength(20)]
-        public string SubmittedCobClaimInformationOtherPayerBinNameSecondary { get; set; }
+        public string SubmittedCobClaimInformationSegmentOtherPayerBinNameSecondary { get; set; }
 
         /// <summary> 
         /// Field #: 39
@@ -4590,7 +4592,7 @@ namespace AHClaim.domain.Record
         /// Length: 20
         /// </summary>
         [FieldFixedLength(20)]
-        public string SubmittedCobClaimInformationOtherPayerBinNameTertiary { get; set; }
+        public string SubmittedCobClaimInformationSegmentOtherPayerBinNameTertiary { get; set; }
 
         /// <summary> 
         /// Field #: 40
@@ -4599,7 +4601,7 @@ namespace AHClaim.domain.Record
         /// Length: 1
         /// </summary>  
         [FieldFixedLength(1)]
-        public string SubmittedCobClaimInformationBenefitStageInformationPresentedPrimary { get; set; }
+        public string SubmittedCobClaimInformationSegmentBenefitStageInformationPresentedPrimary { get; set; }
 
         /// <summary> 
         /// Field #: 41
@@ -4608,7 +4610,7 @@ namespace AHClaim.domain.Record
         /// Length: 1
         /// </summary>
         [FieldFixedLength(1)]
-        public string SubmittedCobClaimInformationBenefitStageInformationPresentedSecondary { get; set; }
+        public string SubmittedCobClaimInformationSegmentBenefitStageInformationPresentedSecondary { get; set; }
 
         /// <summary> 
         /// Field #: 42 
@@ -4617,7 +4619,7 @@ namespace AHClaim.domain.Record
         /// Length: 1
         /// </summary>
         [FieldFixedLength(1)]
-        public string SubmittedCobClaimInformationBenefitStageInformationPresentedTertiary { get; set; }
+        public string SubmittedCobClaimInformationSegmentBenefitStageInformationPresentedTertiary { get; set; }
 
         /// <summary> 
         /// Field #: 43 
@@ -4625,7 +4627,7 @@ namespace AHClaim.domain.Record
         /// Length: 33
         /// </summary>
         [FieldFixedLength(33)]
-        public string SubmittedCobClaimInformationFutureUse { get; set; }
+        public string SubmittedCobClaimInformationSegmentFutureUse { get; set; }
 
         #endregion
 
@@ -4753,7 +4755,7 @@ namespace AHClaim.domain.Record
         /// Length: 3
         /// </summary>
         [FieldFixedLength(3)]
-        public string PharmacyPricingReservedForFutureUse { get; set; }
+        public string PharmacyPricingSegmentReservedForFutureUse { get; set; }
 
         #endregion
 

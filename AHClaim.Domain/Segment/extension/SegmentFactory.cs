@@ -555,6 +555,7 @@ namespace AHClaim.domain.Segment.extension
         {
             return container.Select(r => new TransactionMessagingSegment()
             {
+                TransactionMessage = r.TransactionMessagingSegmentTransactionMessage
             });
         }
 
@@ -568,6 +569,12 @@ namespace AHClaim.domain.Segment.extension
         {
             return container.Select(r => new SubmittedMemberSegment()
             {
+                SubmittedCardholderLastName = r.SubmittedMemberSegmentSubmittedCardholderLastName,
+                SubmittedPatientFirstName = r.SubmittedMemberSegmentSubmittedPatientFirstName,
+                SubmittedPatientDateofBirth = r.SubmittedMemberSegmentSubmittedPatientDateofBirth,
+                SubmittedGender = r.SubmittedMemberSegmentSubmittedGender,
+                SubmittedPatientEmailAddress = r.SubmittedMemberSegmentSubmittedPatientEmailAddress,
+                ReservedForFutureUse = r.SubmittedMemberSegmentReservedForFutureUse
             });
         }
 
@@ -581,6 +588,16 @@ namespace AHClaim.domain.Segment.extension
         {
             return container.Select(r => new EnhancedSubmittedMemberSegment()
             {
+                SubmittedCardholderLastName = r.EnhancedSubmittedMemberSegmentSubmittedCardholderLastName,
+                SubmittedPatientFirstName = r.EnhancedSubmittedMemberSegmentSubmittedPatientFirstName,
+                SubmittedPatientDateOfBirth = r.EnhancedSubmittedMemberSegmentSubmittedPatientDateOfBirth,
+                SubmittedGender = r.EnhancedSubmittedMemberSegmentSubmittedGender,
+                SubmittedPatientEmailAddress = r.EnhancedSubmittedMemberSegmentSubmittedPatientEmailAddress,
+                SubmittedPatientStreetAddress = r.EnhancedSubmittedMemberSegmentSubmittedPatientStreetAddress,
+                SubmittedPatientCityAddress = r.EnhancedSubmittedMemberSegmentSubmittedPatientCityAddress,
+                PatientStateProvinceAddress = r.EnhancedSubmittedMemberSegmentPatientStateProvinceAddress,
+                SubmittedPatientZipPostalCode = r.EnhancedSubmittedMemberSegmentSubmittedPatientZipPostalCode,
+                FutureUse = r.EnhancedSubmittedMemberSegmentFutureUse
             });
         }
 
@@ -594,6 +611,17 @@ namespace AHClaim.domain.Segment.extension
         {
             return container.Select(r => new AddtlSubmittedValuesSegment()
             {
+                SubmittedNdcNumber = r.AddtlSubmittedValuesSegmentSubmittedNdcNumber,
+                SubmittedCardholderId = r.AddtlSubmittedValuesSegmentSubmittedCardholderId,
+                PrescriptionOriginCode = r.AddtlSubmittedValuesSegmentPrescriptionOriginCode,
+                PrimaryOtherPayerIdQualifier = r.AddtlSubmittedValuesSegmentPrimaryOtherPayerIdQualifier,
+                PrimaryOtherPayerId = r.AddtlSubmittedValuesSegmentPrimaryOtherPayerId,
+                SubmittedNcpdpVersion = r.AddtlSubmittedValuesSegmentSubmittedNcpdpVersion,
+                SubmittedGroupNumber = r.AddtlSubmittedValuesSegmentSubmittedGroupNumber,
+                SubmittedBin = r.AddtlSubmittedValuesSegmentSubmittedBin,
+                SubmittedTransactionType = r.AddtlSubmittedValuesSegmentSubmittedTransactionType,
+                SoftwareVendorId = r.AddtlSubmittedValuesSegmentSoftwareVendorId,
+                ReservedForFutureUse = r.AddtlSubmittedValuesSegmentReservedForFutureUse
             });
         }
 
@@ -607,6 +635,20 @@ namespace AHClaim.domain.Segment.extension
         {
             return container.Select(r => new PatientPaySegment()
             {
+                AmtAttributedToProcessorFee = r.PatientPaySegmentAmtAttributedToProcessorFee,
+                AmountOfCoinsurance = r.PatientPaySegmentAmountOfCoinsurance,
+                ReservedForFutureDefinedField = r.PatientPaySegmentReservedForFutureDefinedField,
+                ReservedForFuturePricingField1 = r.PatientPaySegmentReservedForFuturePricingField1,
+                ReservedForFuturePricingField2 = r.PatientPaySegmentReservedForFuturePricingField2,
+                AmtAttributedToProductSelectionBrandDrug = r.PatientPaySegmentAmtAttributedToProductSelectionBrandDrug,
+                AmtAttributedToProductSelectionNonPreferredFormularySelection =
+                    r.PatientPaySegmentAmtAttributedToProductSelectionNonPreferredFormularySelection,
+                AmtAttributedToProductSelectionBrandNonPreferredFormularySelection = r
+                    .PatientPaySegmentAmtAttributedToProductSelectionBrandNonPreferredFormularySelection,
+                ReservedForFuturePricingField3 = r.PatientPaySegmentReservedForFuturePricingField3,
+                ReservedForFuturePricingField4 = r.PatientPaySegmentReservedForFuturePricingField4,
+                AmountAttributedToSalesTax = r.PatientPaySegmentAmountAttributedToSalesTax,
+                ReservedForFutureUse = r.PatientPaySegmentReservedForFutureUse
             });
         }
 
@@ -614,12 +656,76 @@ namespace AHClaim.domain.Segment.extension
         /// Factory method for Submitted COB Information Segments
         /// </summary>
         /// <param name="container">Raw Claim Records</param>
-        /// <returns>IEnumerable&lt;SubmittedCobInformationSegment&gt;</returns>
-        public static IEnumerable<SubmittedCobInformationSegment> GetSubmittedCobInformationSegments(
+        /// <returns>IEnumerable&lt;SubmittedCobClaimInformationSegment&gt;</returns>
+        public static IEnumerable<SubmittedCobInformationSegment> GetSubmittedCobClaimInformationSegments(
             this IEnumerable<RawClaimRecord> container)
         {
             return container.Select(r => new SubmittedCobInformationSegment()
             {
+                CoordinationOfBenefitsOtherPaymentsCount =
+                    r.SubmittedCobClaimInformationSegmentCoordinationOfBenefitsOtherPaymentsCount,
+                OtherPayerCoverageTypePrimarySubmission =
+                    r.SubmittedCobClaimInformationSegmentOtherPayerCoverageTypePrimarySubmission,
+                OtherPayerIdQualifierPrimarySubmission =
+                    r.SubmittedCobClaimInformationSegmentOtherPayerIdQualifierPrimarySubmission,
+                OtherPayerIdBinPrimarySubmission =
+                    r.SubmittedCobClaimInformationSegmentOtherPayerIdBinPrimarySubmission,
+                OtherPayerDatePrimarySubmission = r.SubmittedCobClaimInformationSegmentOtherPayerDatePrimarySubmission,
+                RejectCountPrimarySubmission = r.SubmittedCobClaimInformationSegmentRejectCountPrimarySubmission,
+                RejectCodePrimarySubmission1 = r.SubmittedCobClaimInformationSegmentRejectCodePrimarySubmission1,
+                RejectCodePrimarySubmission2 = r.SubmittedCobClaimInformationSegmentRejectCodePrimarySubmission2,
+                RejectCodePrimarySubmission3 = r.SubmittedCobClaimInformationSegmentRejectCodePrimarySubmission3,
+                OtherPayerPatientResponsibilityAmountQualifierPrimarySubmission = r
+                    .SubmittedCobClaimInformationSegmentOtherPayerPatientResponsibilityAmountQualifierPrimarySubmission,
+                OtherPayerPatientResponsibilityAmountSumPrimarySubmission = r
+                    .SubmittedCobClaimInformationSegmentOtherPayerPatientResponsibilityAmountSumPrimarySubmission,
+                OtherPayerAmountPaidSumPrimarySubmission =
+                    r.SubmittedCobClaimInformationSegmentOtherPayerAmountPaidSumPrimarySubmission,
+                OtherPayerCoverageTypeSecondarySubmission =
+                    r.SubmittedCobClaimInformationSegmentOtherPayerCoverageTypeSecondarySubmission,
+                OtherPayerIdQualifierSecondarySubmission =
+                    r.SubmittedCobClaimInformationSegmentOtherPayerIdQualifierSecondarySubmission,
+                OtherPayerIdBinSecondarySubmission =
+                    r.SubmittedCobClaimInformationSegmentOtherPayerIdBinSecondarySubmission,
+                OtherPayerDateSecondarySubmission =
+                    r.SubmittedCobClaimInformationSegmentOtherPayerDateSecondarySubmission,
+                RejectCountSecondarySubmission = r.SubmittedCobClaimInformationSegmentRejectCountSecondarySubmission,
+                RejectCodeSecondarySubmission1 = r.SubmittedCobClaimInformationSegmentRejectCodeSecondarySubmission1,
+                RejectCodeSecondarySubmission2 = r.SubmittedCobClaimInformationSegmentRejectCodeSecondarySubmission2,
+                RejectCodeSecondarySubmission3 = r.SubmittedCobClaimInformationSegmentRejectCodeSecondarySubmission3,
+                OtherPayerPatientResponsibilityAmountQualifierSecondarySubmission = r
+                    .SubmittedCobClaimInformationSegmentOtherPayerPatientResponsibilityAmountQualifierSecondarySubmission,
+                OtherPayerPatientResponsibilityAmountSumSecondarySubmission = r
+                    .SubmittedCobClaimInformationSegmentOtherPayerPatientResponsibilityAmountSumSecondarySubmission,
+                OtherPayerAmountPaidSumSecondarySubmission =
+                    r.SubmittedCobClaimInformationSegmentOtherPayerAmountPaidSumSecondarySubmission,
+                Submission = r.SubmittedCobClaimInformationSegmentSubmission,
+                OtherPayerIdQualifierTertiarySubmission =
+                    r.SubmittedCobClaimInformationSegmentOtherPayerIdQualifierTertiarySubmission,
+                OtherPayerIdBinTertiarySubmission =
+                    r.SubmittedCobClaimInformationSegmentOtherPayerIdBinTertiarySubmission,
+                OtherPayerDateTertiarySubmission =
+                    r.SubmittedCobClaimInformationSegmentOtherPayerDateTertiarySubmission,
+                RejectCountTertiarySubmission = r.SubmittedCobClaimInformationSegmentRejectCountTertiarySubmission,
+                RejectCodeTertiarySubmission1 = r.SubmittedCobClaimInformationSegmentRejectCodeTertiarySubmission1,
+                RejectCodeTertiarySubmission2 = r.SubmittedCobClaimInformationSegmentRejectCodeTertiarySubmission2,
+                RejectCodeTertiarySubmission3 = r.SubmittedCobClaimInformationSegmentRejectCodeTertiarySubmission3,
+                OtherPayerPatientResponsibilityAmountQualifierTertiarySubmission = r
+                    .SubmittedCobClaimInformationSegmentOtherPayerPatientResponsibilityAmountQualifierTertiarySubmission,
+                OtherPayerPatientResponsibilityAmountSumTertiarySubmission = r
+                    .SubmittedCobClaimInformationSegmentOtherPayerPatientResponsibilityAmountSumTertiarySubmission,
+                OtherPayerAmountPaidSumTertiarySubmission =
+                    r.SubmittedCobClaimInformationSegmentOtherPayerAmountPaidSumTertiarySubmission,
+                OtherPayerBinNamePrimary = r.SubmittedCobClaimInformationSegmentOtherPayerBinNamePrimary,
+                OtherPayerBinNameSecondary = r.SubmittedCobClaimInformationSegmentOtherPayerBinNameSecondary,
+                OtherPayerBinNameTertiary = r.SubmittedCobClaimInformationSegmentOtherPayerBinNameTertiary,
+                BenefitStageInformationPresentedPrimary =
+                    r.SubmittedCobClaimInformationSegmentBenefitStageInformationPresentedPrimary,
+                BenefitStageInformationPresentedSecondary =
+                    r.SubmittedCobClaimInformationSegmentBenefitStageInformationPresentedSecondary,
+                BenefitStageInformationPresentedTertiary =
+                    r.SubmittedCobClaimInformationSegmentBenefitStageInformationPresentedTertiary,
+                FutureUse = r.SubmittedCobClaimInformationSegmentFutureUse
             });
         }
 
@@ -633,6 +739,17 @@ namespace AHClaim.domain.Segment.extension
         {
             return container.Select(r => new PharmacyPricingSegment()
             {
+                PharmacyIngredientCost = r.PharmacyPricingSegmentPharmacyIngredientCost,
+                PharmacyDispensingFee = r.PharmacyPricingSegmentPharmacyDispensingFee,
+                PharmacySalesTax = r.PharmacyPricingSegmentPharmacySalesTax,
+                PharmacyGrossAmount = r.PharmacyPricingSegmentPharmacyGrossAmount,
+                PharmacyCopayAmount = r.PharmacyPricingSegmentPharmacyCopayAmount,
+                PharmacyDueAmount = r.PharmacyPricingSegmentPharmacyDueAmount,
+                PharmacyBasisOfCost = r.PharmacyPricingSegmentPharmacyBasisOfCost,
+                PharmacyBasisOfReimbursement = r.PharmacyPricingSegmentPharmacyBasisOfReimbursement,
+                PharmacyCalculatedAmount = r.PharmacyPricingSegmentPharmacyCalculatedAmount,
+                ProcessorFee = r.PharmacyPricingSegmentProcessorFee,
+                ReservedForFutureUse = r.PharmacyPricingSegmentReservedForFutureUse
             });
         }
 
@@ -646,6 +763,13 @@ namespace AHClaim.domain.Segment.extension
         {
             return container.Select(r => new AddtlSubmittedPharmacyPricingSegment()
             {
+                SubmittedUc = r.AddtlSubmittedPharmacyPricingSegmentSubmittedUc,
+                SubmittedIngredientCost = r.AddtlSubmittedPharmacyPricingSegmentSubmittedIngredientCost,
+                SubmittedDispensingFee = r.AddtlSubmittedPharmacyPricingSegmentSubmittedDispensingFee,
+                SubmittedSalesTax = r.AddtlSubmittedPharmacyPricingSegmentSubmittedSalesTax,
+                SubmittedGrossAmount = r.AddtlSubmittedPharmacyPricingSegmentSubmittedGrossAmount,
+                SubmittedCopayAmount = r.AddtlSubmittedPharmacyPricingSegmentSubmittedCopayAmount,
+                ReservedForFutureUse = r.AddtlSubmittedPharmacyPricingSegmentReservedForFutureUse
             });
         }
     }
