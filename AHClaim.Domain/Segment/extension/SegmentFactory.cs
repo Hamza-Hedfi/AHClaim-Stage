@@ -2,7 +2,7 @@
 using System.Linq;
 using AHClaim.domain.Record;
 
-namespace AHClaim.domain.Segment.extension
+namespace AHClaim.domain.Segment.Extension
 {
     public static class SegmentFactory
     {

@@ -1,13 +1,13 @@
 ﻿using System;
 using AHClaim.domain.Record;
-using AHClaim.domain.Segment.extension;
+using AHClaim.domain.Segment.Extension;
 using FileHelpers;
 
 namespace AHClaim.App
 {
-    internal class Program
+    class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
             /*
              * 
@@ -21,8 +21,9 @@ namespace AHClaim.App
             var headerEngine = new FixedFileEngine<HeaderRecord>();
             var footerEngine = new FixedFileEngine<FileTrailerRecord>();
 
+            Console.WriteLine($"{Environment.CurrentDirectory}");
             var result =
-                engine.ReadFile($"{Environment.CurrentDirectory}\\..\\..\\ClaimsSample\\2021-02-19_EC210218.AC");
+                engine.ReadFile($"{Environment.CurrentDirectory}\\..\\..\\..\\ClaimsSample\\2021-02-19_EC210218.AC");
 
             var headerResult = headerEngine.ReadString(engine.HeaderText);
             var footerResult = footerEngine.ReadString(engine.FooterText);

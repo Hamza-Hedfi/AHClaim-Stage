@@ -14,7 +14,7 @@ namespace AHClaim.domain.Record
     /// DO NOT MODIFY THE ORDER OF THE PROPERTIES, UNLESS YOU KNOW WHAT YOU ARE DOING
     ///     OR [FieldOrder] IS PRESENT FOR ALL PROPERTIES
     /// </summary>
-    [FixedLengthRecord(FixedMode.AllowVariableLength)]
+    [FixedLengthRecord]
     public class RawClaimRecord
     {
         #region Header Segment
