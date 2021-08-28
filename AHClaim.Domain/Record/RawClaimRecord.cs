@@ -3491,195 +3491,1362 @@ namespace AHClaim.domain.Record
 
         #region Paper Claim Info Segment
 
-        [FieldFixedLength(1)] public string PaperClaimInfoSegmentSeparatorCharacter { get; set; }
-        [FieldFixedLength(2)] public string PaperClaimInfoSegmentIdentifier { get; set; }
-        [FieldFixedLength(10)] public string PaperClaimInfoSegmentUserId { get; set; }
-        [FieldFixedLength(4)] public string PaperClaimInfoSegmentTerminalId { get; set; }
-        [FieldFixedLength(8)] public string PaperClaimInfoSegmentReceivedDateNumber1 { get; set; }
-        [FieldFixedLength(8)] public string PaperClaimInfoSegmentReceivedDateNumber2 { get; set; }
-        [FieldFixedLength(20)] public string PaperClaimInfoSegmentReferenceCode { get; set; }
-        [FieldFixedLength(29)] public string PaperClaimInfoSegmentReservedForFutureUse { get; set; }
+        /// <summary> 
+        /// Field # 1
+        /// Field Name: Segment Separator Character 
+        /// Format: AN 
+        /// Length: 1 
+        /// Value: >
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string PaperClaimInfoSegmentSeparatorCharacter { get; set; }
+
+        /// <summary> 
+        /// Field # 2
+        /// Field Name: Segment Identifier ( PC ) 
+        /// Format: AN 
+        /// Length: 2
+        /// Value: PC
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string PaperClaimInfoSegmentIdentifier { get; set; }
+
+        /// <summary> 
+        /// Field # 3
+        /// Field Name: User ID 
+        /// Format: AN 
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PaperClaimInfoSegmentUserId { get; set; }
+
+        /// <summary> 
+        /// Field # 4
+        /// Field Name: Terminal ID 
+        /// Format: N
+        /// Length: 4
+        /// </summary>
+        [FieldFixedLength(4)]
+        public string PaperClaimInfoSegmentTerminalId { get; set; }
+
+        /// <summary> 
+        /// Field # 5
+        /// Field Name: Received Date #1 
+        /// Format: N
+        /// Length: 8
+        /// </summary>
+        [FieldFixedLength(8)]
+        public string PaperClaimInfoSegmentReceivedDateNumber1 { get; set; }
+
+        /// <summary> 
+        /// Field # 6
+        /// Field Name: Received Date #2 
+        /// Format: N
+        /// Length: 8
+        /// </summary>
+        [FieldFixedLength(8)]
+        public string PaperClaimInfoSegmentReceivedDateNumber2 { get; set; }
+
+        /// <summary> 
+        /// Field # 7
+        /// Field Name: Reference Code 
+        /// Format: AN
+        /// Length: 20
+        /// </summary>
+        [FieldFixedLength(20)]
+        public string PaperClaimInfoSegmentReferenceCode { get; set; }
+
+        /// <summary> 
+        /// Field # 8
+        /// Field Name: Reserved for Future Use 
+        /// Length: 29
+        /// </summary>
+        [FieldFixedLength(29)]
+        public string PaperClaimInfoSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
         #region Plan Codes Used Segment
 
-        [FieldFixedLength(1)] public string PlanCodesUsedSegmentSeparatorCharacter { get; set; }
-        [FieldFixedLength(2)] public string PlanCodesUsedSegmentIdentifier { get; set; }
-        [FieldFixedLength(10)] public string PlanCodesUsedSegmentLineOfBusinessCode { get; set; }
-        [FieldFixedLength(10)] public string PlanCodesUsedSegmentPlanNetworkCode { get; set; }
-        [FieldFixedLength(10)] public string PlanCodesUsedSegmentMarginNetworkCode { get; set; }
-        [FieldFixedLength(10)] public string PlanCodesUsedSegmentCommonFormularyCode { get; set; }
-        [FieldFixedLength(10)] public string PlanCodesUsedSegmentPlanFormulaCode { get; set; }
-        [FieldFixedLength(10)] public string PlanCodesUsedSegmentPharmacyFormulaCode { get; set; }
-        [FieldFixedLength(10)] public string PlanCodesUsedSegmentCommonMacCode { get; set; }
-        [FieldFixedLength(10)] public string PlanCodesUsedSegmentCopayCode { get; set; }
-        [FieldFixedLength(10)] public string PlanCodesUsedSegmentLevel2MessagingCode { get; set; }
-        [FieldFixedLength(10)] public string PlanCodesUsedSegmentMemberPlanCode { get; set; }
-        [FieldFixedLength(10)] public string PlanCodesUsedSegmentPlanCommonMacCode { get; set; }
-        [FieldFixedLength(70)] public string PlanCodesUsedSegmentReservedForFutureUse { get; set; }
+        /// <summary>
+        /// Field #: 1 
+        /// Field Name: Segment Separator Character 
+        /// Format: AN 
+        /// Length: 1
+        /// Value: >
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string PlanCodesUsedSegmentSeparatorCharacter { get; set; }
+
+        /// <summary>
+        /// Field #: 2 
+        /// Field Name: Segment Identifier ( PL ) 
+        /// Format: AN 
+        /// Length: 2
+        /// Value: PL
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string PlanCodesUsedSegmentIdentifier { get; set; }
+
+        ///<summary>
+        /// Field #: 3
+        /// Field Name: Line of Business Code
+        /// Format: AN 
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PlanCodesUsedSegmentLineOfBusinessCode { get; set; }
+
+        ///<summary>
+        /// Field #: 4
+        /// Field Name: Plan Network Code
+        /// Format: AN 
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PlanCodesUsedSegmentPlanNetworkCode { get; set; }
+
+        ///<summary>
+        /// Field #: 5
+        /// Field Name: Margin Network Code
+        /// Format: AN 
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PlanCodesUsedSegmentMarginNetworkCode { get; set; }
+
+        ///<summary>
+        /// Field #: 6
+        /// Field Name: Common Formulary Code
+        /// Format: AN 
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PlanCodesUsedSegmentCommonFormularyCode { get; set; }
+
+        ///<summary>
+        /// Field #: 7
+        /// Field Name: Plan Formula Code
+        /// Format: AN 
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PlanCodesUsedSegmentPlanFormulaCode { get; set; }
+
+        ///<summary>
+        /// Field #: 8
+        /// Field Name: Pharmacy Formula Code
+        /// Format: AN 
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PlanCodesUsedSegmentPharmacyFormulaCode { get; set; }
+
+        ///<summary>
+        /// Field #: 9
+        /// Field Name: Common MAC Code
+        /// Format: AN 
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PlanCodesUsedSegmentCommonMacCode { get; set; }
+
+        ///<summary>
+        /// Field #: 10
+        /// Field Name: Copay Code
+        /// Format: AN 
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PlanCodesUsedSegmentCopayCode { get; set; }
+
+        ///<summary>
+        /// Field #: 11
+        /// Field Name: Level 2 Messaging Code
+        /// Format: AN 
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PlanCodesUsedSegmentLevel2MessagingCode { get; set; }
+
+        ///<summary>
+        /// Field #: 12
+        /// Field Name: Member Plan Code
+        /// Format: AN 
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PlanCodesUsedSegmentMemberPlanCode { get; set; }
+
+        ///<summary>
+        /// Field #: 13
+        /// Field Name: Plan Common MAC Code
+        /// Format: AN 
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PlanCodesUsedSegmentPlanCommonMacCode { get; set; }
+
+        ///<summary>
+        /// Field #: 14
+        /// Field Name: Reserved for Future Use 
+        /// Length: 70
+        /// </summary>
+        [FieldFixedLength(70)]
+        public string PlanCodesUsedSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
         #region Transaction Messaging
 
-        [FieldFixedLength(1)] public string TransactionMessagingSegmentSeparatorCharacter { get; set; }
-        [FieldFixedLength(2)] public string TransactionMessagingSegmentIdentifier { get; set; }
-        [FieldFixedLength(200)] public string TransactionMessagingSegmentTransactionMessage { get; set; }
+        /// <summary>
+        /// Field #: 1 
+        /// Field Name: Segment Separator Character 
+        /// Format: AN
+        /// Length: 1 
+        /// Value: >
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string TransactionMessagingSegmentSeparatorCharacter { get; set; }
+
+        /// <summary>
+        /// Field #: 2 
+        /// Field Name: Segment Identifier ( TS ) 
+        /// Format: AN
+        /// Length: 2 
+        /// Value: TS
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string TransactionMessagingSegmentIdentifier { get; set; }
+
+        /// <summary>
+        /// Field #: 3 
+        /// Field Name: Transaction Message 
+        /// Format: AN
+        /// Length: 200
+        /// </summary>
+        [FieldFixedLength(200)]
+        public string TransactionMessagingSegmentTransactionMessage { get; set; }
 
         #endregion
 
         #region Submitted Member Segment
 
-        [FieldFixedLength(1)] public string SubmittedMemberSegmentSeparatorCharacter { get; set; }
-        [FieldFixedLength(2)] public string SubmittedMemberSegmentIdentifier { get; set; }
-        [FieldFixedLength(15)] public string SubmittedMemberSegmentSubmittedCardholderLastName { get; set; }
-        [FieldFixedLength(15)] public string SubmittedMemberSegmentSubmittedPatientFirstName { get; set; }
-        [FieldFixedLength(8)] public string SubmittedMemberSegmentSubmittedPatientDateofBirth { get; set; }
-        [FieldFixedLength(1)] public string SubmittedMemberSegmentSubmittedGender { get; set; }
-        [FieldFixedLength(80)] public string SubmittedMemberSegmentSubmittedPatientEmailAddress { get; set; }
-        [FieldFixedLength(43)] public string SubmittedMemberSegmentReservedForFutureUse { get; set; }
+        /// <summary> 
+        /// Field #: 1 
+        /// Field Name: Segment Separator Character 
+        /// Format: AN 
+        /// Length: 1
+        /// Value: >
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string SubmittedMemberSegmentSeparatorCharacter { get; set; }
+
+        /// <summary> 
+        /// Field #: 2 
+        /// Field Name: Segment Identifier ( SM ) 
+        /// Format: AN 
+        /// Length: 2
+        /// Value: SM
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string SubmittedMemberSegmentIdentifier { get; set; }
+
+        /// <summary> 
+        /// Field #: 3 
+        /// Field Name: Submitted Cardholder Last Name 
+        /// Format: AN 
+        /// Length: 15
+        /// </summary>
+        [FieldFixedLength(15)]
+        public string SubmittedMemberSegmentSubmittedCardholderLastName { get; set; }
+
+        /// <summary> 
+        /// Field #: 4 
+        /// Field Name: Submitted Patient First Name 
+        /// Format: AN 
+        /// Length: 15
+        /// </summary>
+        [FieldFixedLength(15)]
+        public string SubmittedMemberSegmentSubmittedPatientFirstName { get; set; }
+
+        /// <summary> 
+        /// Field #: 5 
+        /// Field Name: Submitted Patient Date of Birth 
+        /// Format: N 
+        /// Length: 8
+        /// </summary>
+        [FieldFixedLength(8)]
+        public string SubmittedMemberSegmentSubmittedPatientDateofBirth { get; set; }
+
+        /// <summary> 
+        /// Field #: 6 
+        /// Field Name: Submitted Gender 
+        /// Format: AN 
+        /// Length: 1
+        /// Value: M, F, U 
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string SubmittedMemberSegmentSubmittedGender { get; set; }
+
+        /// <summary> 
+        /// Field #: 7 
+        /// Field Name: Submitted Patient Email Address 
+        /// Format: AN 
+        /// Length: 80
+        /// </summary>
+        [FieldFixedLength(80)]
+        public string SubmittedMemberSegmentSubmittedPatientEmailAddress { get; set; }
+
+        /// <summary> 
+        /// Field #: 8 
+        /// Field Name: Reserved for Future Use 
+        /// Length: 43
+        /// </summary>
+        [FieldFixedLength(43)]
+        public string SubmittedMemberSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
         #region Enhanced Submitted Member Segment
 
-        [FieldFixedLength(1)] public string EnhancedSubmittedMemberSegmentSeparatorCharacter { get; set; }
-        [FieldFixedLength(2)] public string EnhancedSubmittedMemberSegmentIdentifier { get; set; }
-        [FieldFixedLength(15)] public string EnhancedSubmittedMemberSegmentSubmittedCardholderLastName { get; set; }
-        [FieldFixedLength(15)] public string EnhancedSubmittedMemberSegmentSubmittedPatientFirstName { get; set; }
-        [FieldFixedLength(8)] public string EnhancedSubmittedMemberSegmentSubmittedPatientDateOfBirth { get; set; }
-        [FieldFixedLength(1)] public string EnhancedSubmittedMemberSegmentSubmittedGender { get; set; }
-        [FieldFixedLength(80)] public string EnhancedSubmittedMemberSegmentSubmittedPatientEmailAddress { get; set; }
-        [FieldFixedLength(30)] public string EnhancedSubmittedMemberSegmentSubmittedPatientStreetAddress { get; set; }
-        [FieldFixedLength(20)] public string EnhancedSubmittedMemberSegmentSubmittedPatientCityAddress { get; set; }
-        [FieldFixedLength(2)] public string EnhancedSubmittedMemberSegmentPatientStateProvinceAddress { get; set; }
-        [FieldFixedLength(15)] public string EnhancedSubmittedMemberSegmentSubmittedPatientZipPostalCode { get; set; }
-        [FieldFixedLength(100)] public string EnhancedSubmittedMemberSegmentFutureUse { get; set; }
+        /// <summary> 
+        /// Field #: 1
+        /// Field Name: Segment Separator Character 
+        /// Format: AN
+        /// Length: 1
+        /// Value: >
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string EnhancedSubmittedMemberSegmentSeparatorCharacter { get; set; }
+
+        /// <summary> 
+        /// Field #: 2
+        /// Field Name: Segment Identifier ( ES ) 
+        /// Format: AN
+        /// Length: 2
+        /// Value: ES
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string EnhancedSubmittedMemberSegmentIdentifier { get; set; }
+
+        /// <summary> 
+        /// Field #: 3
+        /// Field Name: Submitted Cardholder Last Name 
+        /// Format: AN
+        /// Length: 15
+        /// </summary>
+        [FieldFixedLength(15)]
+        public string EnhancedSubmittedMemberSegmentSubmittedCardholderLastName { get; set; }
+
+        /// <summary> 
+        /// Field #: 4
+        /// Field Name: Submitted Patient First Name 
+        /// Format: AN
+        /// Length: 15
+        /// </summary>
+        [FieldFixedLength(15)]
+        public string EnhancedSubmittedMemberSegmentSubmittedPatientFirstName { get; set; }
+
+        /// <summary> 
+        /// Field #: 5
+        /// Field Name: Submitted Patient Date of Birth 
+        /// Format: N
+        /// Length: 8
+        /// </summary>
+        [FieldFixedLength(8)]
+        public string EnhancedSubmittedMemberSegmentSubmittedPatientDateOfBirth { get; set; }
+
+        /// <summary> 
+        /// Field #: 6
+        /// Field Name: Submitted Gender 
+        /// Format: AN
+        /// Length: 1
+        /// Value: M, F, U
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string EnhancedSubmittedMemberSegmentSubmittedGender { get; set; }
+
+        /// <summary> 
+        /// Field #: 7
+        /// Field Name: Submitted Patient Email Address 
+        /// Format: AN
+        /// Length: 80
+        /// </summary>
+        [FieldFixedLength(80)]
+        public string EnhancedSubmittedMemberSegmentSubmittedPatientEmailAddress { get; set; }
+
+        /// <summary> 
+        /// Field #: 8
+        /// Field Name: Submitted Patient Street Address 
+        /// Format: AN
+        /// Length: 30
+        /// </summary>
+        [FieldFixedLength(30)]
+        public string EnhancedSubmittedMemberSegmentSubmittedPatientStreetAddress { get; set; }
+
+        /// <summary> 
+        /// Field #: 9
+        /// Field Name: Submitted Patient City Address 
+        /// Format: AN
+        /// Length: 20
+        /// </summary>
+        [FieldFixedLength(20)]
+        public string EnhancedSubmittedMemberSegmentSubmittedPatientCityAddress { get; set; }
+
+        /// <summary> 
+        /// Field #: 10
+        /// Field Name: Patient State/Province Address 
+        /// Format: AN
+        /// Length: 2
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string EnhancedSubmittedMemberSegmentPatientStateProvinceAddress { get; set; }
+
+        /// <summary> 
+        /// Field #: 11
+        /// Field Name: Submitted Patient Zip/Postal Code 
+        /// Format: AN
+        /// Length: 15
+        /// </summary>
+        [FieldFixedLength(15)]
+        public string EnhancedSubmittedMemberSegmentSubmittedPatientZipPostalCode { get; set; }
+
+        /// <summary> 
+        /// Field #: 12
+        /// Field Name: Future Use 
+        /// Length: 100
+        /// </summary>
+        [FieldFixedLength(100)]
+        public string EnhancedSubmittedMemberSegmentFutureUse { get; set; }
 
         #endregion
 
         #region Addtl. Submitted Values Segment
 
-        [FieldFixedLength(1)] public string AddtlSubmittedValuesSegmentSeparatorCharacter { get; set; }
-        [FieldFixedLength(2)] public string AddtlSubmittedValuesSegmentIdentifier { get; set; }
-        [FieldFixedLength(19)] public string AddtlSubmittedValuesSegmentSubmittedNdcNumber { get; set; }
-        [FieldFixedLength(20)] public string AddtlSubmittedValuesSegmentSubmittedCardholderId { get; set; }
-        [FieldFixedLength(1)] public string AddtlSubmittedValuesSegmentPrescriptionOriginCode { get; set; }
-        [FieldFixedLength(2)] public string AddtlSubmittedValuesSegmentPrimaryOtherPayerIdQualifier { get; set; }
-        [FieldFixedLength(10)] public string AddtlSubmittedValuesSegmentPrimaryOtherPayerId { get; set; }
-        [FieldFixedLength(2)] public string AddtlSubmittedValuesSegmentSubmittedNcpdpVersion { get; set; }
-        [FieldFixedLength(15)] public string AddtlSubmittedValuesSegmentSubmittedGroupNumber { get; set; }
-        [FieldFixedLength(10)] public string AddtlSubmittedValuesSegmentSubmittedBin { get; set; }
-        [FieldFixedLength(2)] public string AddtlSubmittedValuesSegmentSubmittedTransactionType { get; set; }
-        [FieldFixedLength(10)] public string AddtlSubmittedValuesSegmentSoftwareVendorId { get; set; }
-        [FieldFixedLength(106)] public string AddtlSubmittedValuesSegmentReservedForFutureUse { get; set; }
+        /// <summary> 
+        /// Field #: 1 
+        /// Field Name: Segment Separator Character 
+        /// Format: AN
+        /// Length: 1
+        /// Value: >
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string AddtlSubmittedValuesSegmentSeparatorCharacter { get; set; }
+
+        /// <summary> 
+        /// Field #: 2 
+        /// Field Name: Segment Identifier ( SV ) 
+        /// Format: AN
+        /// Length: 2
+        /// Value: SV
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string AddtlSubmittedValuesSegmentIdentifier { get; set; }
+
+        /// <summary> 
+        /// Field #: 3 Submitted NDC Number 
+        /// Format: N 
+        /// Length: 19  
+        /// Definition: Displays Submitted NDC if an NDC Remap Occurs
+        /// </summary>
+        [FieldFixedLength(19)]
+        public string AddtlSubmittedValuesSegmentSubmittedNdcNumber { get; set; }
+
+        /// <summary> 
+        /// Field #: 4 
+        /// Field Name: Submitted Cardholder ID 
+        /// Format: AN 
+        /// Length: 20 
+        /// </summary>
+        [FieldFixedLength(20)]
+        public string AddtlSubmittedValuesSegmentSubmittedCardholderId { get; set; }
+
+        /// <summary> 
+        /// Field #: 5 
+        /// Field Name: Prescription Origin Code 
+        /// Format: N 
+        /// Length: 1  
+        /// Value: 0-5 
+        /// Definition: Value as submitted by the pharmacy
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string AddtlSubmittedValuesSegmentPrescriptionOriginCode { get; set; }
+
+        /// <summary> 
+        /// Field #: 6 
+        /// Field Name: Primary Other Payer ID Qualifier 
+        /// Format: N 
+        /// Length: 2  
+        /// Definition: Other Payer ID Qualifier as submitted by the pharmacy, etc.
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string AddtlSubmittedValuesSegmentPrimaryOtherPayerIdQualifier { get; set; }
+
+        /// <summary> 
+        /// Field #: 7 
+        /// Field Name: Primary Other Payer ID 
+        /// Format: N 
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string AddtlSubmittedValuesSegmentPrimaryOtherPayerId { get; set; }
+
+        /// <summary> 
+        /// Field #: 8 
+        /// Field Name: Submitted NCPDP Version 
+        /// Format: AN 
+        /// Length: 2
+        /// Definition: Identifies the submitted NCPDP version
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string AddtlSubmittedValuesSegmentSubmittedNcpdpVersion { get; set; }
+
+        /// <summary> 
+        /// Field #: 9 
+        /// Field Name: Submitted Group Number 
+        /// Format: AN 
+        /// Length: 15 
+        /// </summary>
+        [FieldFixedLength(15)]
+        public string AddtlSubmittedValuesSegmentSubmittedGroupNumber { get; set; }
+
+        /// <summary> 
+        /// Field #: 10 
+        /// Field Name: Submitted BIN 
+        /// Format: AN 
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string AddtlSubmittedValuesSegmentSubmittedBin { get; set; }
+
+        /// <summary> 
+        /// Field #: 11 
+        /// Field Name: Submitted Transaction Type 
+        /// Format: AN 
+        /// Length: 2 
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string AddtlSubmittedValuesSegmentSubmittedTransactionType { get; set; }
+
+        /// <summary> 
+        /// Field #: 12 
+        /// Field Name: Software Vendor ID 
+        /// Format: AN 
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string AddtlSubmittedValuesSegmentSoftwareVendorId { get; set; }
+
+        /// <summary> 
+        /// Field #: 13 
+        /// Field Name: Reserved for Future  Use 
+        /// Length: 106 
+        /// </summary>
+        [FieldFixedLength(106)]
+        public string AddtlSubmittedValuesSegmentReservedForFutureUse { get; set; }
 
         #endregion
 
         #region Patient Pay Segment
 
-        [FieldFixedLength(1)] public string PatientPaySegmentSeparatorCharacter { get; set; }
-        [FieldFixedLength(2)] public string PatientPaySegmentIdentifier { get; set; }
-        [FieldFixedLength(10)] public string PatientPaySegmentAmtAttributedToProcessorFee { get; set; }
-        [FieldFixedLength(10)] public string PatientPaySegmentAmountOfCoinsurance { get; set; }
-        [FieldFixedLength(2)] public string PatientPaySegmentReservedForFutureDefinedField { get; set; }
-        [FieldFixedLength(10)] public string PatientPaySegmentReservedForFuturePricingField1 { get; set; }
-        [FieldFixedLength(10)] public string PatientPaySegmentReservedForFuturePricingField2 { get; set; }
-        [FieldFixedLength(10)] public string PatientPaySegmentAmtAttributedToProductSelectionBrandDrug { get; set; }
+        /// <summary>
+        /// Field #: 1
+        /// Field Name: Segment Separator Character 
+        /// Format: AN
+        /// Length: 1
+        /// Value: >
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string PatientPaySegmentSeparatorCharacter { get; set; }
 
+        /// <summary>
+        /// Field #: 2
+        /// Field Name: Segment Identifier (PP) 
+        /// Format: AN
+        /// Length: 2
+        /// Value: PP
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string PatientPaySegmentIdentifier { get; set; }
+
+        /// <summary>
+        /// Field #: 3
+        /// Field Name: Amt. Attributed to Processor Fee 
+        /// Format: D
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PatientPaySegmentAmtAttributedToProcessorFee { get; set; }
+
+        /// <summary>
+        /// Field #: 4
+        /// Field Name: Amount of Coinsurance 
+        /// Format: D
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PatientPaySegmentAmountOfCoinsurance { get; set; }
+
+        /// <summary>
+        /// Field #: 5
+        /// Field Name: Reserved for future defined Field 
+        /// Format: A
+        /// Length: 2
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string PatientPaySegmentReservedForFutureDefinedField { get; set; }
+
+        /// <summary>
+        /// Field #: 6
+        /// Field Name: Reserved for future Pricing Field 
+        /// Format: D
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PatientPaySegmentReservedForFuturePricingField1 { get; set; }
+
+        /// <summary>
+        /// Field #: 7
+        /// Field Name: Reserved for future Pricing Field 
+        /// Format: D
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PatientPaySegmentReservedForFuturePricingField2 { get; set; }
+
+        /// <summary>
+        /// Field #: 8
+        /// Field Name: Amt. Attributed to Product Selection/Brand Drug 
+        /// Format: D
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PatientPaySegmentAmtAttributedToProductSelectionBrandDrug { get; set; }
+
+        /// <summary>
+        /// Field #: 9
+        /// Field Name: Amt. Attributed to Product Selection/NonPreferred Formulary Selection 
+        /// Format: D
+        /// Length: 10
+        /// </summary>
         [FieldFixedLength(10)]
         public string PatientPaySegmentAmtAttributedToProductSelectionNonPreferredFormularySelection { get; set; }
 
+        /// <summary>
+        /// Field #: 10
+        /// Field Name: Amt. Attributed to Product Selection/Brand NonPreferred Formulary Selection 
+        /// Format: D
+        /// Length: 10
+        /// </summary>
         [FieldFixedLength(10)]
         public string PatientPaySegmentAmtAttributedToProductSelectionBrandNonPreferredFormularySelection { get; set; }
 
-        [FieldFixedLength(10)] public string PatientPaySegmentReservedForFuturePricingField3 { get; set; }
-        [FieldFixedLength(10)] public string PatientPaySegmentReservedForFuturePricingField4 { get; set; }
-        [FieldFixedLength(10)] public string PatientPaySegmentAmountAttributedToSalesTax { get; set; }
-        [FieldFixedLength(40)] public string PatientPaySegmentReservedForFutureUse { get; set; }
+        /// <summary>
+        /// Field #: 11
+        /// Field Name: Reserved for future Pricing Field 
+        /// Format: D
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PatientPaySegmentReservedForFuturePricingField3 { get; set; }
+
+        /// <summary>
+        /// Field #: 12
+        /// Field Name: Reserved for future Pricing Field
+        /// Format: D
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PatientPaySegmentReservedForFuturePricingField4 { get; set; }
+
+        /// <summary>
+        /// Field #: 13
+        /// Field Name: Amount Attributed to Sales Tax 
+        /// Format: D
+        /// Length: 10
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PatientPaySegmentAmountAttributedToSalesTax { get; set; }
+
+        /// <summary>
+        /// Field #: 14
+        /// Field Name: Reserved for Future Use 
+        /// Length: 40
+        /// </summary>
+        [FieldFixedLength(40)]
+        public string PatientPaySegmentReservedForFutureUse { get; set; }
 
         #endregion
 
-        /* Revision : this segment contains conflicting attributes
         #region Submitted OCB Information
 
-        public string SubmittedCOBClaimInformationSegmentSeparatorCharacter { get; set; }
-        public string SubmittedCOBClaimInformationSegmentIdentifier { get; set; }
-        public string CoordinationofBenefitsOtherPaymentsCount { get; set; }
-        public string OtherPayerCoverageTypePrimarySubmission { get; set; }
-        public string OtherPayerIDQualifierPrimarySubmission { get; set; }
-        public string OtherPayerIDBINPrimarySubmission { get; set; }
-        public string OtherPayerDate { get; set; }
-        public string RejectCountPrimarySubmission { get; set; }
-        public string RejectCodePrimarySubmission { get; set; }
-        public string RejectCodePrimarySubmission { get; set; }
-        public string RejectCodePrimarySubmission { get; set; }
-        public string OtherPayerPatientResponsibilityAmountQualifier { get; set; }
-        public string OtherPayerPatientResponsibilityAmountSUM { get; set; }
-        public string OtherPayerAmountPaidSUM { get; set; }
-        public string OtherPayerCoverageTypeSecondarySubmission { get; set; }
-        public string OtherPayerIDQualifierSecondarySubmission { get; set; }
-        public string OtherPayerIDBINSecondarySubmission { get; set; }
-        public string OtherPayerDate { get; set; }
-        public string RejectCountSecondarySubmission { get; set; }
-        public string RejectCodeSecondarySubmission { get; set; }
-        public string RejectCodeSecondarySubmission { get; set; }
-        public string RejectCodeSecondarySubmission { get; set; }
-        public string OtherPayerPatientResponsibilityAmountQualifier { get; set; }
-        public string OtherPayerPatientResponsibilityAmountSUM { get; set; }
-        public string OtherPayerAmountPaidSUM { get; set; }
-        public string Submission { get; set; }
-        public string OtherPayerIDQualifierTertiarySubmission { get; set; }
-        public string OtherPayerIDBINTertiarySubmission { get; set; }
-        public string OtherPayerDate { get; set; }
-        public string RejectCountTertiarySubmission { get; set; }
-        public string RejectCodeTertiarySubmission { get; set; }
-        public string RejectCodeTertiarySubmission { get; set; }
-        public string RejectCodeTertiarySubmission { get; set; }
-        public string OtherPayerPatientResponsibilityAmountQualifier { get; set; }
-        public string OtherPayerPatientResponsibilityAmountSUM { get; set; }
-        public string OtherPayerAmountPaidSUM { get; set; }
-        public string OtherPayerBINNamePrimary { get; set; }
-        public string OtherPayerBINNameSecondary { get; set; }
-        public string OtherPayerBINNameTertiary { get; set; }
-        public string BenefitStageInformationPresentedPrimary { get; set; }
-        public string BenefitStageInformationPresentedSecondary { get; set; }
-        public string BenefitStageInformationPresentedTertiary { get; set; }
-        public string SubmittedCOBClaimInformationFutureUse { get; set; }
+        /// <summary> 
+        /// Field #: 1
+        /// Field Name: Segment Separator Character 
+        /// Format: AN 
+        /// Length: 1
+        /// Value: >
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string SubmittedCobClaimInformationSegmentSeparatorCharacter { get; set; }
+
+        /// <summary> 
+        /// Field #: 2
+        /// Field Name: Segment Identifier ( SC ) 
+        /// Format: AN 
+        /// Length: 2
+        /// Value: SC
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string SubmittedCobClaimInformationSegmentIdentifier { get; set; }
+
+        /// <summary> 
+        /// Field #: 3
+        /// Field Name: Coordination of Benefits / Other Payments Count 
+        /// Format: AN
+        /// Length: 1
+        /// Value: 337-4C
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string SubmittedCobClaimInformationCoordinationOfBenefitsOtherPaymentsCount { get; set; }
+
+        /// <summary> 
+        /// Field #: 4
+        /// Field Name: Other Payer Coverage Type - Primary Submission 
+        /// Format: AN
+        /// Length: 2
+        /// Value: 338-5C
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string SubmittedCobClaimInformationOtherPayerCoverageTypePrimarySubmission { get; set; }
+
+        /// <summary> 
+        /// Field #: 5
+        /// Field Name: Other Payer ID Qualifier - Primary Submission 
+        /// Format: AN
+        /// Length: 2
+        /// Value: 339-6C
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string SubmittedCobClaimInformationOtherPayerIdQualifierPrimarySubmission { get; set; }
+
+        /// <summary> 
+        /// Field #: 6
+        /// Field Name: Other Payer ID (BIN) - Primary Submission 
+        /// Format: AN
+        /// Length: 10
+        /// Value: 340-7C
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string SubmittedCobClaimInformationOtherPayerIdBinPrimarySubmission { get; set; }
+
+        /// <summary> 
+        /// Field #: 7
+        /// Field Name: Other Payer Date 
+        /// Format: N
+        /// Length: 8
+        /// Definition: 443-E8 - format ccyymmdd 
+        /// </summary>
+        [FieldFixedLength(8)]
+        public string SubmittedCobClaimInformationOtherPayerDatePrimarySubmission { get; set; }
+
+        /// <summary> 
+        /// Field #: 8
+        /// Field Name: Reject Count - Primary Submission 
+        /// Format: N
+        /// Length: 2
+        /// Definition: 471-5E 
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string SubmittedCobClaimInformationRejectCountPrimarySubmission { get; set; }
+
+        /// <summary> 
+        /// Field #: 9
+        /// Field Name: Reject Code - Primary Submission 
+        /// Format: AN
+        /// Length: 3
+        /// Definition: 472-6E 
+        /// </summary>
+        [FieldFixedLength(3)]
+        public string SubmittedCobClaimInformationRejectCodePrimarySubmission1 { get; set; }
+
+        /// <summary> 
+        /// Field #: 10
+        /// Field Name: Reject Code - Primary Submission 
+        /// Format: AN
+        /// Length: 3
+        /// Definition: 472-6E 
+        /// </summary>
+        [FieldFixedLength(3)]
+        public string SubmittedCobClaimInformationRejectCodePrimarySubmission2 { get; set; }
+
+        /// <summary> 
+        /// Field #: 11
+        /// Field Name: Reject Code - Primary Submission 
+        /// Format: AN
+        /// Length: 3
+        /// Definition: 472-6E 
+        /// </summary>
+        [FieldFixedLength(3)]
+        public string SubmittedCobClaimInformationRejectCodePrimarySubmission3 { get; set; }
+
+        /// <summary> 
+        /// Field #: 12
+        /// Field Name: Other Payer Patient Responsibilty Amount Qualifier 
+        /// Format: AN
+        /// Length: 14
+        /// Definition: 351-NP ,If multiple qualifiers are submitted, the first 5 will be presented in this field with '-' as seperator. 
+        /// </summary>
+        [FieldFixedLength(14)]
+        public string SubmittedCobClaimInformationOtherPayerPatientResponsibilityAmountQualifierPrimarySubmission
+        {
+            get;
+            set;
+        }
+
+        /// <summary> 
+        /// Field #: 13
+        /// Field Name: Other Payer Patient Responsibility Amount SUM 
+        /// Format: N
+        /// Length: 10
+        /// Definition: SUM of 352-NQ for identified Payer. If 06 submitted in qualifier, submitted value is provided, else all OPPRA amounts are summed 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string SubmittedCobClaimInformationOtherPayerPatientResponsibilityAmountSumPrimarySubmission
+        {
+            get;
+            set;
+        }
+
+        /// <summary> 
+        /// Field #: 14
+        /// Field Name: Other Payer Amount Paid - SUM 
+        /// Format: N
+        /// Length: 10
+        /// Definition: SUM of 431-DV for identfied Payer 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string SubmittedCobClaimInformationOtherPayerAmountPaidSumPrimarySubmission { get; set; }
+
+        /// <summary> 
+        /// Field #: 15
+        /// Field Name: Other Payer Coverage Type - Secondary Submission 
+        /// Format: AN
+        /// Length: 2
+        /// Definition: 338-5C
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string SubmittedCobClaimInformationOtherPayerCoverageTypeSecondarySubmission { get; set; }
+
+        /// <summary> 
+        /// Field #: 16
+        /// Field Name: Other Payer ID Qualifier - Secondary Submission 
+        /// Format: AN
+        /// Length: 2
+        /// Definition: 339-6C
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string SubmittedCobClaimInformationOtherPayerIdQualifierSecondarySubmission { get; set; }
+
+        /// <summary> 
+        /// Field #: 17
+        /// Field Name: Other Payer ID (BIN) - Secondary Submission 
+        /// Format: AN
+        /// Length: 10
+        /// Definition: 340-7C
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string SubmittedCobClaimInformationOtherPayerIdBinSecondarySubmission { get; set; }
+
+        /// <summary> 
+        /// Field #: 18
+        /// Field Name: Other Payer Date 
+        /// Format: N
+        /// Length: 8
+        /// Definition: 443-E8 - format ccyymmdd
+        /// </summary>
+        [FieldFixedLength(8)]
+        public string SubmittedCobClaimInformationOtherPayerDateSecondarySubmission { get; set; }
+
+        /// <summary> 
+        /// Field #: 19
+        /// Field Name: Reject Count - Secondary Submission 
+        /// Format: N
+        /// Length: 2
+        /// Definition: 471-5E
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string SubmittedCobClaimInformationRejectCountSecondarySubmission { get; set; }
+
+        /// <summary> 
+        /// Field #: 20
+        /// Field Name: Reject Code - Secondary Submission 
+        /// Format: AN
+        /// Length: 3
+        /// Definition: 472-6E
+        /// </summary>
+        [FieldFixedLength(3)]
+        public string SubmittedCobClaimInformationRejectCodeSecondarySubmission1 { get; set; }
+
+        /// <summary> 
+        /// Field #: 21
+        /// Field Name: Reject Code - Secondary Submission 
+        /// Format: AN
+        /// Length: 3
+        /// Definition: 472-6E
+        /// </summary>
+        [FieldFixedLength(3)]
+        public string SubmittedCobClaimInformationRejectCodeSecondarySubmission2 { get; set; }
+
+        /// <summary> 
+        /// Field #: 22
+        /// Field Name: Reject Code - Secondary Submission 
+        /// Format: AN
+        /// Length: 3
+        /// Definition: 472-6E
+        /// </summary>
+        [FieldFixedLength(3)]
+        public string SubmittedCobClaimInformationRejectCodeSecondarySubmission3 { get; set; }
+
+        /// <summary> 
+        /// Field #: 23
+        /// Field Name: Other Payer Patient Responsibility Amount Qualifier 
+        /// Format: AN
+        /// Length: 14 
+        /// Definition: 351-NP, If multiple qualifiers are submitted, the first 5 will be presented in this field. 
+        /// </summary>
+        [FieldFixedLength(14)]
+        public string SubmittedCobClaimInformationOtherPayerPatientResponsibilityAmountQualifierSecondarySubmission
+        {
+            get;
+            set;
+        }
+
+        /// <summary> 
+        /// Field #: 24
+        /// Field Name: Other Payer Patient Responsibility Amount SUM 
+        /// Format: N
+        /// Length: 10 
+        /// Definition: SUM of 352-NQ for identified Payer. If 06 submitted in qualifier, submitted value is provided, else all OPPRA amounts are summed 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string SubmittedCobClaimInformationOtherPayerPatientResponsibilityAmountSumSecondarySubmission
+        {
+            get;
+            set;
+        }
+
+        /// <summary> 
+        /// Field #: 25
+        /// Field Name: Other Payer Amount Paid - SUM 
+        /// Format: N
+        /// Length: 10 
+        /// Definition: SUM of 431-DV for identfied Payer 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string SubmittedCobClaimInformationOtherPayerAmountPaidSumSecondarySubmission { get; set; }
+
+        /// <summary> 
+        /// Field #: 26
+        /// Field Name: Other Payer Coverage Type - Tertiary Submission 
+        /// Format: AN
+        /// Length: 2 
+        /// Definition: 338-5C 
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string SubmittedCobClaimInformationSubmission { get; set; }
+
+        /// <summary> 
+        /// Field #: 27
+        /// Field Name: Other Payer ID Qualifier - Tertiary Submission 
+        /// Format: AN
+        /// Length: 2 
+        /// Definition: 339-6C 
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string SubmittedCobClaimInformationOtherPayerIdQualifierTertiarySubmission { get; set; }
+
+        /// <summary> 
+        /// Field #: 28
+        /// Field Name: Other Payer ID (BIN) - Tertiary Submission 
+        /// Format: AN
+        /// Length: 10 
+        /// Definition: 340-7C 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string SubmittedCobClaimInformationOtherPayerIdBinTertiarySubmission { get; set; }
+
+        /// <summary> 
+        /// Field #: 29
+        /// Field Name: Other Payer Date 
+        /// Format: N
+        /// Length: 8 
+        /// Definition: 443-E8 - format ccyymmdd 
+        /// </summary>
+        [FieldFixedLength(8)]
+        public string SubmittedCobClaimInformationOtherPayerDateTertiarySubmission { get; set; }
+
+        /// <summary> 
+        /// Field #: 30
+        /// Field Name: Reject Count - Tertiary Submission 
+        /// Format: N
+        /// Length: 2 
+        /// Definition: 471-5E 
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string SubmittedCobClaimInformationRejectCountTertiarySubmission { get; set; }
+
+        /// <summary> 
+        /// Field #: 31
+        /// Field Name: Reject Code - Tertiary Submission 
+        /// Format: AN
+        /// Length: 3 
+        /// Definition: 472-6E 
+        /// </summary>
+        [FieldFixedLength(3)]
+        public string SubmittedCobClaimInformationRejectCodeTertiarySubmission1 { get; set; }
+
+        /// <summary> 
+        /// Field #: 32
+        /// Field Name: Reject Code - Tertiary Submission 
+        /// Format: AN
+        /// Length: 3 
+        /// Definition: 472-6E 
+        /// </summary>
+        [FieldFixedLength(3)]
+        public string SubmittedCobClaimInformationRejectCodeTertiarySubmission2 { get; set; }
+
+        /// <summary> 
+        /// Field #: 33
+        /// Field Name: Reject Code - Tertiary Submission 
+        /// Format: AN
+        /// Length: 3 
+        /// Definition: 472-6E 
+        /// </summary>
+        [FieldFixedLength(3)]
+        public string SubmittedCobClaimInformationRejectCodeTertiarySubmission3 { get; set; }
+
+        /// <summary> 
+        /// Field #: 34
+        /// Field Name: Other Payer Patient Responsibility Amount Qualifier 
+        /// Format: AN
+        /// Length: 14 
+        /// Definition: 351-NP 
+        /// </summary>
+        [FieldFixedLength(14)]
+        public string SubmittedCobClaimInformationOtherPayerPatientResponsibilityAmountQualifierTertiarySubmission
+        {
+            get;
+            set;
+        }
+
+        /// <summary> 
+        /// Field #: 35
+        /// Field Name: Other Payer Patient Responsibility Amount SUM 
+        /// Format: N
+        /// Length: 10 
+        /// Definition: SUM of 352-NQ for identified Payer. If 06 submitted in qualifier, submitted value is provided, else all OPPRA amounts are summed 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string SubmittedCobClaimInformationOtherPayerPatientResponsibilityAmountSumTertiarySubmission
+        {
+            get;
+            set;
+        }
+
+        /// <summary> 
+        /// Field #: 36
+        /// Field Name: Other Payer Amount Paid - SUM 
+        /// Format: N
+        /// Length: 10 
+        /// Definition: SUM of 431-DV for identfied Payer 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string SubmittedCobClaimInformationOtherPayerAmountPaidSumTertiarySubmission { get; set; }
+
+        /// <summary> 
+        /// Field #: 37
+        /// Field Name: Other Payer (BIN) Name - Primary 
+        /// Format: AN
+        /// Length: 20
+        /// </summary>
+        [FieldFixedLength(20)]
+        public string SubmittedCobClaimInformationOtherPayerBinNamePrimary { get; set; }
+
+        /// <summary> 
+        /// Field #: 38
+        /// Field Name: Other Payer (BIN) Name - Secondary 
+        /// Format: AN
+        /// Length: 20
+        /// </summary>
+        [FieldFixedLength(20)]
+        public string SubmittedCobClaimInformationOtherPayerBinNameSecondary { get; set; }
+
+        /// <summary> 
+        /// Field #: 39
+        /// Field Name: Other Payer (BIN) Name - Tertiary 
+        /// Format: AN
+        /// Length: 20
+        /// </summary>
+        [FieldFixedLength(20)]
+        public string SubmittedCobClaimInformationOtherPayerBinNameTertiary { get; set; }
+
+        /// <summary> 
+        /// Field #: 40
+        /// Field Name: Benefit Stage Information Presented - Primary 
+        /// Format: N
+        /// Length: 1
+        /// </summary>  
+        [FieldFixedLength(1)]
+        public string SubmittedCobClaimInformationBenefitStageInformationPresentedPrimary { get; set; }
+
+        /// <summary> 
+        /// Field #: 41
+        /// Field Name: Benefit Stage Information Presented - Secondary 
+        /// Format: N
+        /// Length: 1
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string SubmittedCobClaimInformationBenefitStageInformationPresentedSecondary { get; set; }
+
+        /// <summary> 
+        /// Field #: 42 
+        /// Field Name: Benefit Stage Information Presented - Tertiary 
+        /// Format: N 
+        /// Length: 1
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string SubmittedCobClaimInformationBenefitStageInformationPresentedTertiary { get; set; }
+
+        /// <summary> 
+        /// Field #: 43 
+        /// Field Name: Future Use 
+        /// Length: 33
+        /// </summary>
+        [FieldFixedLength(33)]
+        public string SubmittedCobClaimInformationFutureUse { get; set; }
 
         #endregion
-        */
+
 
         #region Pharmacy Pricing Segment
 
-        [FieldFixedLength(1)] public string PharmacyPricingSegmentSeparatorCharacter { get; set; }
-        [FieldFixedLength(2)] public string PharmacyPricingSegmentIdentifier { get; set; }
-        [FieldFixedLength(10)] public string PharmacyPricingSegmentPharmacyIngredientCost { get; set; }
-        [FieldFixedLength(10)] public string PharmacyPricingSegmentPharmacyDispensingFee { get; set; }
-        [FieldFixedLength(10)] public string PharmacyPricingSegmentPharmacySalesTax { get; set; }
-        [FieldFixedLength(10)] public string PharmacyPricingSegmentPharmacyGrossAmount { get; set; }
-        [FieldFixedLength(10)] public string PharmacyPricingSegmentPharmacyCopayAmount { get; set; }
-        [FieldFixedLength(10)] public string PharmacyPricingSegmentPharmacyDueAmount { get; set; }
-        [FieldFixedLength(3)] public string PharmacyPricingSegmentPharmacyBasisOfCost { get; set; }
-        [FieldFixedLength(3)] public string PharmacyPricingSegmentPharmacyBasisOfReimbursement { get; set; }
-        [FieldFixedLength(10)] public string PharmacyPricingSegmentPharmacyCalculatedAmount { get; set; }
-        [FieldFixedLength(10)] public string PharmacyPricingSegmentProcessorFee { get; set; }
-        [FieldFixedLength(3)] public string PharmacyPricingReservedForFutureUse { get; set; }
+        /// <summary> 
+        /// Field #: 1
+        /// Field Name: Segment Separator Character 
+        /// Format: AN
+        /// Length: 1 
+        /// Value: >
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string PharmacyPricingSegmentSeparatorCharacter { get; set; }
+
+        /// <summary> 
+        /// Field #: 2
+        /// Field Name: Segment Identifier ( PS ) 
+        /// Format: AN
+        /// Length: 2 
+        /// Value: PS
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string PharmacyPricingSegmentIdentifier { get; set; }
+
+        /// <summary> 
+        /// Field #: 3
+        /// Field Name: Pharmacy Ingredient Cost 
+        /// Format: D
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PharmacyPricingSegmentPharmacyIngredientCost { get; set; }
+
+        /// <summary> 
+        /// Field #: 4
+        /// Field Name: Pharmacy Dispensing Fee 
+        /// Format: D
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PharmacyPricingSegmentPharmacyDispensingFee { get; set; }
+
+        /// <summary> 
+        /// Field #: 5
+        /// Field Name: Pharmacy Sales Tax 
+        /// Format: D
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PharmacyPricingSegmentPharmacySalesTax { get; set; }
+
+        /// <summary> 
+        /// Field #: 6
+        /// Field Name: Pharmacy Gross Amount 
+        /// Format: D
+        /// Length: 10 
+        /// Definition: Equals sum of fields 3, 4, 5 and Claim Segment field 49. 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PharmacyPricingSegmentPharmacyGrossAmount { get; set; }
+
+        /// <summary> 
+        /// Field #: 7
+        /// Field Name: Pharmacy Copay Amount 
+        /// Format: D
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PharmacyPricingSegmentPharmacyCopayAmount { get; set; }
+
+        /// <summary> 
+        /// Field #: 8
+        /// Field Name: Pharmacy Due Amount 
+        /// Format: D
+        /// Length: 10 
+        /// Definition: Equals field 6 less field 7 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PharmacyPricingSegmentPharmacyDueAmount { get; set; }
+
+        /// <summary> 
+        /// Field #: 9
+        /// Field Name: Pharmacy Basis of Cost 
+        /// Format: AN
+        /// Length: 3 
+        /// Value: AWP, FED, MAC, WAC 
+        /// Definition: Calculation basis used prior to U&C compare 
+        /// </summary>
+        [FieldFixedLength(3)]
+        public string PharmacyPricingSegmentPharmacyBasisOfCost { get; set; }
+
+        /// <summary> 
+        /// Field #: 10
+        /// Field Name: Pharmacy Basis of Reimbursement 
+        /// Format: N
+        /// Length: 3 
+        /// Definition: Actual lower of basis used as per NCPDP defined Basis of Reimbursement codes 
+        /// </summary>
+        [FieldFixedLength(3)]
+        public string PharmacyPricingSegmentPharmacyBasisOfReimbursement { get; set; }
+
+        /// <summary> 
+        /// Field #: 11
+        /// Field Name: Pharmacy Calculated Amount 
+        /// Format: D
+        /// Length: 10 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PharmacyPricingSegmentPharmacyCalculatedAmount { get; set; }
+
+        /// <summary> 
+        /// Field #: 12
+        /// Field Name: Processor Fee (User Fee) 
+        /// Format: D
+        /// Length: 10 
+        /// Definition: The Plan User Fee assessed at time of transaction 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string PharmacyPricingSegmentProcessorFee { get; set; }
+
+        /// <summary> 
+        /// Field #: 13
+        /// Field Name: Reserved for Future Use 
+        /// Length: 3
+        /// </summary>
+        [FieldFixedLength(3)]
+        public string PharmacyPricingReservedForFutureUse { get; set; }
 
         #endregion
 
         #region Addtl. Submitted Pharmacy Pricing
 
-        [FieldFixedLength(1)] public string AddtlSubmittedPharmacyPricingSegmentSeparatorCharacter { get; set; }
-        [FieldFixedLength(2)] public string AddtlSubmittedPharmacyPricingSegmentIdentifier { get; set; }
-        [FieldFixedLength(10)] public string AddtlSubmittedPharmacyPricingSegmentSubmittedUc { get; set; }
-        [FieldFixedLength(10)] public string AddtlSubmittedPharmacyPricingSegmentSubmittedIngredientCost { get; set; }
-        [FieldFixedLength(10)] public string AddtlSubmittedPharmacyPricingSegmentSubmittedDispensingFee { get; set; }
-        [FieldFixedLength(10)] public string AddtlSubmittedPharmacyPricingSegmentSubmittedSalesTax { get; set; }
-        [FieldFixedLength(10)] public string AddtlSubmittedPharmacyPricingSegmentSubmittedGrossAmount { get; set; }
-        [FieldFixedLength(10)] public string AddtlSubmittedPharmacyPricingSegmentSubmittedCopayAmount { get; set; }
-        [FieldFixedLength(24)] public string AddtlSubmittedPharmacyPricingSegmentReservedForFutureUse { get; set; }
+        /// <summary>
+        /// Field #: 1
+        /// Field Name: Segment Separator Character 
+        /// Format: AN
+        /// Length: 1 
+        /// Value: >
+        /// </summary>
+        [FieldFixedLength(1)]
+        public string AddtlSubmittedPharmacyPricingSegmentSeparatorCharacter { get; set; }
+
+        /// <summary>
+        /// Field #: 2
+        /// Field Name: Segment Identifier ( SP ) 
+        /// Format: AN
+        /// Length: 2 
+        /// Value: SP
+        /// </summary>
+        [FieldFixedLength(2)]
+        public string AddtlSubmittedPharmacyPricingSegmentIdentifier { get; set; }
+
+        /// <summary>
+        /// Field #: 3
+        /// Field Name: Submitted U&C 
+        /// Format: D
+        /// Length: 10 
+        /// Definition: Value submitted by pharmacy 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string AddtlSubmittedPharmacyPricingSegmentSubmittedUc { get; set; }
+
+        /// <summary>
+        /// Field #: 4
+        /// Field Name: Submitted Ingredient Cost 
+        /// Format: D
+        /// Length: 10 
+        /// Definition: Value submitted by pharmacy 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string AddtlSubmittedPharmacyPricingSegmentSubmittedIngredientCost { get; set; }
+
+        /// <summary>
+        /// Field #: 5
+        /// Field Name: Submitted Dispensing Fee 
+        /// Format: D
+        /// Length: 10 
+        /// Definition: Value submitted by pharmacy 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string AddtlSubmittedPharmacyPricingSegmentSubmittedDispensingFee { get; set; }
+
+        /// <summary>
+        /// Field #: 6
+        /// Field Name: Submitted Sales Tax 
+        /// Format: D
+        /// Length: 10 
+        /// Definition: Value submitted by pharmacy 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string AddtlSubmittedPharmacyPricingSegmentSubmittedSalesTax { get; set; }
+
+        /// <summary>
+        /// Field #: 7
+        /// Field Name: Submitted Gross Amount 
+        /// Format: D
+        /// Length: 10 
+        /// Definition: Value submitted by pharmacy 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string AddtlSubmittedPharmacyPricingSegmentSubmittedGrossAmount { get; set; }
+
+        /// <summary>
+        /// Field #: 8
+        /// Field Name: Submitted Copay Amount 
+        /// Format: D
+        /// Length: 10 
+        /// Definition: Value submitted by pharmacy 
+        /// </summary>
+        [FieldFixedLength(10)]
+        public string AddtlSubmittedPharmacyPricingSegmentSubmittedCopayAmount { get; set; }
+
+        /// <summary>
+        /// Field #: 9
+        /// Field Name: Reserved for Future Use 
+        /// Length: 24
+        /// </summary>
+        [FieldFixedLength(24)]
+        public string AddtlSubmittedPharmacyPricingSegmentReservedForFutureUse { get; set; }
 
         #endregion
     }
