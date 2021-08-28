@@ -4629,7 +4629,6 @@ namespace AHClaim.domain.Record
 
         #endregion
 
-
         #region Pharmacy Pricing Segment
 
         /// <summary> 

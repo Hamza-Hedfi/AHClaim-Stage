@@ -500,5 +500,153 @@ namespace AHClaim.domain.Segment.extension
                 ReservedForFutureUse = r.ClaimBalancesSegmentReservedForFutureUse
             });
         }
+
+        /// <summary>
+        /// Factory method for Paper Claim Info Segment
+        /// </summary>
+        /// <param name="container">Raw Claim Records</param>
+        /// <returns>IEnumerable&lt;PaperClaimInfoSegment&gt;</returns>
+        public static IEnumerable<PaperClaimInfoSegment> GetPaperClaimInfoSegments(
+            this IEnumerable<RawClaimRecord> container)
+        {
+            return container.Select(r => new PaperClaimInfoSegment()
+            {
+                UserId = r.PaperClaimInfoSegmentUserId,
+                TerminalId = r.PaperClaimInfoSegmentTerminalId,
+                ReceivedDateNumber1 = r.PaperClaimInfoSegmentReceivedDateNumber1,
+                ReceivedDateNumber2 = r.PaperClaimInfoSegmentReceivedDateNumber2,
+                ReferenceCode = r.PaperClaimInfoSegmentReferenceCode,
+                ReservedForFutureUse = r.PaperClaimInfoSegmentReservedForFutureUse
+            });
+        }
+
+        /// <summary>
+        /// Factory method for Plan Codes Used Segment
+        /// </summary>
+        /// <param name="container">Raw Claim Records</param>
+        /// <returns>IEnumerable&lt;PlanCodesUsedSegment&gt;</returns>
+        public static IEnumerable<PlanCodesUsedSegment> GetPlanCodesUsedSegments(
+            this IEnumerable<RawClaimRecord> container)
+        {
+            return container.Select(r => new PlanCodesUsedSegment()
+            {
+                LineOfBusinessCode = r.PlanCodesUsedSegmentLineOfBusinessCode,
+                PlanNetworkCode = r.PlanCodesUsedSegmentPlanNetworkCode,
+                MarginNetworkCode = r.PlanCodesUsedSegmentMarginNetworkCode,
+                CommonFormularyCode = r.PlanCodesUsedSegmentCommonFormularyCode,
+                PlanFormulaCode = r.PlanCodesUsedSegmentPlanFormulaCode,
+                PharmacyFormulaCode = r.PlanCodesUsedSegmentPharmacyFormulaCode,
+                CommonMacCode = r.PlanCodesUsedSegmentCommonMacCode,
+                CopayCode = r.PlanCodesUsedSegmentCopayCode,
+                Level2MessagingCode = r.PlanCodesUsedSegmentLevel2MessagingCode,
+                MemberPlanCode = r.PlanCodesUsedSegmentMemberPlanCode,
+                PlanCommonMacCode = r.PlanCodesUsedSegmentPlanCommonMacCode,
+                ReservedForFutureUse = r.PlanCodesUsedSegmentReservedForFutureUse
+            });
+        }
+
+        /// <summary>
+        /// Factory method for Transaction Messaging Segments
+        /// </summary>
+        /// <param name="container">Raw Claim Records</param>
+        /// <returns>IEnumerable&lt;TransactionMessagingSegment&gt;</returns>
+        public static IEnumerable<TransactionMessagingSegment> GetTransactionMessagingSegments(
+            this IEnumerable<RawClaimRecord> container)
+        {
+            return container.Select(r => new TransactionMessagingSegment()
+            {
+            });
+        }
+
+        /// <summary>
+        /// Factory method for Submitted Member Segments
+        /// </summary>
+        /// <param name="container">Raw Claim Records</param>
+        /// <returns>IEnumerable&lt;SubmittedMemberSegment&gt;</returns>
+        public static IEnumerable<SubmittedMemberSegment> GetSubmittedMemberSegments(
+            this IEnumerable<RawClaimRecord> container)
+        {
+            return container.Select(r => new SubmittedMemberSegment()
+            {
+            });
+        }
+
+        /// <summary>
+        /// Factory method for Enhanced Submitted Member Segments
+        /// </summary>
+        /// <param name="container">Raw Claim Records</param>
+        /// <returns>IEnumerable&lt;EnhancedSubmittedMemberSegment&gt;</returns>
+        public static IEnumerable<EnhancedSubmittedMemberSegment> GetEnhancedSubmittedMemberSegments(
+            this IEnumerable<RawClaimRecord> container)
+        {
+            return container.Select(r => new EnhancedSubmittedMemberSegment()
+            {
+            });
+        }
+
+        /// <summary>
+        /// Factory method for Addtl Submitted Values Segments
+        /// </summary>
+        /// <param name="container">Raw Claim Records</param>
+        /// <returns>IEnumerable&lt;AddtlSubmittedValuesSegment&gt;</returns>
+        public static IEnumerable<AddtlSubmittedValuesSegment> GetAddtlSubmittedValuesSegments(
+            this IEnumerable<RawClaimRecord> container)
+        {
+            return container.Select(r => new AddtlSubmittedValuesSegment()
+            {
+            });
+        }
+
+        /// <summary>
+        /// Factory method for Patient Pay Segments
+        /// </summary>
+        /// <param name="container">Raw Claim Records</param>
+        /// <returns>IEnumerable&lt;PatientPaySegment&gt;</returns>
+        public static IEnumerable<PatientPaySegment> GetPatientPaySegments(
+            this IEnumerable<RawClaimRecord> container)
+        {
+            return container.Select(r => new PatientPaySegment()
+            {
+            });
+        }
+
+        /// <summary>
+        /// Factory method for Submitted COB Information Segments
+        /// </summary>
+        /// <param name="container">Raw Claim Records</param>
+        /// <returns>IEnumerable&lt;SubmittedCobInformationSegment&gt;</returns>
+        public static IEnumerable<SubmittedCobInformationSegment> GetSubmittedCobInformationSegments(
+            this IEnumerable<RawClaimRecord> container)
+        {
+            return container.Select(r => new SubmittedCobInformationSegment()
+            {
+            });
+        }
+
+        /// <summary>
+        /// Factory method for Pharmacy Pricing Segments
+        /// </summary>
+        /// <param name="container">Raw Claim Records</param>
+        /// <returns>IEnumerable&lt;PharmacyPricingSegment&gt;</returns>
+        public static IEnumerable<PharmacyPricingSegment> GetPharmacyPricingSegments(
+            this IEnumerable<RawClaimRecord> container)
+        {
+            return container.Select(r => new PharmacyPricingSegment()
+            {
+            });
+        }
+
+        /// <summary>
+        /// Factory method for Addtl. Submitted Pharmacy Pricing Segments
+        /// </summary>
+        /// <param name="container">Raw Claim Records</param>
+        /// <returns>IEnumerable&lt;AddtlSubmittedPharmacyPricingSegment&gt;</returns>
+        public static IEnumerable<AddtlSubmittedPharmacyPricingSegment> GetAddtlSubmittedPharmacyPricingSegments(
+            this IEnumerable<RawClaimRecord> container)
+        {
+            return container.Select(r => new AddtlSubmittedPharmacyPricingSegment()
+            {
+            });
+        }
     }
 }

@@ -69,7 +69,7 @@
         <Compile Include="Segment\SubmittedDurOverrideSegment.cs" />
         <Compile Include="Segment\SubmittedMemberSegment.cs" />
         <Compile Include="Segment\SubmittedCobInformationSegment.cs" />
-        <Compile Include="Segment\TransactionMessaging.cs" />
+        <Compile Include="Segment\TransactionMessagingSegment.cs" />
         <Compile Include="Segment\WorkersCompensationSegment.cs" />
     </ItemGroup>
     <ItemGroup>

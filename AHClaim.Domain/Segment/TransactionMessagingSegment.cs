@@ -1,6 +1,6 @@
 ﻿namespace AHClaim.domain.Segment
 {
-    public class TransactionMessaging
+    public class TransactionMessagingSegment
     {
         /// <summary>
         /// Field #: 3 
